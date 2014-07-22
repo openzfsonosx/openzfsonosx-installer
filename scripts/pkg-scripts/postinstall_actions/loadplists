@@ -1,0 +1,13 @@
+#!/bin/bash
+date -j -f "%a %b %d %T %Z %Y" "`date`" "+%s" >> /tmp/o3x.log
+echo $0 >> /tmp/o3x.log
+
+launchctl list | grep org.openzfsonosx.zed.service 1>/dev/null
+[ $? -eq 0 ] && /bin/launchctl remove org.openzfsonosx.zed.service
+
+/bin/launchctl load -w /Library/LaunchDaemons/org.openzfsonosx.zed.service.plist
+
+launchctl list | grep org.openzfsonosx.zpool-import-all 1>/dev/null
+[ $? -eq 0 ] && /bin/launchctl remove org.openzfsonosx.zpool-import-all
+
+/bin/launchctl load -w /Library/LaunchDaemons/org.openzfsonosx.zpool-import-all.plist
