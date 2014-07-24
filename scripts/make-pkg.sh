@@ -68,11 +68,15 @@ then
 	pushd ${OS}/Library/Extensions
 	for path in "${zfs_kext}" "${spl_kernel_exports_kext}" "${spl_kext}"
 	do
-		codesign -fvs "${dev_id_application}" "${path}"
-	done
-	for path in "${zfs_kext}" "${spl_kernel_exports_kext}" "${spl_kext}"
-	do
-		spctl --assess --raw "${path}"
+		set +e
+		spctl --assess "${path}"
+		ret=$?
+		set -e
+		if [ $ret -ne 0 ]
+		then
+			codesign -fvs "${dev_id_application}" "${path}"
+			spctl --assess --raw "${path}"
+		fi
 	done
 	popd
 fi
