@@ -48,9 +48,23 @@ do_rsync() {
 	"$RSYNC" $RSYNC_OPTIONS "$1" "$2"
 }
 
+do_unlock() {
+	set +e
+	&>/dev/null security show-keychain-info "${keychain}"
+	ret=$?
+	set -e
+	[ $ret -ne 0 ] && security unlock-keychain "${keychain}"
+	set +e
+	&>/dev/null security show-keychain-info login.keychain
+	ret=$?
+	set -e
+	[ $ret -ne 0 ] && security unlock-keychain login.keychain
+	return 0
+}
+
 if [ ${OS} -ge 109 ]
 then
-	[ ${should_unlock} -eq 1 ] && security unlock-keychain "${keychain}"
+	[ ${should_unlock} -eq 1 ] && do_unlock
 	pushd ${OS}/Library/Extensions
 	for path in "${zfs_kext}" "${spl_kernel_exports_kext}" "${spl_kext}"
 	do
@@ -98,6 +112,7 @@ rm -f ../out-${OS}-signed.pkg
 
 if [ ${should_sign_installer} -eq 1 ]
 then
+	[ ${should_unlock} -eq 1 ] && do_unlock
 	productsign --sign "${dev_id_installer}" --keychain "${keychain}" out-${OS}.pkg out-${OS}-signed.pkg
 	chown ${owner} out-${OS}-signed.pkg
 	do_rsync out-${OS}-signed.pkg ../
