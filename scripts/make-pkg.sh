@@ -38,10 +38,10 @@ fi
 if [ -e /usr/local/bin/rsync ]
 then
 	export RSYNC="/usr/local/bin/rsync"
-	export RSYNC_OPTIONS="-rltDcAX --fileflags --delete --itemize-changes"
+	export RSYNC_OPTIONS="-rltDcAX --fileflags --itemize-changes"
 else
 	export RSYNC="/usr/bin/rsync"
-	export RSYNC_OPTIONS="-rltDcE --delete --itemize-changes"
+	export RSYNC_OPTIONS="-rltDcE --itemize-changes"
 fi
 
 do_rsync() {
