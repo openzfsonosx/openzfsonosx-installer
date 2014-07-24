@@ -50,7 +50,7 @@ cd "${topdir}"
 
 HOME_DIR="$(dscl . -read /Users/"$(logname)" NFSHomeDirectory | cut -d ' ' -f2)"
 
-make_only=0
+make_only=1
 
 MLDEV="${HOME_DIR}"/Developer/mountainlion
 MAVDEV="${HOME_DIR}"/Developer/mavericks
