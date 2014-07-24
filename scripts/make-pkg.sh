@@ -120,6 +120,8 @@ then
 	productsign --sign "${dev_id_installer}" --keychain "${keychain}" out-${OS}.pkg out-${OS}-signed.pkg
 	chown ${owner} out-${OS}-signed.pkg
 	do_rsync out-${OS}-signed.pkg ../
+	chown ${owner} ../out-${OS}-signed.pkg
 else
 	do_rsync out-${OS}.pkg ../
+	chown ${owner} ../out-${OS}.pkg
 fi
