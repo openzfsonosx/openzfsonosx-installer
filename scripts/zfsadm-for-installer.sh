@@ -187,6 +187,7 @@ SPL_BRANCH="$6"
 ZFS_BRANCH="$7"
 TARGET_OS_X_VERSION="$8"
 PULL="$9"
+SHOULD_CLEAN="yes"
 
 SPL_REPOSITORY_DIR="$DEV_DIR"/spl
 ZFS_REPOSITORY_DIR="$DEV_DIR"/zfs
@@ -427,6 +428,11 @@ then
 	SHOULD_INSTALL="yes"
 fi
 
+if [ "$SHOULD_CONFIGURE" = "no" ]
+then
+	SHOULD_CLEAN="no"
+fi
+
 SK="$INSTALL_DIR"/spl.kext
 ZK="$INSTALL_DIR"/zfs.kext
 SPL_KEXT_RELPATH=module/spl/spl.kext
@@ -560,10 +566,6 @@ then
 	else
 		$SUDO $CHOWN -R "$OWNER":staff "$SPL_REPOSITORY_DIR"
 		cd "$SPL_REPOSITORY_DIR"
-		if [ x"$PULL" = x"on" ]
-		then
-			$SUDO -u "$OWNER" $GIT pull
-		fi
 	fi
 	if [ ! -d "$ZFS_REPOSITORY_DIR" ]
 	then
@@ -577,10 +579,6 @@ then
 	else
 		$SUDO $CHOWN -R "$OWNER":staff "$ZFS_REPOSITORY_DIR"
 		cd "$ZFS_REPOSITORY_DIR"
-		if [ x"$PULL" = x"on" ]
-		then
-			$SUDO -u "$OWNER" $GIT pull
-		fi
 	fi
 fi
 
@@ -604,6 +602,11 @@ then
 	then
 		cd "$SPL_REPOSITORY_DIR"
 		$ECHO "Trying to switch spl branch ..."
+		if [ x"$SHOULD_CLEAN" = x"yes" ]
+		then
+			git reset --hard @{u}
+			git clean -fdqx
+		fi
 		$SUDO -u "$OWNER" $GIT checkout "$SPL_BRANCH"
 		if [ $? -eq 0 ]
 		then
@@ -635,6 +638,11 @@ then
 	then
 		cd "$ZFS_REPOSITORY_DIR"
 		$ECHO "Trying to switch zfs branch ..."
+		if [ x"$SHOULD_CLEAN" = x"yes" ]
+		then
+			git reset --hard @{u}
+			git clean -fdqx
+		fi
 		$SUDO -u "$OWNER" $GIT checkout "$ZFS_BRANCH"
 		if [ $? -eq 0 ]
 		then
@@ -646,12 +654,36 @@ then
 	fi
 fi
 
+if [ x"$SHOULD_CLEAN" = x"yes" ]
+then
+	cd "$SPL_REPOSITORY_DIR"
+	git reset --hard @{u}
+	git clean -fdqx
+	if [ x"$PULL" = x"on" ]
+	then
+		$SUDO -u "$OWNER" $GIT pull
+	fi
+	cd "$ZFS_REPOSITORY_DIR"
+	git reset --hard @{u}
+	git clean -fdqx
+	if [ x"$PULL" = x"on" ]
+	then
+		$SUDO -u "$OWNER" $GIT pull
+	fi
+else
+	if [ x"$PULL" = x"on" ]
+	then
+		cd "$SPL_REPOSITORY_DIR"
+		$SUDO -u "$OWNER" $GIT pull
+		cd "$ZFS_REPOSITORY_DIR"
+		$SUDO -u "$OWNER" $GIT pull
+	fi
+fi
+
 if [ "$SHOULD_CONFIGURE" = "yes" ]
 then
 	CFLAGS_STRING=${CFLAGS_ARRAY[*]}
 	cd "$SPL_REPOSITORY_DIR"
-	git reset --hard @{u}
-	git clean -fdqx
 	if [ x"$TARGET_OS_X_VERSION" = x"10.8" ]
 	then
 		[ -e "${ML_SPL_DIFF}" ] && git apply "${ML_SPL_DIFF}"
@@ -663,8 +695,6 @@ then
 	    ${CFLAGS_STRING:+CFLAGS="$CFLAGS_STRING"}\
 	    ${SPL_CONFIGURE_ARRAY[@]}
 	cd "$ZFS_REPOSITORY_DIR"
-	git reset --hard @{u}
-	git clean -fdqx
 	if [ x"$TARGET_OS_X_VERSION" = x"10.8" ]
 	then
 		[ -e "${ML_ZFS_DIFF}" ] && git apply "${ML_ZFS_DIFF}"
