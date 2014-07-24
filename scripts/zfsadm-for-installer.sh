@@ -604,8 +604,8 @@ then
 		$ECHO "Trying to switch spl branch ..."
 		if [ x"$SHOULD_CLEAN" = x"yes" ]
 		then
-			git reset --hard @{u}
-			git clean -fdqx
+			$GIT reset --hard @{u}
+			$GIT clean -fdqx
 		fi
 		$SUDO -u "$OWNER" $GIT checkout "$SPL_BRANCH"
 		if [ $? -eq 0 ]
@@ -640,8 +640,8 @@ then
 		$ECHO "Trying to switch zfs branch ..."
 		if [ x"$SHOULD_CLEAN" = x"yes" ]
 		then
-			git reset --hard @{u}
-			git clean -fdqx
+			$GIT reset --hard @{u}
+			$GIT clean -fdqx
 		fi
 		$SUDO -u "$OWNER" $GIT checkout "$ZFS_BRANCH"
 		if [ $? -eq 0 ]
@@ -657,15 +657,15 @@ fi
 if [ x"$SHOULD_CLEAN" = x"yes" ]
 then
 	cd "$SPL_REPOSITORY_DIR"
-	git reset --hard @{u}
-	git clean -fdqx
+	$GIT reset --hard @{u}
+	$GIT clean -fdqx
 	if [ x"$PULL" = x"on" ]
 	then
 		$SUDO -u "$OWNER" $GIT pull
 	fi
 	cd "$ZFS_REPOSITORY_DIR"
-	git reset --hard @{u}
-	git clean -fdqx
+	$GIT reset --hard @{u}
+	$GIT clean -fdqx
 	if [ x"$PULL" = x"on" ]
 	then
 		$SUDO -u "$OWNER" $GIT pull
@@ -686,9 +686,9 @@ then
 	cd "$SPL_REPOSITORY_DIR"
 	if [ x"$TARGET_OS_X_VERSION" = x"10.8" ]
 	then
-		[ -e "${ML_SPL_DIFF}" ] && git apply "${ML_SPL_DIFF}"
+		[ -e "${ML_SPL_DIFF}" ] && $GIT apply "${ML_SPL_DIFF}"
 	else
-		[ -e "${MAV_SPL_DIFF}" ] && git apply "${MAV_SPL_DIFF}"
+		[ -e "${MAV_SPL_DIFF}" ] && $GIT apply "${MAV_SPL_DIFF}"
 	fi
 	$SUDO -u "$OWNER" $BASH_PATH "$SPL_REPOSITORY_DIR"/autogen.sh
 	$SUDO -u "$OWNER" $BASH_PATH "$SPL_REPOSITORY_DIR"/configure\
@@ -697,9 +697,9 @@ then
 	cd "$ZFS_REPOSITORY_DIR"
 	if [ x"$TARGET_OS_X_VERSION" = x"10.8" ]
 	then
-		[ -e "${ML_ZFS_DIFF}" ] && git apply "${ML_ZFS_DIFF}"
+		[ -e "${ML_ZFS_DIFF}" ] && $GIT apply "${ML_ZFS_DIFF}"
 	else
-		[ -e "${MAV_ZFS_DIFF}" ] && git apply "${MAV_ZFS_DIFF}"
+		[ -e "${MAV_ZFS_DIFF}" ] && $GIT apply "${MAV_ZFS_DIFF}"
 	fi
 	$SUDO -u "$OWNER" $BASH_PATH "$ZFS_REPOSITORY_DIR"/autogen.sh
 	$SUDO -u "$OWNER" $BASH_PATH "$ZFS_REPOSITORY_DIR"/configure\
