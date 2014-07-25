@@ -35,7 +35,7 @@ fi
 topdir=`dirname "$($CANONICALIZE "$0")"`
 
 if test x$topdir = x"." ; then
-	if ! test -f make-installers.sh ; then
+	if ! test -d resources -a -d scripts -a -f README.md ; then
 		printf "cd into the zfs installer repository or install GNU readlink or realpath.\n"
 		printf "Homebrew: brew install coreutils\n"
 		printf "MacPorts: port install coreutils\n"
