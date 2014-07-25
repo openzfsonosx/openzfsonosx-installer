@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 set -e
 
@@ -35,7 +35,7 @@ then
 	if [ $ret -ne 0 ]
 	then
 		echo "Please enter your login password"
-		read loginpassword
+		read -s loginpassword
 		export LP="$loginpassword"
 		#die if the password doesn't work
 		set +e
@@ -63,7 +63,7 @@ then
 	if [ $ret -ne 0 ]
 	then
 		echo "Please enter openzfs-login.keychain's password"
-			read openzfspassword
+			read -s openzfspassword
 			export OZP="$openzfspassword"
 			security unlock-keychain -p "$OZP" "${keychain}"
 	fi
@@ -117,7 +117,7 @@ do_rsync() {
 }
 if [ ${OS} -ge 109 ]
 then
-	pushd ${OS}/Library/Extensions
+	pushd ${OS}/Library/Extensions &>/dev/null
 	for path in "${zfs_kext}" "${spl_kernel_exports_kext}" "${spl_kext}"
 	do
 		set +e
@@ -126,6 +126,7 @@ then
 		set -e
 		if [ $ret -ne 0 ]
 		then
+			echo "Signing ${path}"
 			codesign -fvs "${dev_id_application}" "${path}"
 			spctl --assess --raw "${path}"
 		fi
@@ -133,6 +134,7 @@ then
 	popd
 fi
 
+echo "Creating pkg"
 sudo -u ${owner} packagesbuild -F . packages-o3x-${OS}.pkgproj
 
 rm -rf conv ; mkdir conv
