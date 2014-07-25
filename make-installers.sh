@@ -4,46 +4,46 @@ set -e
 
 if [[ $(id -u) -ne 0 ]]
 then
-        sudo "$0" "$@"
-        exit 0
+	sudo "$0" "$@"
+	exit 0
 fi
 
 READLINK=`which greadlink 2>/dev/null`
 if test x$READLINK = "x" ; then
-        READLINK=`which readlink 2>/dev/null`
+	READLINK=`which readlink 2>/dev/null`
 fi
 
 if ! test x$READLINK = "x" ; then
-        $READLINK -f . > /dev/null 2>&1
-        if ! test x$? = "x0" ; then
-                unset READLINK
-        else
-                CANONICALIZE="$READLINK -f"
-        fi
+	$READLINK -f . > /dev/null 2>&1
+	if ! test x$? = "x0" ; then
+		unset READLINK
+	else
+		CANONICALIZE="$READLINK -f"
+	fi
 fi
 
 if test x$READLINK = "x" ; then
-        REALPATH=`which grealpath 2>/dev/null`
-        if test x$REALPATH = "x" ; then
-                REALPATH=`which realpath 2>/dev/null`
-        fi
-        if test x$REALPATH = "x" ; then
-                CANONICALIZE=readlink
-        else
-                CANONICALIZE=$REALPATH
-        fi
+	REALPATH=`which grealpath 2>/dev/null`
+	if test x$REALPATH = "x" ; then
+		REALPATH=`which realpath 2>/dev/null`
+	fi
+	if test x$REALPATH = "x" ; then
+		CANONICALIZE=readlink
+	else
+		CANONICALIZE=$REALPATH
+	fi
 fi
 
 topdir=`dirname "$($CANONICALIZE "$0")"`
 
 if test x$topdir = x"." ; then
-        if ! test -f make-installers.sh ; then
-                printf "cd into the zfs installer repository or install GNU readlink or realpath.\n"
-                printf "Homebrew: brew install coreutils\n"
-                printf "MacPorts: port install coreutils\n"
-                printf "Gentoo Prefix: emerge sys-apps/coreutils\n"
-                exit 1
-        fi
+	if ! test -f make-installers.sh ; then
+		printf "cd into the zfs installer repository or install GNU readlink or realpath.\n"
+		printf "Homebrew: brew install coreutils\n"
+		printf "MacPorts: port install coreutils\n"
+		printf "Gentoo Prefix: emerge sys-apps/coreutils\n"
+		exit 1
+	fi
 fi
 
 cd "${topdir}"
