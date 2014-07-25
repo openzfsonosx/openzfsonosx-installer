@@ -1,7 +1,5 @@
 #!/bin/bash -x
 
-set -e
-
 if [[ $(id -u) -ne 0 ]]
 then
 	sudo "$0" "$@"
@@ -45,6 +43,8 @@ if test x$topdir = x"." ; then
 		exit 1
 	fi
 fi
+
+set -e
 
 cd "${topdir}"
 
