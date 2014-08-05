@@ -7,6 +7,20 @@ fi
 
 do_108=1
 do_109=1
+require_version2_signature=1
+os_release_major_version=`uname -r | awk -F '.' '{print $1;}'`
+
+if [ -z $os_release_major_version ]
+then
+       echo "Could not determine operating system release major version"
+       exit 1
+fi
+
+if [ $require_version2_signature -eq 1 -a $os_release_major_version -lt 13 -a $do_109 -eq 1 ]
+then
+       echo "It is necessary to sign code while running OS X Mavericks or higher to get a version 2 signature."
+       exit 1
+fi
 
 READLINK=`which greadlink 2>/dev/null`
 if test x$READLINK = "x" ; then

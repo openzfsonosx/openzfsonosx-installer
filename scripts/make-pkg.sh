@@ -11,9 +11,30 @@ keychain_timeout=1200
 #keychain_timeout=none
 should_unlock=1
 should_sign_installer=1
+require_version2_signature=1
 zfs_kext="zfs.kext/"
 spl_kext="spl.kext/"
 spl_kernel_exports_kext="spl.kext/Contents/Plugins/KernelExports.kext/"
+os_release_major_version=`uname -r | awk -F '.' '{print $1;}'`
+
+if [ -z $os_release_major_version ]
+then
+	echo "Could not determine operating system release major version"
+	exit 1
+fi
+
+if [[ $1 == *8* || $0 == *8* || $PWD == *8* ]]
+then
+	OS=108
+else
+	OS=109
+fi
+
+if [ $require_version2_signature -eq 1 -a $os_release_major_version -lt 13 -a $OS -gt 108 ]
+then
+	echo "It is necessary to sign code while running OS X Mavericks or higher to get a version 2 signature."
+	exit 1
+fi
 
 re='^[0-9]+$'
 if ! [[ ${keychain_timeout} =~ $re ]]
@@ -86,16 +107,9 @@ then
 	fi
 fi
 
-if [[ $1 == *8* || $0 == *8* || $PWD == *8* ]]
-then
-	OS=108
-else
-	OS=109
-fi
-
 cd packages-o3x-${OS}
 
-if [ `uname -r | awk -F '.' '{ print $1; }'` -ge 13 ]
+if [ $os_release_major_version -ge 13 ]
 then
 	productbuild_has_scripts_option=1
 else
