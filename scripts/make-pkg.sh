@@ -134,7 +134,7 @@ then
 	for path in "${zfs_kext}" "${spl_kernel_exports_kext}" "${spl_kext}"
 	do
 		set +e
-		spctl --assess "${path}"
+		codesign -dv "${path}"
 		ret=$?
 		set -e
 		if [ $ret -ne 0 ]
