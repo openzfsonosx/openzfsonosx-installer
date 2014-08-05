@@ -84,7 +84,6 @@ then
 	else
 		sudo -n -E "$0" "$@"
 	fi
-	exit 0
 fi
 
 if [[ $1 == *8* || $0 == *8* || $PWD == *8* ]]

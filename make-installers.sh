@@ -3,7 +3,6 @@
 if [[ $(id -u) -ne 0 ]]
 then
 	sudo "$0" "$@"
-	exit 0
 fi
 
 READLINK=`which greadlink 2>/dev/null`
