@@ -196,6 +196,11 @@ do_rsync() {
 	"$SUDO" "$RSYNC" $RSYNC_OPTIONS "$1" "$2"
 }
 
+ncpu=$(/usr/sbin/sysctl -n hw.ncpu)
+tcpu=$((ncpu / 2 + 1))
+[[ ${tcpu} -gt 8 ]] && tcpu=8
+JOBS=$tcpu
+
 if [ x"${INSTALL_DIR:0:1}" = x"-" ]
 then
 	$ECHO "Install directory path cannot start with \"-\""
@@ -710,9 +715,9 @@ fi
 if [ "$SHOULD_MAKE" = "yes" ]
 then
 	cd "$SPL_REPOSITORY_DIR"
-	$SUDO -u "$OWNER" $MAKE -j
+	$SUDO -u "$OWNER" $MAKE -j"$JOBS"
 	cd "$ZFS_REPOSITORY_DIR"
-	$SUDO -u "$OWNER" $MAKE -j
+	$SUDO -u "$OWNER" $MAKE -j"$JOBS"
 fi
 
 if [ "$SHOULD_CONFIGURE" = "no" ]
