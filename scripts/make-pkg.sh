@@ -105,6 +105,7 @@ then
 	else
 		sudo -n -E "$0" "$@"
 	fi
+	exit $?
 fi
 
 cd packages-o3x-${OS}

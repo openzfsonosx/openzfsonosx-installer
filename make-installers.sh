@@ -3,6 +3,7 @@
 if [[ $(id -u) -ne 0 ]]
 then
 	sudo "$0" "$@"
+	exit $?
 fi
 
 do_108=1
