@@ -5,6 +5,9 @@ then
 	sudo "$0" "$@"
 fi
 
+do_108=1
+do_109=1
+
 READLINK=`which greadlink 2>/dev/null`
 if test x$READLINK = "x" ; then
 	READLINK=`which readlink 2>/dev/null`
@@ -62,35 +65,39 @@ MAVDESTDIR="${MAVPAK}"/109
 
 if [ $make_only -eq 1 ]
 then
-	./scripts/zfsadm-for-installer.sh -t 10.8 -d "${MLDEV}" -i /System/Library/Extensions -m
-	./scripts/zfsadm-for-installer.sh -t 10.9 -d "${MAVDEV}" -i /Library/Extensions -m
+	[ $do_108 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.8 -d "${MLDEV}" -i /System/Library/Extensions -m
+	[ $do_109 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.9 -d "${MAVDEV}" -i /Library/Extensions -m
 else
-	./scripts/zfsadm-for-installer.sh -t 10.8 -d "${MLDEV}" -i /System/Library/Extensions
-	./scripts/zfsadm-for-installer.sh -t 10.9 -d "${MAVDEV}" -i /Library/Extensions
+	[ $do_108 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.8 -d "${MLDEV}" -i /System/Library/Extensions
+	[ $do_109 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.9 -d "${MAVDEV}" -i /Library/Extensions
 fi
 
-rm -rf "${MLDESTDIR}"
-cd "${MLDEV}"
+if [ $do_108 -eq 1 ]
+then
+	rm -rf "${MLDESTDIR}"
+	cd "${MLDEV}"
 
-cd spl
-sudo make DESTDIR="${MLDESTDIR}" install
-cd ..
+	cd spl
+	sudo make DESTDIR="${MLDESTDIR}" install
+	cd ..
 
-cd zfs
-sudo make DESTDIR="${MLDESTDIR}" install
-cd ..
+	cd zfs
+	sudo make DESTDIR="${MLDESTDIR}" install
+fi
 
-rm -rf "${MAVDESTDIR}"
-cd "${MAVDEV}"
+if [ $do_109 -eq 1 ]
+then
+	rm -rf "${MAVDESTDIR}"
+	cd "${MAVDEV}"
 
-cd spl
-sudo make DESTDIR="${MAVDESTDIR}" install
-cd ..
+	cd spl
+	sudo make DESTDIR="${MAVDESTDIR}" install
+	cd ..
 
-cd zfs
-sudo make DESTDIR="${MAVDESTDIR}" install
-cd ..
+	cd zfs
+	sudo make DESTDIR="${MAVDESTDIR}" install
+fi
 
 cd "${topdir}"
-./scripts/make-pkg.sh 108
-./scripts/make-pkg.sh 109
+[ $do_108 -eq 1 ] && ./scripts/make-pkg.sh 108
+[ $do_109 -eq 1 ] && ./scripts/make-pkg.sh 109
