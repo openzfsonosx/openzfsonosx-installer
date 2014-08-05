@@ -115,4 +115,10 @@ fi
 
 cd "${topdir}"
 [ $do_108 -eq 1 ] && ./scripts/make-pkg.sh 108
+ret108=$?
 [ $do_109 -eq 1 ] && ./scripts/make-pkg.sh 109
+ret109=$?
+
+[ $do_109 -eq 1 -a $ret109 -ne 0 ] && exit $ret109
+[ $do_108 -eq 1 -a $ret108 -ne 0 ] && exit $ret108
+exit 0
