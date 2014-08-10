@@ -1,14 +1,14 @@
---- distribution.dist	2014-07-22 00:20:34.000000000 -0700
-+++ distribution.dist	2014-07-22 00:14:18.000000000 -0700
-@@ -1,6 +1,11 @@
+--- distribution.dist	2014-08-10 03:09:22.000000000 -0700
++++ distribution.dist	2014-08-10 03:09:30.000000000 -0700
+@@ -1,7 +1,9 @@
  <?xml version="1.0" encoding="UTF-8" standalone="no"?>
- <installer-script authoringTool="Packages" authoringToolVersion="1.1.1" authoringToolBuild="2B71" minSpecVersion="1.0">
+-<installer-script authoringTool="Packages" authoringToolVersion="1.1.1" authoringToolBuild="2B71" minSpecVersion="1.0">
++<installer-script authoringTool="Packages" authoringToolVersion="1.1.1" authoringToolBuild="2B71" minSpecVersion="2">
      <options rootVolumeOnly="true" customize="never" allow-external-scripts="true"/>
-+    <volume-check>
-+        <allowed-os-versions>
-+            <os-version min="10.9.0"/>
-+        </allowed-os-versions>
-+    </volume-check>
-     <installation-check script="installation_check()"/>
+-    <installation-check script="installation_check()"/>
++    <installation-check script="installation_check()">
++        <ram min-gb="2.00"/>
++    </installation-check>
      <!--+==========================+
          |       Presentation       |
+         +==========================+-->
