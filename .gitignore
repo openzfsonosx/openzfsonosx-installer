@@ -60,9 +60,5 @@ out-108.pkg
 out-109.pkg
 out-108-signed.pkg
 out-109-signed.pkg
-spl-108.diff
-spl-109.diff
-zfs-108.diff
-zfs-109.diff
 /stage
 /rw.*
