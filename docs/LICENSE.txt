@@ -1,0 +1,1 @@
+../resources/English.lproj/License.txt

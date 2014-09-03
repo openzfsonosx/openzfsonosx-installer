@@ -6,8 +6,9 @@ then
 	exit $?
 fi
 
-do_108=1
-do_109=1
+should_make_108=1
+should_make_109=1
+should_make_dmg=0
 require_version2_signature=1
 os_release_major_version=`uname -r | awk -F '.' '{print $1;}'`
 
@@ -17,7 +18,7 @@ then
        exit 1
 fi
 
-if [ $require_version2_signature -eq 1 -a $os_release_major_version -lt 13 -a $do_109 -eq 1 ]
+if [ $require_version2_signature -eq 1 -a $os_release_major_version -lt 13 -a $should_make_109 -eq 1 ]
 then
        echo "It is necessary to sign code while running OS X Mavericks or higher to get a version 2 signature."
        exit 1
@@ -80,14 +81,14 @@ MAVDESTDIR="${MAVPAK}"/109
 
 if [ $make_only -eq 1 ]
 then
-	[ $do_108 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.8 -d "${MLDEV}" -i /System/Library/Extensions -m
-	[ $do_109 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.9 -d "${MAVDEV}" -i /Library/Extensions -m
+	[ $should_make_108 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.8 -d "${MLDEV}" -i /System/Library/Extensions -m
+	[ $should_make_109 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.9 -d "${MAVDEV}" -i /Library/Extensions -m
 else
-	[ $do_108 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.8 -d "${MLDEV}" -i /System/Library/Extensions
-	[ $do_109 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.9 -d "${MAVDEV}" -i /Library/Extensions
+	[ $should_make_108 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.8 -d "${MLDEV}" -i /System/Library/Extensions
+	[ $should_make_109 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.9 -d "${MAVDEV}" -i /Library/Extensions
 fi
 
-if [ $do_108 -eq 1 ]
+if [ $should_make_108 -eq 1 ]
 then
 	rm -rf "${MLDESTDIR}"
 	cd "${MLDEV}"
@@ -100,7 +101,7 @@ then
 	sudo make DESTDIR="${MLDESTDIR}" install
 fi
 
-if [ $do_109 -eq 1 ]
+if [ $should_make_109 -eq 1 ]
 then
 	rm -rf "${MAVDESTDIR}"
 	cd "${MAVDEV}"
@@ -114,11 +115,20 @@ then
 fi
 
 cd "${topdir}"
-[ $do_108 -eq 1 ] && ./scripts/make-pkg.sh 108
+[ $should_make_108 -eq 1 ] && ./scripts/make-pkg.sh 108
 ret108=$?
-[ $do_109 -eq 1 ] && ./scripts/make-pkg.sh 109
+[ $should_make_109 -eq 1 ] && ./scripts/make-pkg.sh 109
 ret109=$?
 
-[ $do_109 -eq 1 -a $ret109 -ne 0 ] && exit $ret109
-[ $do_108 -eq 1 -a $ret108 -ne 0 ] && exit $ret108
-exit 0
+[ $should_make_109 -eq 1 -a $ret109 -ne 0 ] && exit $ret109
+[ $should_make_108 -eq 1 -a $ret108 -ne 0 ] && exit $ret108
+
+if [ $should_make_dmg -eq 1 ]
+then
+	./scripts/make-dmg.sh
+	ret=$?
+else
+	ret=0
+fi
+
+exit $ret

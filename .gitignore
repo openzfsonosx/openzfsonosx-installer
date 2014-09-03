@@ -64,3 +64,5 @@ spl-108.diff
 spl-109.diff
 zfs-108.diff
 zfs-109.diff
+/stage
+/rw.*

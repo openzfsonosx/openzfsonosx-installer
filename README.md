@@ -16,8 +16,9 @@ need to comment out all of the Mavericks and code signing sections.
 ### Configuration options:
 
 make-installers.sh
-- `do_108`
-- `do_109`
+- `should_make_108`
+- `should_make_109`
+- `should_make_dmg`
 - `require_version2_signature`
 - `make_only`
 
@@ -31,3 +32,7 @@ scripts/make-pkg.sh
 - `should_unlock`
 - `should_sign_installer`
 - `require_version2_signature`
+
+scripts/make-dmg.sh
+- `should_arrange`
+- `should_detach`
