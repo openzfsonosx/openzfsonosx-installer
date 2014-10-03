@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=1.3.0
+VERSION=1.3.1
 PRETTY_108="OpenZFS on OS X $VERSION Mountain Lion.pkg"
 PRETTY_109="OpenZFS on OS X $VERSION Mavericks or higher.pkg"
 DMG_VOLNAME="OpenZFS on OS X $VERSION"
