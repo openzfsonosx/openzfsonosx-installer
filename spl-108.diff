@@ -1,5 +1,5 @@
 diff --git a/module/spl/Info.plist b/module/spl/Info.plist
-index 216642e..80b3009 100644
+index 216642e..a0293bc 100644
 --- a/module/spl/Info.plist
 +++ b/module/spl/Info.plist
 @@ -3,9 +3,9 @@
@@ -37,8 +37,7 @@ index 216642e..80b3009 100644
 -	<string>12C37</string>
 +	<string>13F26</string>
  	<key>DTSDKName</key>
--	<string>macosx10.8</string>
-+	<string>macosx10.8</string>
+ 	<string>macosx10.8</string>
  	<key>DTXcode</key>
 -	<string>0452</string>
 +	<string>0601</string>
@@ -60,7 +59,7 @@ index 216642e..80b3009 100644
  </dict>
  </plist>
 diff --git a/module/spl/KernelExports/Info.plist b/module/spl/KernelExports/Info.plist
-index 9523ed9..0edce81 100644
+index 9523ed9..81879d4 100644
 --- a/module/spl/KernelExports/Info.plist
 +++ b/module/spl/KernelExports/Info.plist
 @@ -3,13 +3,13 @@
@@ -94,7 +93,7 @@ index 9523ed9..0edce81 100644
  	<string>8.0.0d0</string>
  	<key>OSBundleRequired</key>
 diff --git a/module/spl/spl-osx.c b/module/spl/spl-osx.c
-index 2def943..d1adc68 100644
+index 2def943..45656ee 100644
 --- a/module/spl/spl-osx.c
 +++ b/module/spl/spl-osx.c
 @@ -199,7 +199,7 @@ extern kern_return_t _stop(kmod_info_t *ki, void *data);
