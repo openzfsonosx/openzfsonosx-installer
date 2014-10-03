@@ -8,7 +8,7 @@ fi
 
 should_make_108=1
 should_make_109=1
-should_make_dmg=0
+should_make_dmg=1
 require_version2_signature=1
 os_release_major_version=`uname -r | awk -F '.' '{print $1;}'`
 
