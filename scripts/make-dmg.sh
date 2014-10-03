@@ -87,29 +87,29 @@ rw_mntpoint="$( \
 
 do_rsync stage/ "$rw_mntpoint"/
 
-export RW_MNTPOINT_BASENAME="$(basename "$rw_mntpoint")"
-
 if [ $should_arrange -eq 1 ]
 then
 	echo '
-	tell application "Finder"
-		tell disk (system attribute "RW_MNTPOINT_BASENAME")
-			open
-			set current view of container window to icon view
-			set toolbar visible of container window to false
-			set statusbar visible of container window to false
-			set the bounds of container window to {400, 100, 850, 400}
-			set viewOptions to the icon view options of container window
-			set arrangement of viewOptions to not arranged
-			set icon size of viewOptions to 72
-			set background picture of viewOptions to file ".background:'dmg-background.png'"
-			close
-			open
-			update without registering applications
-			delay 2
+	on run argv
+		tell application "Finder"
+			tell disk (item 1 of argv)
+				open
+				set current view of container window to icon view
+				set toolbar visible of container window to false
+				set statusbar visible of container window to false
+				set the bounds of container window to {400, 100, 850, 400}
+				set viewOptions to the icon view options of container window
+				set arrangement of viewOptions to not arranged
+				set icon size of viewOptions to 72
+				set background picture of viewOptions to file ".background:'dmg-background.png'"
+				close
+				open
+				update without registering applications
+				delay 2
+			end tell
 		end tell
-	end tell
-' | osascript
+	end run
+' | osascript - "$(basename "$rw_mntpoint")"
 fi
 
 if [ $should_detach -eq 1 ]
