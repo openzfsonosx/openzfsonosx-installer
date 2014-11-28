@@ -54,7 +54,7 @@ index 216642e..a0293bc 100644
 -		<key>net.lundman.kernel.dependencies</key>
 -		<string>10.0.0</string>
 +		<key>net.lundman.kernel.dependencies.1.3.1</key>
-+		<string>1.3.1</string>
++		<string>12.0.0</string>
  	</dict>
  </dict>
  </plist>
