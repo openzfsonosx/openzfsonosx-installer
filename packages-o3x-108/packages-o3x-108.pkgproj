@@ -3577,7 +3577,7 @@
 				<key>OVERWRITE_PERMISSIONS</key>
 				<false/>
 				<key>VERSION</key>
-				<string>4.0</string>
+				<string>5.0</string>
 			</dict>
 			<key>TYPE</key>
 			<integer>0</integer>
