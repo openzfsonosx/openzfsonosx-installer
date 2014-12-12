@@ -101,6 +101,7 @@ rm -f /usr/lib/libzpool.a
 rm -f /usr/lib/libzpool.dylib
 rm -f /usr/lib/libzpool.la
 
+rm -f /usr/local/bin/arcstat.pl
 rm -f /usr/local/sbin/zdb
 rm -f /usr/local/sbin/zdb_static
 rm -f /usr/local/sbin/zed
@@ -112,6 +113,7 @@ rm -f /usr/local/sbin/zpool
 rm -f /usr/local/sbin/zstreamdump
 rm -f /usr/local/sbin/ztest
 rm -f /usr/local/sbin/ztest_static
+rm -f /usr/bin/arcstat.pl
 rm -f /usr/sbin/zdb
 rm -f /usr/sbin/zdb_static
 rm -f /usr/sbin/zed

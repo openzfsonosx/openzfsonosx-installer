@@ -141,10 +141,13 @@ if [ -d /Library/OpenZFSonOSX ] ; then
 fi
 
 
-echo "Removing symlinks to the zfs commands from /usr/sbin" | tee -a "$ULOG"
+echo "Removing zfs commands from /usr/sbin" | tee -a "$ULOG"
 for c in zdb zed zfs zinject zpool ztest zhack zpios zstreamdump; do
 	rm -fv /usr/sbin/${c}
 done
+
+echo "Removing arcstat.pl from /usr/bin" | tee -a "$ULOG"
+rm -fv /usr/bin/arcstat.pl
 
 echo "Removing mount_zfs and umount_zfs from /sbin" | tee -a "$ULOG"
 rm -f /sbin/mount_zfs
