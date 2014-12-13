@@ -24,3 +24,16 @@ index f05eb5f..465247f 100644
    __private_extern__ kmod_start_func_t *_realmain = 0;
    __private_extern__ kmod_stop_func_t  *_antimain = 0;
    __private_extern__ int _kext_apple_cc = __APPLE_CC__ ;
+diff --git a/META b/META
+index 4d5437b..0003d29 100644
+--- a/META
++++ b/META
+@@ -1,7 +1,7 @@
+ Meta:         1
+ Name:         zfs
+ Branch:       1.0
+-Version:      1.3.0
++Version:      1.3.1
+ Release:      1
+ Release-Tags: relext
+ License:      CDDL
