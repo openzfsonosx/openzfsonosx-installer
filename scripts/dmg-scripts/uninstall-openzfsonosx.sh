@@ -198,6 +198,7 @@ echo "Removing /usr/libexec/zfs" | tee -a "$ULOG"
 rm -rf /usr/libexec/zfs
 
 echo "Removing launchd plists" | tee -a "$ULOG"
+rm -f /Library/LaunchDaemons/org.openzfsonosx.InvariantDisks.plist
 rm -f /Library/LaunchDaemons/org.openzfsonosx.zed.plist
 rm -f /Library/LaunchDaemons/org.openzfsonosx.zed.service.plist
 rm -f /Library/LaunchDaemons/org.openzfsonosx.zpool-autoimport.plist

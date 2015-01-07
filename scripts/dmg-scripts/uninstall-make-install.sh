@@ -156,6 +156,7 @@ rm -f /etc/zfs/zed.d/zpool.import.sh
 rm -f /etc/zfs/zed.d/zvol.create.sh
 rm -f /etc/zfs/zed.d/zvol.remove.sh
 
+rm -f /Library/LaunchDaemons/org.openzfsonosx.InvariantDisks.plist
 rm -f /Library/LaunchDaemons/org.openzfsonosx.zed.plist
 rm -f /Library/LaunchDaemons/org.openzfsonosx.zed.service.plist
 rm -f /Library/LaunchDaemons/org.openzfsonosx.zpool-autoimport.plist
