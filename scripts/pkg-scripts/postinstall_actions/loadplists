@@ -5,7 +5,10 @@ echo $0 >> /tmp/o3x.log
 launchctl list | grep org.openzfsonosx.zed.service 1>/dev/null
 [ $? -eq 0 ] && /bin/launchctl remove org.openzfsonosx.zed.service
 
-/bin/launchctl load -w /Library/LaunchDaemons/org.openzfsonosx.zed.service.plist
+launchctl list | grep org.openzfsonosx.zed 1>/dev/null
+[ $? -eq 0 ] && /bin/launchctl remove org.openzfsonosx.zed
+
+/bin/launchctl load -w /Library/LaunchDaemons/org.openzfsonosx.zed.plist
 
 launchctl list | grep org.openzfsonosx.zpool-import-all 1>/dev/null
 [ $? -eq 0 ] && /bin/launchctl remove org.openzfsonosx.zpool-import-all

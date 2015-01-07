@@ -499,7 +499,7 @@
 											<key>GID</key>
 											<integer>0</integer>
 											<key>PATH</key>
-											<string>108/Library/LaunchDaemons/org.openzfsonosx.zed.service.plist</string>
+											<string>108/Library/LaunchDaemons/org.openzfsonosx.zed.plist</string>
 											<key>PATH_TYPE</key>
 											<integer>3</integer>
 											<key>PERMISSIONS</key>
@@ -1795,22 +1795,6 @@
 												<dict>
 													<key>CHILDREN</key>
 													<array>
-														<dict>
-															<key>CHILDREN</key>
-															<array/>
-															<key>GID</key>
-															<integer>0</integer>
-															<key>PATH</key>
-															<string>108/usr/libexec/zfs/launchd.d/zed.service.sh</string>
-															<key>PATH_TYPE</key>
-															<integer>3</integer>
-															<key>PERMISSIONS</key>
-															<integer>493</integer>
-															<key>TYPE</key>
-															<integer>3</integer>
-															<key>UID</key>
-															<integer>0</integer>
-														</dict>
 														<dict>
 															<key>CHILDREN</key>
 															<array/>

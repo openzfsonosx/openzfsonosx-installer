@@ -118,6 +118,7 @@ rm -f /usr/lib/libzpool.dylib
 rm -f /usr/lib/libzpool.la
 
 rm -f /usr/local/bin/arcstat.pl
+rm -f /usr/local/sbin/InvariantDisks
 rm -f /usr/local/sbin/zdb
 rm -f /usr/local/sbin/zdb_static
 rm -f /usr/local/sbin/zed
@@ -130,6 +131,7 @@ rm -f /usr/local/sbin/zstreamdump
 rm -f /usr/local/sbin/ztest
 rm -f /usr/local/sbin/ztest_static
 rm -f /usr/bin/arcstat.pl
+rm -f /usr/sbin/InvariantDisks
 rm -f /usr/sbin/zdb
 rm -f /usr/sbin/zdb_static
 rm -f /usr/sbin/zed
@@ -173,6 +175,7 @@ rm -f /etc/zfs/zed.d/zpool.import.sh
 rm -f /etc/zfs/zed.d/zvol.create.sh
 rm -f /etc/zfs/zed.d/zvol.remove.sh
 
+rm -f /Library/LaunchDaemons/org.openzfsonosx.zed.plist
 rm -f /Library/LaunchDaemons/org.openzfsonosx.zed.service.plist
 rm -f /Library/LaunchDaemons/org.openzfsonosx.zpool-autoimport.plist
 rm -f /Library/LaunchDaemons/org.openzfsonosx.zpool-import-all.plist

@@ -142,7 +142,7 @@ fi
 
 
 echo "Removing zfs commands from /usr/sbin" | tee -a "$ULOG"
-for c in zdb zed zfs zinject zpool ztest zhack zpios zstreamdump; do
+for c in InvariantDisks zdb zed zfs zinject zpool ztest zhack zpios zstreamdump; do
 	rm -fv /usr/sbin/${c}
 done
 
@@ -198,6 +198,7 @@ echo "Removing /usr/libexec/zfs" | tee -a "$ULOG"
 rm -rf /usr/libexec/zfs
 
 echo "Removing launchd plists" | tee -a "$ULOG"
+rm -f /Library/LaunchDaemons/org.openzfsonosx.zed.plist
 rm -f /Library/LaunchDaemons/org.openzfsonosx.zed.service.plist
 rm -f /Library/LaunchDaemons/org.openzfsonosx.zpool-autoimport.plist
 rm -f /Library/LaunchDaemons/org.openzfsonosx.zpool-import-all.plist
