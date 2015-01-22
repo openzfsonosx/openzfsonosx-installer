@@ -184,6 +184,6 @@ rm -f /Library/LaunchDaemons/org.openzfsonosx.zpool-import-all.plist
 rm -rf /System/Library/Filesystems/zfs.fs
 
 [ -d  /etc/zfs/zed.d ] && [ $(ls -A /etc/zfs/zed.d | wc -l) -eq 0 ] && rmdir /etc/zfs/zed.d
-[ -d  /etc/zfs/zed.d ] && [ $(ls -A /etc/zfs/zed.d | wc -l) -eq 0 ] && rmdir /etc/zfs
+[ -d  /etc/zfs ] && [ $(ls -A /etc/zfs | wc -l) -eq 0 ] && rmdir /etc/zfs
 
 exit 0

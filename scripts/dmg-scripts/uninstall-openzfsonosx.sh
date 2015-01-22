@@ -203,7 +203,7 @@ rm -f /etc/zfs/zed.d/zpool.destroy.sh
 rm -f /etc/zfs/zed.d/zpool.import.sh
 rm -f /etc/zfs/zed.d/zvol.create.sh
 rm -f /etc/zfs/zed.d/zvol.remove.sh
-[ -d /etc/zfs/zed.d ] && rmdir /etc/zfs/zed.d
+[ -d  /etc/zfs/zed.d ] && [ $(ls -A /etc/zfs/zed.d | wc -l) -eq 0 ] && rmdir /etc/zfs/zed.d
 
 rm -f /etc/zfs/zpool.cache.tmp
 rm -f /etc/zfs/zpool.cache
@@ -211,7 +211,7 @@ rm -f /etc/zfs/vdev_id.conf.alias.example
 rm -f /etc/zfs/vdev_id.conf.sas_direct.example
 rm -f /etc/zfs/vdev_id.conf.multipath.example
 rm -f /etc/zfs/vdev_id.conf.sas_switch.example
-[ -d /etc/zfs ] && rmdir /etc/zfs
+[ -d  /etc/zfs ] && [ $(ls -A /etc/zfs | wc -l) -eq 0 ] && rmdir /etc/zfs
 
 echo "Removing /usr/libexec/zfs" | tee -a "$ULOG"
 rm -rf /usr/libexec/zfs
