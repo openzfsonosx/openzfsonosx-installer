@@ -20,6 +20,9 @@ launchctl list | grep org.openzfsonosx.InvariantDisks 1>/dev/null
 
 /bin/launchctl load -w /Library/LaunchDaemons/org.openzfsonosx.InvariantDisks.plist
 
+launchctl list | grep org.openzfsonosx.zpool-autoimport 1>/dev/null
+[ $? -eq 0 ] && /bin/launchctl remove org.openzfsonosx.zpool-autoimport
+
 launchctl list | grep org.openzfsonosx.zpool-import-all 1>/dev/null
 [ $? -eq 0 ] && /bin/launchctl remove org.openzfsonosx.zpool-import-all
 
