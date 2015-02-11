@@ -2,6 +2,11 @@
 date -j -f "%a %b %d %T %Z %Y" "`date`" "+%s" >> /tmp/o3x.log
 echo $0 >> /tmp/o3x.log
 
+launchctl list | grep org.openzfsonosx.zconfigd 1>/dev/null
+[ $? -eq 0 ] && /bin/launchctl remove org.openzfsonosx.zconfigd
+
+/bin/launchctl load -w /Library/LaunchDaemons/org.openzfsonosx.zconfigd.plist
+
 launchctl list | grep org.openzfsonosx.zed.service 1>/dev/null
 [ $? -eq 0 ] && /bin/launchctl remove org.openzfsonosx.zed.service
 

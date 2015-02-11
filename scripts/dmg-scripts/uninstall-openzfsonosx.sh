@@ -118,28 +118,34 @@ set -e
 [ $grepret -eq 0 ] && /bin/launchctl remove org.openzfsonosx.InvariantDisks
 
 set +e
-launchctl list | grep org.openzfsonosx.zed 1>/dev/null
+launchctl list | grep org.openzfsonosx.zconfigd 1>/dev/null
 grepret2=$?
 set -e
-[ $grepret2 -eq 0 ] && /bin/launchctl remove org.openzfsonosx.zed
+[ $grepret2 -eq 0 ] && /bin/launchctl remove org.openzfsonosx.zconfigd
+
+set +e
+launchctl list | grep org.openzfsonosx.zed 1>/dev/null
+grepret3=$?
+set -e
+[ $grepret3 -eq 0 ] && /bin/launchctl remove org.openzfsonosx.zed
 
 set +e
 launchctl list | grep org.openzfsonosx.zed.service 1>/dev/null
-grepret3=$?
+grepret4=$?
 set -e
-[ $grepret3 -eq 0 ] && /bin/launchctl remove org.openzfsonosx.zed.service
+[ $grepret4 -eq 0 ] && /bin/launchctl remove org.openzfsonosx.zed.service
 
 set +e
 launchctl list | grep org.openzfsonosx.zpool-autoimport 1>/dev/null
-grepret4=$?
+grepret5=$?
 set -e
-[ $grepret4 -eq 0 ] && /bin/launchctl remove org.openzfsonosx.zpool-autoimport
+[ $grepret5 -eq 0 ] && /bin/launchctl remove org.openzfsonosx.zpool-autoimport
 
 set +e
 launchctl list | grep org.openzfsonosx.zpool-import-all 1>/dev/null
-grepret5=$?
+grepret6=$?
 set -e
-[ $grepret5 -eq 0 ] && /bin/launchctl remove org.openzfsonosx.zpool-import-all
+[ $grepret6 -eq 0 ] && /bin/launchctl remove org.openzfsonosx.zpool-import-all
 
 echo "Deleting installed files" | tee -a "$ULOG"
 echo "Removing spl.kext" | tee -a "$ULOG"
@@ -218,6 +224,7 @@ rm -rf /usr/libexec/zfs
 
 echo "Removing launchd plists" | tee -a "$ULOG"
 rm -f /Library/LaunchDaemons/org.openzfsonosx.InvariantDisks.plist
+rm -f /Library/LaunchDaemons/org.openzfsonosx.zconfigd.plist
 rm -f /Library/LaunchDaemons/org.openzfsonosx.zed.plist
 rm -f /Library/LaunchDaemons/org.openzfsonosx.zed.service.plist
 rm -f /Library/LaunchDaemons/org.openzfsonosx.zpool-autoimport.plist
