@@ -1,0 +1,51 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1187\cocoasubrtf400
+{\fonttbl\f0\fnil\fcharset0 LucidaGrande;\f1\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;\red17\green85\blue204;}
+\margl1440\margr1440\vieww14200\viewh15380\viewkind0
+\deftab720
+\pard\pardeftab720\ri720\sl276\slmult1
+
+\f0\b\fs24 \cf0 Upgrading ZFS Pools
+\f1\b0 \
+\
+After upgrading the OpenZFS on OS X software, some consideration is required before upgrading the feature flags (or version) of your ZFS pools.\
+\
+Quoting from the open-zfs.org wiki,\
+\
+\pard\pardeftab720\li720\ri720\sl276\slmult1
+\cf0 One of the first OpenZFS projects was a new versioning system called "feature flags" which tags on-disk format changes with unique names. The system supports both completely independent format changes, as well as format changes that depend on each other. A pool's on-disk format is portable between OpenZFS implementations as long as all of the feature flags in use by the pool are supported by both implementations.\
+\
+All OpenZFS implementations now support feature flags and regularly port features between them to remain compatible.\
+\pard\pardeftab720\ri720\sl276\slmult1
+\cf0 \
+Upgrading your ZFS pools\'92 feature flags is a one way process. 
+\b After upgrading the feature flags on your ZFS pools, you cannot use them with previous versions of OpenZFS on OS X.
+\b0 \
+\
+Unless you need specific feature flags added by the newer version of the OpenZFS on OS X software, it is perfectly safe to leave your ZFS pools with their current set of feature flags while using them with the latest version of the OpenZFS on OS X.\
+\
+Once you are certain you wish to upgrade the feature flags on all of your imported ZFS pools, the procedure is, as follows:\
+\
+$ sudo zpool upgrade -a\
+$ sudo zfs upgrade -a\
+\
+$ zpool status\
+\
+Alternatively, you can enable feature flags one at time, as needed. For example, to enable lz4 (probably already enabled)\
+\
+$ sudo zpool set feature@lz4_compress=enabled <poolname>\
+\
+If you are on pool version 28, or earlier, and wish to upgrade to pool version 5000 with all the new feature flags, the procedure is the same as above.\
+\
+
+\f0\b References
+\f1\b0 \
+\
+\pard\pardeftab720\ri720\sl276\slmult1
+{\field{\*\fldinst{HYPERLINK "http://blog.vx.sk/archives/44-OpenZFS-Feature-Flags-Compatibility-Matrix.html"}}{\fldrslt \cf2 \ul \ulc2 http://blog.vx.sk/archives/44-OpenZFS-Feature-Flags-Compatibility-Matrix.html}}\cf2 \ul \ulc2 \
+\pard\pardeftab720\li1000\fi-980\ri720\sl276\slmult1
+{\field{\*\fldinst{HYPERLINK "https://openzfsonosx.org/wiki/Zpool#Feature_flags"}}{\fldrslt \cf2 https://openzfsonosx.org/wiki/Zpool#Feature_flags}}\
+\pard\pardeftab720\li1000\fi-980\ri720\sl276\slmult1
+{\field{\*\fldinst{HYPERLINK "http://open-zfs.org/wiki/Features"}}{\fldrslt \cf2 http://open-zfs.org/wiki/Features}}\
+\pard\pardeftab720\li1000\fi-980\ri720\sl276\slmult1
+{\field{\*\fldinst{HYPERLINK "https://openzfsonosx.org/wiki/Changelog"}}{\fldrslt \cf2 https://openzfsonosx.org/wiki/Changelog}}}
