@@ -136,6 +136,7 @@ rm -f /etc/zfs/vdev_id.conf.alias.example
 rm -f /etc/zfs/vdev_id.conf.multipath.example
 rm -f /etc/zfs/vdev_id.conf.sas_direct.example
 rm -f /etc/zfs/vdev_id.conf.sas_switch.example
+rm -f /etc/zfs/zsysctl.conf.example
 
 rm -f /etc/zfs/zed.d/all-debug.sh
 rm -f /etc/zfs/zed.d/all-syslog.sh

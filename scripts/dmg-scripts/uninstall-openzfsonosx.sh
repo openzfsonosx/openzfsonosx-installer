@@ -217,6 +217,7 @@ rm -f /etc/zfs/vdev_id.conf.alias.example
 rm -f /etc/zfs/vdev_id.conf.sas_direct.example
 rm -f /etc/zfs/vdev_id.conf.multipath.example
 rm -f /etc/zfs/vdev_id.conf.sas_switch.example
+rm -f /etc/zfs/zsysctl.conf.example
 [ -d  /etc/zfs ] && [ $(ls -A /etc/zfs | wc -l) -eq 0 ] && rmdir /etc/zfs
 
 echo "Removing /usr/libexec/zfs" | tee -a "$ULOG"
