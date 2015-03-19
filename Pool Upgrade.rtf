@@ -5,10 +5,10 @@
 \deftab720
 \pard\pardeftab720\ri720\sl276\slmult1
 
-\f0\b\fs24 \cf0 Upgrading ZFS Pools
+\f0\b\fs24 \cf0 Upgrading ZFS Storage Pools
 \f1\b0 \
 \
-After upgrading the OpenZFS on OS X software, some consideration is required before upgrading the feature flags (or version) of your ZFS pools.\
+After installing, or upgrading to, the latest version of OpenZFS on OS X, some consideration is required before upgrading the feature flags of your pools.\
 \
 Quoting from the open-zfs.org wiki,\
 \
@@ -18,20 +18,24 @@ Quoting from the open-zfs.org wiki,\
 All OpenZFS implementations now support feature flags and regularly port features between them to remain compatible.\
 \pard\pardeftab720\ri720\sl276\slmult1
 \cf0 \
-Upgrading your ZFS pools\'92 feature flags is a one way process. 
-\b After upgrading the feature flags on your ZFS pools, you cannot use them with previous versions of OpenZFS on OS X.
-\b0 \
+Upgrading a pool's feature flags is a one way process. 
+\b If you enable new feature flags on your pools, you cannot use them with any previous version of OpenZFS on OS X unless that version also supports all of the flags you have enabled. 
+\b0 In general, you can only use a given pool with a particular OpenZFS distribution (including those on other platforms) if that distribution supports all of the feature flags enabled in the pool.\
 \
-Unless you need specific feature flags added by the newer version of the OpenZFS on OS X software, it is perfectly safe to leave your ZFS pools with their current set of feature flags while using them with the latest version of the OpenZFS on OS X.\
+Since it is perfectly safe to use your existing pools with whatever set of feature flags they already have enabled with the latest version of OpenZFS on OS X, you may choose to enable new features on an as-needed basis, or you may choose to enable them all at once.\
 \
-Once you are certain you wish to upgrade the feature flags on all of your imported ZFS pools, the procedure is, as follows:\
+If you do wish to enable 
+\b all
+\b0  of the feature flags on 
+\b all
+\b0  of your imported ZFS pools, the procedure is, as follows:\
 \
 $ sudo zpool upgrade -a\
 $ sudo zfs upgrade -a\
 \
 $ zpool status\
 \
-Alternatively, you can enable feature flags one at time, as needed. For example, to enable lz4 (probably already enabled)\
+Alternatively, you can enable feature flags one at time, as needed. For example, to enable lz4 (probably already enabled),\
 \
 $ sudo zpool set feature@lz4_compress=enabled <poolname>\
 \
