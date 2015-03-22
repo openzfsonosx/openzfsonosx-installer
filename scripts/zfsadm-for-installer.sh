@@ -246,6 +246,7 @@ ZFS_CONFIGURE_ARRAY+=(${SPL_REPOSITORY_DIR:+--with-spl="$SPL_REPOSITORY_DIR"})
 ZFS_CONFIGURE_ARRAY+=(${INSTALL_DIR:+--with-kernel-modprefix="$INSTALL_DIR"})
 
 CFLAGS_ARRAY=(-g)
+CFLAGS_ARRAY+=(-Os)
 CFLAGS_ARRAY+=(-Wno-tautological-constant-out-of-range-compare)
 
 if [ x"$TARGET_OS_X_VERSION" = x"10.8" ]
