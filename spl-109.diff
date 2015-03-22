@@ -24,15 +24,3 @@ index 36eebc8..f4969b2 100644
  __private_extern__ kmod_start_func_t *_realmain = spl_start;
  __private_extern__ kmod_stop_func_t *_antimain = spl_stop;
  __private_extern__ int _kext_apple_cc = __APPLE_CC__ ;
-diff --git a/META b/META
-index de1ae02..65aa4b6 100644
---- a/META
-+++ b/META
-@@ -1,6 +1,6 @@
- Meta:         1
- Name:         spl
- Branch:       1.0
--Version:      1.3.0
-+Version:      1.3.1
- Release:      1
- Release-Tags: relext
