@@ -1,5 +1,5 @@
 diff --git a/module/zfs/zfs_osx.cpp b/module/zfs/zfs_osx.cpp
-index f05eb5f..e43503d 100644
+index 3235abf..8ee096f 100644
 --- a/module/zfs/zfs_osx.cpp
 +++ b/module/zfs/zfs_osx.cpp
 @@ -22,7 +22,7 @@ extern "C" {

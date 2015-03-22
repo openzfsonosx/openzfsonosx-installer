@@ -1,10 +1,13 @@
 diff --git a/module/spl/Info.plist b/module/spl/Info.plist
-index 948eff7..78db2d3 100644
+index 531f4db..6e09d77 100644
 --- a/module/spl/Info.plist
 +++ b/module/spl/Info.plist
-@@ -31,7 +31,7 @@
+@@ -29,9 +29,9 @@
+ 	<key>DTPlatformVersion</key>
+ 	<string>GM</string>
  	<key>DTSDKBuild</key>
- 	<string>13F26</string>
+-	<string>12F37</string>
++	<string>13F26</string>
  	<key>DTSDKName</key>
 -	<string>macosx10.8</string>
 +	<string>macosx10.9</string>
