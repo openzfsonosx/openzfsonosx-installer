@@ -242,6 +242,7 @@ ZFS_CONFIGURE_ARRAY+=(CXX=clang++)
 ZFS_CONFIGURE_ARRAY+=(OBJCXX=clang++)
 ZFS_CONFIGURE_ARRAY+=(--prefix=/usr)
 ZFS_CONFIGURE_ARRAY+=(--sysconfdir=/etc)
+ZFS_CONFIGURE_ARRAY+=(--localstatedir=/var)
 ZFS_CONFIGURE_ARRAY+=(${SPL_REPOSITORY_DIR:+--with-spl="$SPL_REPOSITORY_DIR"})
 ZFS_CONFIGURE_ARRAY+=(${INSTALL_DIR:+--with-kernel-modprefix="$INSTALL_DIR"})
 
