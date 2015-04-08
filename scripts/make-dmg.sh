@@ -61,6 +61,7 @@ do_rsync resources/dmg-background.png stage/.background/
 do_rsync docs/ "stage/Docs & Scripts/Docs/"
 do_rsync resources/English.lproj/ReadMe.rtf stage/
 do_rsync Device\ Names.rtf stage/
+do_rsync Unlinked\ Drain.rtf stage/
 do_rsync Pool\ Upgrade.rtf stage/
 do_rsync Memory\ Utilization.rtf stage/
 do_rsync scripts/dmg-scripts/ "stage/Docs & Scripts/"
