@@ -34,8 +34,10 @@ export ZFS_REPOSITORY_URL="https://github.com/openzfsonosx/zfs"
 
 export ML_SPL_DIFF="$PWD"/spl-108.diff
 export MAV_SPL_DIFF="$PWD"/spl-109.diff
+export YOS_SPL_DIFF="$PWD"/spl-1010.diff
 export ML_ZFS_DIFF="$PWD"/zfs-108.diff
 export MAV_ZFS_DIFF="$PWD"/zfs-109.diff
+export YOS_ZFS_DIFF="$PWD"/zfs-1010.diff
 
 export BASH_PATH=bash
 export CAT=cat
@@ -696,8 +698,11 @@ then
 	if [ x"$TARGET_OS_X_VERSION" = x"10.8" ]
 	then
 		[ -e "${ML_SPL_DIFF}" ] && $GIT apply "${ML_SPL_DIFF}"
-	else
+	elif [ x"$TARGET_OS_X_VERSION" = x"10.9" ]
+	then
 		[ -e "${MAV_SPL_DIFF}" ] && $GIT apply "${MAV_SPL_DIFF}"
+	else
+		[ -e "${YOS_SPL_DIFF}" ] && $GIT apply "${YOS_SPL_DIFF}"
 	fi
 	$SUDO -u "$OWNER" $BASH_PATH "$SPL_REPOSITORY_DIR"/autogen.sh
 	$SUDO -u "$OWNER" $BASH_PATH "$SPL_REPOSITORY_DIR"/configure\
@@ -707,8 +712,11 @@ then
 	if [ x"$TARGET_OS_X_VERSION" = x"10.8" ]
 	then
 		[ -e "${ML_ZFS_DIFF}" ] && $GIT apply "${ML_ZFS_DIFF}"
-	else
+	elif  [ x"$TARGET_OS_X_VERSION" = x"10.9" ]
+	then
 		[ -e "${MAV_ZFS_DIFF}" ] && $GIT apply "${MAV_ZFS_DIFF}"
+	else
+		[ -e "${YOS_ZFS_DIFF}" ] && $GIT apply "${YOS_ZFS_DIFF}"
 	fi
 	$SUDO -u "$OWNER" $BASH_PATH "$ZFS_REPOSITORY_DIR"/autogen.sh
 	$SUDO -u "$OWNER" $BASH_PATH "$ZFS_REPOSITORY_DIR"/configure\

@@ -2,7 +2,8 @@
 
 VERSION=1.3.1
 PRETTY_108="OpenZFS on OS X $VERSION Mountain Lion.pkg"
-PRETTY_109="OpenZFS on OS X $VERSION Mavericks or higher.pkg"
+PRETTY_109="OpenZFS on OS X $VERSION Mavericks.pkg"
+PRETTY_1010="OpenZFS on OS X $VERSION Yosemite or higher.pkg"
 DMG_VOLNAME="OpenZFS on OS X $VERSION"
 
 should_arrange=1
@@ -74,6 +75,11 @@ fi
 if [ -f out-109-signed.pkg ]
 then
 	do_rsync out-109-signed.pkg stage/"$PRETTY_109"
+fi
+
+if [ -f out-1010-signed.pkg ]
+then
+	do_rsync out-1010-signed.pkg stage/"$PRETTY_1010"
 fi
 
 TMPDIR=$PWD

@@ -23,11 +23,14 @@ then
 	exit 1
 fi
 
-if [[ $1 == *8* || $0 == *8* || $PWD == *8* ]]
+if [[ $1 == *1010* || $0 == *1010* || $PWD == *1010* ]]
 then
-	OS=108
-else
+	OS=1010
+elif [[ $1 == *9* || $0 == *9* || $PWD == *9* ]]
+then
 	OS=109
+else
+	OS=108
 fi
 
 if [ $require_version2_signature -eq 1 -a $os_release_major_version -lt 13 -a $OS -gt 108 ]
