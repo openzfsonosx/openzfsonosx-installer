@@ -56,9 +56,9 @@ cscope.*
 *.tar.gz
 bertin.mode1v3
 
-out-108.pkg
-out-109.pkg
-out-108-signed.pkg
-out-109-signed.pkg
-/stage
-/rw.*
+
+/out-108-signed.pkg
+/out-109-signed.pkg
+/packages-o3x-108/out-108-signed.pkg
+/packages-o3x-109/out-109-signed.pkg
+/stage/
