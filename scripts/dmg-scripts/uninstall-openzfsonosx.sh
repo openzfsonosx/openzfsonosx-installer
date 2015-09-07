@@ -171,6 +171,28 @@ for c in InvariantDisks zdb zed zfs zinject zpool ztest zhack zpios zstreamdump;
 	rm -fv /usr/sbin/${c}
 done
 
+echo "Removing zfs libraries from /usr/lib" | tee -a "$ULOG"
+rm -f /usr/lib/libnvpair.1.dylib
+rm -f /usr/lib/libnvpair.a
+rm -f /usr/lib/libnvpair.dylib
+rm -f /usr/lib/libnvpair.la
+rm -f /usr/lib/libuutil.1.dylib
+rm -f /usr/lib/libuutil.a
+rm -f /usr/lib/libuutil.dylib
+rm -f /usr/lib/libuutil.la
+rm -f /usr/lib/libzfs.2.dylib
+rm -f /usr/lib/libzfs.a
+rm -f /usr/lib/libzfs.dylib
+rm -f /usr/lib/libzfs.la
+rm -f /usr/lib/libzfs_core.1.dylib
+rm -f /usr/lib/libzfs_core.a
+rm -f /usr/lib/libzfs_core.dylib
+rm -f /usr/lib/libzfs_core.la
+rm -f /usr/lib/libzpool.1.dylib
+rm -f /usr/lib/libzpool.a
+rm -f /usr/lib/libzpool.dylib
+rm -f /usr/lib/libzpool.la
+
 echo "Removing arcstat.pl from /usr/bin" | tee -a "$ULOG"
 rm -fv /usr/bin/arcstat.pl
 
