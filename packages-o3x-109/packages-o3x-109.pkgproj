@@ -77,22 +77,6 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>109/etc/zfs/zed.d/checksum-email.sh</string>
-													<key>PATH_TYPE</key>
-													<integer>3</integer>
-													<key>PERMISSIONS</key>
-													<integer>493</integer>
-													<key>TYPE</key>
-													<integer>3</integer>
-													<key>UID</key>
-													<integer>0</integer>
-												</dict>
-												<dict>
-													<key>CHILDREN</key>
-													<array/>
-													<key>GID</key>
-													<integer>0</integer>
-													<key>PATH</key>
 													<string>109/etc/zfs/zed.d/checksum-spare.sh</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
@@ -141,7 +125,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>109/etc/zfs/zed.d/data-email.sh</string>
+													<string>109/etc/zfs/zed.d/data-notify.sh</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -157,7 +141,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>109/etc/zfs/zed.d/io-email.sh</string>
+													<string>109/etc/zfs/zed.d/io-notify.sh</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -189,38 +173,6 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>109/etc/zfs/zed.d/resilver.finish-email.sh</string>
-													<key>PATH_TYPE</key>
-													<integer>3</integer>
-													<key>PERMISSIONS</key>
-													<integer>493</integer>
-													<key>TYPE</key>
-													<integer>3</integer>
-													<key>UID</key>
-													<integer>0</integer>
-												</dict>
-												<dict>
-													<key>CHILDREN</key>
-													<array/>
-													<key>GID</key>
-													<integer>0</integer>
-													<key>PATH</key>
-													<string>109/etc/zfs/zed.d/scrub.finish-email.sh</string>
-													<key>PATH_TYPE</key>
-													<integer>3</integer>
-													<key>PERMISSIONS</key>
-													<integer>493</integer>
-													<key>TYPE</key>
-													<integer>3</integer>
-													<key>UID</key>
-													<integer>0</integer>
-												</dict>
-												<dict>
-													<key>CHILDREN</key>
-													<array/>
-													<key>GID</key>
-													<integer>0</integer>
-													<key>PATH</key>
 													<string>109/etc/zfs/zed.d/snapshot.mount.sh</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
@@ -237,11 +189,27 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>109/etc/zfs/zed.d/zed.rc</string>
+													<string>109/etc/zfs/zed.d/zed-functions.sh</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
 													<integer>420</integer>
+													<key>TYPE</key>
+													<integer>3</integer>
+													<key>UID</key>
+													<integer>0</integer>
+												</dict>
+												<dict>
+													<key>CHILDREN</key>
+													<array/>
+													<key>GID</key>
+													<integer>0</integer>
+													<key>PATH</key>
+													<string>109/etc/zfs/zed.d/zed.rc</string>
+													<key>PATH_TYPE</key>
+													<integer>3</integer>
+													<key>PERMISSIONS</key>
+													<integer>384</integer>
 													<key>TYPE</key>
 													<integer>3</integer>
 													<key>UID</key>
@@ -2067,7 +2035,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>109/usr/libexec/zfs/zed.d/checksum-email.sh</string>
+															<string>109/usr/libexec/zfs/zed.d/checksum-notify.sh</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
@@ -2131,7 +2099,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>109/usr/libexec/zfs/zed.d/data-email.sh</string>
+															<string>109/usr/libexec/zfs/zed.d/data-notify.sh</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
@@ -2147,7 +2115,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>109/usr/libexec/zfs/zed.d/generic-email.sh</string>
+															<string>109/usr/libexec/zfs/zed.d/generic-notify.sh</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
@@ -2163,7 +2131,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>109/usr/libexec/zfs/zed.d/io-email.sh</string>
+															<string>109/usr/libexec/zfs/zed.d/io-notify.sh</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
@@ -2180,38 +2148,6 @@
 															<integer>0</integer>
 															<key>PATH</key>
 															<string>109/usr/libexec/zfs/zed.d/io-spare.sh</string>
-															<key>PATH_TYPE</key>
-															<integer>3</integer>
-															<key>PERMISSIONS</key>
-															<integer>493</integer>
-															<key>TYPE</key>
-															<integer>3</integer>
-															<key>UID</key>
-															<integer>0</integer>
-														</dict>
-														<dict>
-															<key>CHILDREN</key>
-															<array/>
-															<key>GID</key>
-															<integer>0</integer>
-															<key>PATH</key>
-															<string>109/usr/libexec/zfs/zed.d/resilver.finish-email.sh</string>
-															<key>PATH_TYPE</key>
-															<integer>3</integer>
-															<key>PERMISSIONS</key>
-															<integer>493</integer>
-															<key>TYPE</key>
-															<integer>3</integer>
-															<key>UID</key>
-															<integer>0</integer>
-														</dict>
-														<dict>
-															<key>CHILDREN</key>
-															<array/>
-															<key>GID</key>
-															<integer>0</integer>
-															<key>PATH</key>
-															<string>109/usr/libexec/zfs/zed.d/scrub.finish-email.sh</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
@@ -3849,7 +3785,7 @@
 				<key>OVERWRITE_PERMISSIONS</key>
 				<false/>
 				<key>VERSION</key>
-				<string>5.0</string>
+				<string>6.0</string>
 			</dict>
 			<key>UUID</key>
 			<string>DA78ACD3-B7AF-426E-A34D-143E0C00A983</string>
