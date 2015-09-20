@@ -211,18 +211,25 @@ rm -fv /usr/share/man/man8/zpool.8
 rm -fv /usr/share/man/man8/zstreamdump.8
 
 echo "Removing /etc/zfs/zed.d" | tee -a "$ULOG"
-rm -fv /etc/zfs/zed.d/all-debug.sh
-rm -fv /etc/zfs/zed.d/all-syslog.sh
 rm -fv /etc/zfs/zed.d/checksum-email.sh
-rm -fv /etc/zfs/zed.d/checksum-spare.sh
-rm -fv /etc/zfs/zed.d/config.remove.sh
-rm -fv /etc/zfs/zed.d/config.sync.sh
 rm -fv /etc/zfs/zed.d/data-email.sh
 rm -fv /etc/zfs/zed.d/generic-email.sh
 rm -fv /etc/zfs/zed.d/io-email.sh
-rm -fv /etc/zfs/zed.d/io-spare.sh
 rm -fv /etc/zfs/zed.d/resilver.finish-email.sh
 rm -fv /etc/zfs/zed.d/scrub.finish-email.sh
+
+rm -fv /etc/zfs/zed.d/all-debug.sh
+rm -fv /etc/zfs/zed.d/all-syslog.sh
+rm -fv /etc/zfs/zed.d/checksum-notify.sh
+rm -fv /etc/zfs/zed.d/checksum-spare.sh
+rm -fv /etc/zfs/zed.d/config.remove.sh
+rm -fv /etc/zfs/zed.d/config.sync.sh
+rm -fv /etc/zfs/zed.d/data-notify.sh
+rm -fv /etc/zfs/zed.d/generic-notify.sh
+rm -fv /etc/zfs/zed.d/io-notify.sh
+rm -fv /etc/zfs/zed.d/io-spare.sh
+rm -fv /etc/zfs/zed.d/resilver.finish-notify.sh
+rm -fv /etc/zfs/zed.d/scrub.finish-notify.sh
 rm -fv /etc/zfs/zed.d/snapshot.mount.sh
 rm -fv /etc/zfs/zed.d/zed.rc
 rm -fv /etc/zfs/zed.d/zpool.destroy.sh
