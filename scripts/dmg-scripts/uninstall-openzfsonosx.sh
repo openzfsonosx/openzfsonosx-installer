@@ -155,106 +155,104 @@ echo "Removing zfs.kext" | tee -a "$ULOG"
 rm -rfv /System/Library/Extensions/zfs.kext
 rm -rfv /Library/Extensions/zfs.kext
 echo "Removing zfs userland from /Library/OpenZFSonOSX" | tee -a "$ULOG"
-rm -rfv /Library/OpenZFSonOSX/ZFSCommandLineTools
-if [ -d /Library/OpenZFSonOSX ] ; then 
-	if [ "$(ls -1 /Library/OpenZFSonOSX/ | wc -l)" -le 1 ] ; then
-		[ -f /Library/OpenZFSonOSX/.DS_Store ] && rm /Library/OpenZFSonOSX/.DS_Store
-		if [ "$(ls -1 /Library/OpenZFSonOSX/ | wc -l)" -eq 0 ] ; then
-			rmdir /Library/OpenZFSonOSX
-		fi
-	fi
-fi
-
+rm -rfv /Library/OpenZFSonOSX
 
 echo "Removing zfs commands from /usr/sbin" | tee -a "$ULOG"
-for c in InvariantDisks zdb zed zfs zinject zpool ztest zhack zpios zstreamdump; do
-	rm -fv /usr/sbin/${c}
-done
+rm -fv /usr/sbin/InvariantDisks
+rm -fv /usr/sbin/zdb
+rm -fv /usr/sbin/zed
+rm -fv /usr/sbin/zfs
+rm -fv /usr/sbin/zinject
+rm -fv /usr/sbin/zpool
+rm -fv /usr/sbin/ztest
+rm -fv /usr/sbin/zhack
+rm -fv /usr/sbin/zpios
+rm -fv /usr/sbin/zstreamdump
 
 echo "Removing zfs libraries from /usr/lib" | tee -a "$ULOG"
-rm -f /usr/lib/libnvpair.1.dylib
-rm -f /usr/lib/libnvpair.a
-rm -f /usr/lib/libnvpair.dylib
-rm -f /usr/lib/libnvpair.la
-rm -f /usr/lib/libuutil.1.dylib
-rm -f /usr/lib/libuutil.a
-rm -f /usr/lib/libuutil.dylib
-rm -f /usr/lib/libuutil.la
-rm -f /usr/lib/libzfs.2.dylib
-rm -f /usr/lib/libzfs.a
-rm -f /usr/lib/libzfs.dylib
-rm -f /usr/lib/libzfs.la
-rm -f /usr/lib/libzfs_core.1.dylib
-rm -f /usr/lib/libzfs_core.a
-rm -f /usr/lib/libzfs_core.dylib
-rm -f /usr/lib/libzfs_core.la
-rm -f /usr/lib/libzpool.1.dylib
-rm -f /usr/lib/libzpool.a
-rm -f /usr/lib/libzpool.dylib
-rm -f /usr/lib/libzpool.la
+rm -fv /usr/lib/libnvpair.1.dylib
+rm -fv /usr/lib/libnvpair.a
+rm -fv /usr/lib/libnvpair.dylib
+rm -fv /usr/lib/libnvpair.la
+rm -fv /usr/lib/libuutil.1.dylib
+rm -fv /usr/lib/libuutil.a
+rm -fv /usr/lib/libuutil.dylib
+rm -fv /usr/lib/libuutil.la
+rm -fv /usr/lib/libzfs.2.dylib
+rm -fv /usr/lib/libzfs.a
+rm -fv /usr/lib/libzfs.dylib
+rm -fv /usr/lib/libzfs.la
+rm -fv /usr/lib/libzfs_core.1.dylib
+rm -fv /usr/lib/libzfs_core.a
+rm -fv /usr/lib/libzfs_core.dylib
+rm -fv /usr/lib/libzfs_core.la
+rm -fv /usr/lib/libzpool.1.dylib
+rm -fv /usr/lib/libzpool.a
+rm -fv /usr/lib/libzpool.dylib
+rm -fv /usr/lib/libzpool.la
 
 echo "Removing arcstat.pl from /usr/bin" | tee -a "$ULOG"
 rm -fv /usr/bin/arcstat.pl
 
 echo "Removing mount_zfs and umount_zfs from /sbin" | tee -a "$ULOG"
-rm -f /sbin/mount_zfs
-rm -f /sbin/umount_zfs
+rm -fv /sbin/mount_zfs
+rm -fv /sbin/umount_zfs
 
 echo "Removing man pages" | tee -a "$ULOG"
-rm -f /usr/share/man/man1/zhack.1
-rm -f /usr/share/man/man1/zpios.1
-rm -f /usr/share/man/man1/ztest.1
-rm -f /usr/share/man/man5/zpool-features.5
-rm -f /usr/share/man/man8/zdb.8
-rm -f /usr/share/man/man8/zed.8
-rm -f /usr/share/man/man8/zfs.8
-rm -f /usr/share/man/man8/zinject.8
-rm -f /usr/share/man/man8/zpool.8
-rm -f /usr/share/man/man8/zstreamdump.8
+rm -fv /usr/share/man/man1/zhack.1
+rm -fv /usr/share/man/man1/zpios.1
+rm -fv /usr/share/man/man1/ztest.1
+rm -fv /usr/share/man/man5/zpool-features.5
+rm -fv /usr/share/man/man8/zdb.8
+rm -fv /usr/share/man/man8/zed.8
+rm -fv /usr/share/man/man8/zfs.8
+rm -fv /usr/share/man/man8/zinject.8
+rm -fv /usr/share/man/man8/zpool.8
+rm -fv /usr/share/man/man8/zstreamdump.8
 
 echo "Removing /etc/zfs/zed.d" | tee -a "$ULOG"
-rm -f /etc/zfs/zed.d/all-debug.sh
-rm -f /etc/zfs/zed.d/all-syslog.sh
-rm -f /etc/zfs/zed.d/checksum-email.sh
-rm -f /etc/zfs/zed.d/checksum-spare.sh
-rm -f /etc/zfs/zed.d/config.remove.sh
-rm -f /etc/zfs/zed.d/config.sync.sh
-rm -f /etc/zfs/zed.d/data-email.sh
-rm -f /etc/zfs/zed.d/generic-email.sh
-rm -f /etc/zfs/zed.d/io-email.sh
-rm -f /etc/zfs/zed.d/io-spare.sh
-rm -f /etc/zfs/zed.d/resilver.finish-email.sh
-rm -f /etc/zfs/zed.d/scrub.finish-email.sh
-rm -f /etc/zfs/zed.d/snapshot.mount.sh
-rm -f /etc/zfs/zed.d/zed.rc
-rm -f /etc/zfs/zed.d/zpool.destroy.sh
-rm -f /etc/zfs/zed.d/zpool.import.sh
-rm -f /etc/zfs/zed.d/zvol.create.sh
-rm -f /etc/zfs/zed.d/zvol.remove.sh
+rm -fv /etc/zfs/zed.d/all-debug.sh
+rm -fv /etc/zfs/zed.d/all-syslog.sh
+rm -fv /etc/zfs/zed.d/checksum-email.sh
+rm -fv /etc/zfs/zed.d/checksum-spare.sh
+rm -fv /etc/zfs/zed.d/config.remove.sh
+rm -fv /etc/zfs/zed.d/config.sync.sh
+rm -fv /etc/zfs/zed.d/data-email.sh
+rm -fv /etc/zfs/zed.d/generic-email.sh
+rm -fv /etc/zfs/zed.d/io-email.sh
+rm -fv /etc/zfs/zed.d/io-spare.sh
+rm -fv /etc/zfs/zed.d/resilver.finish-email.sh
+rm -fv /etc/zfs/zed.d/scrub.finish-email.sh
+rm -fv /etc/zfs/zed.d/snapshot.mount.sh
+rm -fv /etc/zfs/zed.d/zed.rc
+rm -fv /etc/zfs/zed.d/zpool.destroy.sh
+rm -fv /etc/zfs/zed.d/zpool.import.sh
+rm -fv /etc/zfs/zed.d/zvol.create.sh
+rm -fv /etc/zfs/zed.d/zvol.remove.sh
 [ -d  /etc/zfs/zed.d ] && [ $(ls -A /etc/zfs/zed.d | wc -l) -eq 0 ] && rmdir /etc/zfs/zed.d
 
-rm -f /etc/zfs/zpool.cache.tmp
-rm -f /etc/zfs/zpool.cache
-rm -f /etc/zfs/vdev_id.conf.alias.example
-rm -f /etc/zfs/vdev_id.conf.sas_direct.example
-rm -f /etc/zfs/vdev_id.conf.multipath.example
-rm -f /etc/zfs/vdev_id.conf.sas_switch.example
-rm -f /etc/zfs/zsysctl.conf.example
+rm -fv /etc/zfs/zpool.cache.tmp
+rm -fv /etc/zfs/zpool.cache
+rm -fv /etc/zfs/vdev_id.conf.alias.example
+rm -fv /etc/zfs/vdev_id.conf.sas_direct.example
+rm -fv /etc/zfs/vdev_id.conf.multipath.example
+rm -fv /etc/zfs/vdev_id.conf.sas_switch.example
+rm -fv /etc/zfs/zsysctl.conf.example
 [ -d  /etc/zfs ] && [ $(ls -A /etc/zfs | wc -l) -eq 0 ] && rmdir /etc/zfs
 
 echo "Removing /usr/libexec/zfs" | tee -a "$ULOG"
-rm -rf /usr/libexec/zfs
+rm -rfv /usr/libexec/zfs
 
 echo "Removing launchd plists" | tee -a "$ULOG"
-rm -f /Library/LaunchDaemons/org.openzfsonosx.InvariantDisks.plist
-rm -f /Library/LaunchDaemons/org.openzfsonosx.zconfigd.plist
-rm -f /Library/LaunchDaemons/org.openzfsonosx.zed.plist
-rm -f /Library/LaunchDaemons/org.openzfsonosx.zed.service.plist
-rm -f /Library/LaunchDaemons/org.openzfsonosx.zpool-autoimport.plist
-rm -f /Library/LaunchDaemons/org.openzfsonosx.zpool-import-all.plist
+rm -fv /Library/LaunchDaemons/org.openzfsonosx.InvariantDisks.plist
+rm -fv /Library/LaunchDaemons/org.openzfsonosx.zconfigd.plist
+rm -fv /Library/LaunchDaemons/org.openzfsonosx.zed.plist
+rm -fv /Library/LaunchDaemons/org.openzfsonosx.zed.service.plist
+rm -fv /Library/LaunchDaemons/org.openzfsonosx.zpool-autoimport.plist
+rm -fv /Library/LaunchDaemons/org.openzfsonosx.zpool-import-all.plist
 
 echo "Removing zfs.fs" | tee -a "$ULOG"
-rm -rf /System/Library/Filesystems/zfs.fs
+rm -rfv /System/Library/Filesystems/zfs.fs
 
 echo "Telling OS X to forget zfs packages" | tee -a "$ULOG"
 pkgutil --pkgs | grep net | grep lundman | while read p ; do echo "Forgetting $p" ; pkgutil --forget "$p" ; done
