@@ -672,14 +672,14 @@ then
 	$GIT clean -fdqx
 	if [ x"$PULL" = x"on" ]
 	then
-		$SUDO -u "$OWNER" $GIT pull
+		$SUDO -u "$OWNER" $GIT pull --tags --ff-only
 	fi
 	cd "$ZFS_REPOSITORY_DIR"
 	$GIT reset --hard @{u}
 	$GIT clean -fdqx
 	if [ x"$PULL" = x"on" ]
 	then
-		$SUDO -u "$OWNER" $GIT pull
+		$SUDO -u "$OWNER" $GIT pull --tags --ff-only
 	fi
 else
 	if [ x"$PULL" = x"on" ]
