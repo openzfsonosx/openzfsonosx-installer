@@ -259,6 +259,8 @@ then
 (${ML_HEADERS:+--with-kernel-headers="$ML_HEADERS"})
 	ZFS_CONFIGURE_ARRAY+=\
 (${ML_HEADERS:+--with-kernelsrc="$ML_HEADERS"})
+	ZFS_CONFIGURE_ARRAY+=\
+(--with-filesystems-prefix=/System/Library/Filesystems)
 elif [ x"$TARGET_OS_X_VERSION" = x"10.9" ]
 then
 	CFLAGS_ARRAY+=(-mmacosx-version-min=10.9)
@@ -266,6 +268,8 @@ then
 (${MAV_HEADERS:+--with-kernel-headers="$MAV_HEADERS"})
 	ZFS_CONFIGURE_ARRAY+=\
 (${MAV_HEADERS:+--with-kernelsrc="$MAV_HEADERS"})
+	ZFS_CONFIGURE_ARRAY+=\
+(--with-filesystems-prefix=/System/Library/Filesystems)
 elif [ x"$TARGET_OS_X_VERSION" = x"10.10" ]
 then
 	CFLAGS_ARRAY+=(-mmacosx-version-min=10.10)
@@ -273,6 +277,8 @@ then
 (${YOS_HEADERS:+--with-kernel-headers="$YOS_HEADERS"})
 	ZFS_CONFIGURE_ARRAY+=\
 (${YOS_HEADERS:+--with-kernelsrc="$YOS_HEADERS"})
+	ZFS_CONFIGURE_ARRAY+=\
+(--with-filesystems-prefix=/System/Library/Filesystems)
 elif [ x"$TARGET_OS_X_VERSION" != x"native" ]
 then
 	$ECHO "target should be '10.8', '10.9', '10.10', or 'native'"
