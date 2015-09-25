@@ -35,9 +35,11 @@ export ZFS_REPOSITORY_URL="https://github.com/openzfsonosx/zfs"
 export ML_SPL_DIFF="$PWD"/spl-108.diff
 export MAV_SPL_DIFF="$PWD"/spl-109.diff
 export YOS_SPL_DIFF="$PWD"/spl-1010.diff
+export ELCAP_SPL_DIFF="$PWD"/spl-1011.diff
 export ML_ZFS_DIFF="$PWD"/zfs-108.diff
 export MAV_ZFS_DIFF="$PWD"/zfs-109.diff
 export YOS_ZFS_DIFF="$PWD"/zfs-1010.diff
+export ELCAP_ZFS_DIFF="$PWD"/zfs-1011.diff
 
 export BASH_PATH=bash
 export CAT=cat
@@ -228,21 +230,21 @@ XCODE_SDKS=$XCODE/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs
 XCODE_ML_SDK="$XCODE_SDKS/MacOSX10.8.sdk"
 XCODE_MAV_SDK="$XCODE_SDKS/MacOSX10.9.sdk"
 XCODE_YOS_SDK="$XCODE_SDKS/MacOSX10.10.sdk"
+XCODE_ELCAP_SDK="$XCODE_SDKS/MacOSX10.11.sdk"
 KERNEL_FRAMEWORK_PATH=/System/Library/Frameworks/Kernel.framework
 ML_HEADERS=$XCODE_ML_SDK$KERNEL_FRAMEWORK_PATH
 MAV_HEADERS=$XCODE_MAV_SDK$KERNEL_FRAMEWORK_PATH
 YOS_HEADERS=$XCODE_YOS_SDK$KERNEL_FRAMEWORK_PATH
+ELCAP_HEADERS=$XCODE_ELCAP_SDK$KERNEL_FRAMEWORK_PATH
 
 SPL_CONFIGURE_ARRAY=(CC=clang)
 SPL_CONFIGURE_ARRAY+=(CXX=clang++)
 SPL_CONFIGURE_ARRAY+=(OBJCXX=clang++)
-SPL_CONFIGURE_ARRAY+=(--prefix=/usr)
 SPL_CONFIGURE_ARRAY+=(--sysconfdir=/etc)
 SPL_CONFIGURE_ARRAY+=(${INSTALL_DIR:+--with-kernel-modprefix="$INSTALL_DIR"})
 ZFS_CONFIGURE_ARRAY=(CC=clang)
 ZFS_CONFIGURE_ARRAY+=(CXX=clang++)
 ZFS_CONFIGURE_ARRAY+=(OBJCXX=clang++)
-ZFS_CONFIGURE_ARRAY+=(--prefix=/usr)
 ZFS_CONFIGURE_ARRAY+=(--sysconfdir=/etc)
 ZFS_CONFIGURE_ARRAY+=(--localstatedir=/var)
 ZFS_CONFIGURE_ARRAY+=(${SPL_REPOSITORY_DIR:+--with-spl="$SPL_REPOSITORY_DIR"})
@@ -255,6 +257,8 @@ CFLAGS_ARRAY+=(-Wno-tautological-constant-out-of-range-compare)
 if [ x"$TARGET_OS_X_VERSION" = x"10.8" ]
 then
 	CFLAGS_ARRAY+=(-mmacosx-version-min=10.8)
+	SPL_CONFIGURE_ARRAY+=(--prefix=/usr)
+	ZFS_CONFIGURE_ARRAY+=(--prefix=/usr)
 	SPL_CONFIGURE_ARRAY+=\
 (${ML_HEADERS:+--with-kernel-headers="$ML_HEADERS"})
 	ZFS_CONFIGURE_ARRAY+=\
@@ -264,6 +268,8 @@ then
 elif [ x"$TARGET_OS_X_VERSION" = x"10.9" ]
 then
 	CFLAGS_ARRAY+=(-mmacosx-version-min=10.9)
+	SPL_CONFIGURE_ARRAY+=(--prefix=/usr)
+	ZFS_CONFIGURE_ARRAY+=(--prefix=/usr)
 	SPL_CONFIGURE_ARRAY+=\
 (${MAV_HEADERS:+--with-kernel-headers="$MAV_HEADERS"})
 	ZFS_CONFIGURE_ARRAY+=\
@@ -273,15 +279,30 @@ then
 elif [ x"$TARGET_OS_X_VERSION" = x"10.10" ]
 then
 	CFLAGS_ARRAY+=(-mmacosx-version-min=10.10)
+	SPL_CONFIGURE_ARRAY+=(--prefix=/usr)
+	ZFS_CONFIGURE_ARRAY+=(--prefix=/usr)
 	SPL_CONFIGURE_ARRAY+=\
 (${YOS_HEADERS:+--with-kernel-headers="$YOS_HEADERS"})
 	ZFS_CONFIGURE_ARRAY+=\
 (${YOS_HEADERS:+--with-kernelsrc="$YOS_HEADERS"})
 	ZFS_CONFIGURE_ARRAY+=\
 (--with-filesystems-prefix=/System/Library/Filesystems)
+elif [ x"$TARGET_OS_X_VERSION" = x"10.11" ]
+then
+	CFLAGS_ARRAY+=(-mmacosx-version-min=10.11)
+	SPL_CONFIGURE_ARRAY+=(--prefix=/usr/local)
+	ZFS_CONFIGURE_ARRAY+=(--prefix=/usr/local)
+	SPL_CONFIGURE_ARRAY+=(--sbindir=/usr/local/bin)
+	ZFS_CONFIGURE_ARRAY+=(--sbindir=/usr/local/bin)
+	SPL_CONFIGURE_ARRAY+=\
+(${ELCAP_HEADERS:+--with-kernel-headers="$ELCAP_HEADERS"})
+	ZFS_CONFIGURE_ARRAY+=\
+(${ELCAP_HEADERS:+--with-kernelsrc="$ELCAP_HEADERS"})
+	ZFS_CONFIGURE_ARRAY+=\
+(--with-filesystems-prefix=/Library/Filesystems)
 elif [ x"$TARGET_OS_X_VERSION" != x"native" ]
 then
-	$ECHO "target should be '10.8', '10.9', '10.10', or 'native'"
+	$ECHO "target should be '10.8', '10.9', '10.10', '10.11', or 'native'"
 	exit 22
 fi
 
@@ -707,8 +728,11 @@ then
 	elif [ x"$TARGET_OS_X_VERSION" = x"10.9" ]
 	then
 		[ -e "${MAV_SPL_DIFF}" ] && $GIT apply "${MAV_SPL_DIFF}"
-	else
+	elif [ x"$TARGET_OS_X_VERSION" = x"10.10" ]
+	then
 		[ -e "${YOS_SPL_DIFF}" ] && $GIT apply "${YOS_SPL_DIFF}"
+	else
+		[ -e "${ELCAP_SPL_DIFF}" ] && $GIT apply "${ELCAP_SPL_DIFF}"
 	fi
 	$SUDO -u "$OWNER" $BASH_PATH "$SPL_REPOSITORY_DIR"/autogen.sh
 	$SUDO -u "$OWNER" $BASH_PATH "$SPL_REPOSITORY_DIR"/configure\
@@ -721,8 +745,11 @@ then
 	elif  [ x"$TARGET_OS_X_VERSION" = x"10.9" ]
 	then
 		[ -e "${MAV_ZFS_DIFF}" ] && $GIT apply "${MAV_ZFS_DIFF}"
-	else
+	elif  [ x"$TARGET_OS_X_VERSION" = x"10.10" ]
+	then
 		[ -e "${YOS_ZFS_DIFF}" ] && $GIT apply "${YOS_ZFS_DIFF}"
+	else
+		[ -e "${ELCAP_ZFS_DIFF}" ] && $GIT apply "${ELCAP_ZFS_DIFF}"
 	fi
 	$SUDO -u "$OWNER" $BASH_PATH "$ZFS_REPOSITORY_DIR"/autogen.sh
 	$SUDO -u "$OWNER" $BASH_PATH "$ZFS_REPOSITORY_DIR"/configure\

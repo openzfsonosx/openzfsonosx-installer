@@ -17,4 +17,7 @@ then
 elif [ x"$1" = x"1010" ]
 then
 	pbv "${SDKS}"/MacOSX10.10.sdk/"${SYSVER}"
+elif [ x"$1" = x"1011" ]
+then
+	pbv "${SDKS}"/MacOSX10.11.sdk/"${SYSVER}"
 fi

@@ -9,6 +9,7 @@ fi
 should_make_108=1
 should_make_109=1
 should_make_1010=1
+should_make_1011=1
 should_make_dmg=1
 require_version2_signature=1
 os_release_major_version=`uname -r | awk -F '.' '{print $1;}'`
@@ -80,6 +81,7 @@ make_only=0
 MLDEV="${HOME_DIR}"/Developer/mountainlion
 MAVDEV="${HOME_DIR}"/Developer/mavericks
 YOSDEV="${HOME_DIR}"/Developer/yosemite
+ELCAPDEV="${HOME_DIR}"/Developer/elcapitan
 
 MLPAK="${topdir}"/packages-o3x-108
 MLDESTDIR="${MLPAK}"/108
@@ -90,15 +92,20 @@ MAVDESTDIR="${MAVPAK}"/109
 YOSPAK="${topdir}"/packages-o3x-1010
 YOSDESTDIR="${YOSPAK}"/1010
 
+ELCAPPAK="${topdir}"/packages-o3x-1011
+ELCAPDESTDIR="${ELCAPPAK}"/1011
+
 if [ $make_only -eq 1 ]
 then
 	[ $should_make_108 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.8 -d "${MLDEV}" -i /System/Library/Extensions -m
 	[ $should_make_109 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.9 -d "${MAVDEV}" -i /Library/Extensions -m
 	[ $should_make_1010 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.10 -d "${YOSDEV}" -i /Library/Extensions -m
+	[ $should_make_1011 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.11 -d "${ELCAPDEV}" -i /Library/Extensions -m
 else
 	[ $should_make_108 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.8 -d "${MLDEV}" -i /System/Library/Extensions
 	[ $should_make_109 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.9 -d "${MAVDEV}" -i /Library/Extensions
 	[ $should_make_1010 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.10 -d "${YOSDEV}" -i /Library/Extensions
+	[ $should_make_1011 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.11 -d "${ELCAPDEV}" -i /Library/Extensions
 fi
 
 if [ $should_make_108 -eq 1 ]
@@ -140,6 +147,19 @@ then
 	sudo make DESTDIR="${YOSDESTDIR}" install
 fi
 
+if [ $should_make_1011 -eq 1 ]
+then
+	rm -rf "${ELCAPDESTDIR}"
+	cd "${ELCAPDEV}"
+
+	cd spl
+	sudo make DESTDIR="${ELCAPDESTDIR}" install
+	cd ..
+
+	cd zfs
+	sudo make DESTDIR="${ELCAPDESTDIR}" install
+fi
+
 cd "${topdir}"
 [ $should_make_108 -eq 1 ] && ./scripts/make-pkg.sh 108
 ret108=$?
@@ -147,7 +167,10 @@ ret108=$?
 ret109=$?
 [ $should_make_1010 -eq 1 ] && ./scripts/make-pkg.sh 1010
 ret1010=$?
+[ $should_make_1011 -eq 1 ] && ./scripts/make-pkg.sh 1011
+ret1011=$?
 
+[ $should_make_1011 -eq 1 -a $ret1011 -ne 0 ] && exit $ret1011
 [ $should_make_1010 -eq 1 -a $ret1010 -ne 0 ] && exit $ret1010
 [ $should_make_109 -eq 1 -a $ret109 -ne 0 ] && exit $ret109
 [ $should_make_108 -eq 1 -a $ret108 -ne 0 ] && exit $ret108
