@@ -3,8 +3,7 @@
 #exit code 1 means no zfs file systems mounted
 
 echo "Mounted ZFS file system(s) check"
-/sbin/mount | awk -F '(' '{print $2;}' | awk -F ',' '{print $1;}' | grep zfs &>/dev/null
-
-[ $? -eq 0 ] && exit 0
-
+myvar="$(2>/dev/null /usr/bin/lsvfs zfs | /usr/bin/tail -1 | /usr/bin/awk '{print $2}')"
+[ ! -z "${myvar##*[!0-9]*}" ] || exit 1
+[ $myvar -ne 0 ] && exit 0
 exit 1
