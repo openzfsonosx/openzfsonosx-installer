@@ -2,8 +2,8 @@
 +++ distribution.dist	2015-03-22 12:34:50.000000000 -0700
 @@ -1,7 +1,14 @@
  <?xml version="1.0" encoding="UTF-8" standalone="no"?>
--<installer-script authoringTool="Packages" authoringToolVersion="1.1.2" authoringToolBuild="2B104" minSpecVersion="1.0">
-+<installer-script authoringTool="Packages" authoringToolVersion="1.1.2" authoringToolBuild="2B104" minSpecVersion="2">
+-<installer-script authoringTool="Packages" authoringToolVersion="1.1.3" authoringToolBuild="2B112" minSpecVersion="1.0">
++<installer-script authoringTool="Packages" authoringToolVersion="1.1.3" authoringToolBuild="2B112" minSpecVersion="2">
      <options rootVolumeOnly="true" customize="never" allow-external-scripts="true"/>
 -    <installation-check script="installation_check()"/>
 +    <volume-check>
