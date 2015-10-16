@@ -265,6 +265,7 @@ then
 (${ML_HEADERS:+--with-kernelsrc="$ML_HEADERS"})
 	ZFS_CONFIGURE_ARRAY+=\
 (--with-filesystems-prefix=/System/Library/Filesystems)
+	ZFS_CONFIGURE_ARRAY+=(--with-mountexecdir=/sbin)
 elif [ x"$TARGET_OS_X_VERSION" = x"10.9" ]
 then
 	CFLAGS_ARRAY+=(-mmacosx-version-min=10.9)
@@ -276,6 +277,7 @@ then
 (${MAV_HEADERS:+--with-kernelsrc="$MAV_HEADERS"})
 	ZFS_CONFIGURE_ARRAY+=\
 (--with-filesystems-prefix=/System/Library/Filesystems)
+	ZFS_CONFIGURE_ARRAY+=(--with-mountexecdir=/sbin)
 elif [ x"$TARGET_OS_X_VERSION" = x"10.10" ]
 then
 	CFLAGS_ARRAY+=(-mmacosx-version-min=10.10)
@@ -287,6 +289,7 @@ then
 (${YOS_HEADERS:+--with-kernelsrc="$YOS_HEADERS"})
 	ZFS_CONFIGURE_ARRAY+=\
 (--with-filesystems-prefix=/System/Library/Filesystems)
+	ZFS_CONFIGURE_ARRAY+=(--with-mountexecdir=/sbin)
 elif [ x"$TARGET_OS_X_VERSION" = x"10.11" ]
 then
 	CFLAGS_ARRAY+=(-mmacosx-version-min=10.11)
