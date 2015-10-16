@@ -18,7 +18,7 @@ echo "No pools should be imported" | tee -a "$ULOG"
 if [ -c /dev/zfs ] ; then
 	if [ -e /usr/sbin/zpool ] ; then
 		echo "Checking output of /usr/sbin/zpool status" | tee -a "$ULOG"
-		TMPF=`mktemp /private/tmp/zfsuninstaller-zpoolcheck.XXXXXX`
+		TMPF=`mktemp /private/tmp/zfsuninstaller-poolcheck.XXXXXX`
 		set +e
 		2>>"$TMPF" 1>>"$TMPF" /usr/sbin/zpool status
 		err=$?
