@@ -169,6 +169,21 @@ rm -fv /usr/sbin/zhack
 rm -fv /usr/sbin/zpios
 rm -fv /usr/sbin/zstreamdump
 
+echo "Removing zfs commands from /usr/local/bin" | tee -a "$ULOG"
+rm -fv /usr/local/bin/arcstat.pl
+rm -fv /usr/local/bin/InvariantDisks
+rm -fv /usr/local/bin/zdb
+rm -fv /usr/local/bin/zed
+rm -fv /usr/local/bin/zfs
+rm -fv /usr/local/bin/zinject
+rm -fv /usr/local/bin/zpool
+rm -fv /usr/local/bin/ztest
+rm -fv /usr/local/bin/zhack
+rm -fv /usr/local/bin/zpios
+rm -fv /usr/local/bin/zstreamdump
+rm -fv /usr/local/bin/mount_zfs
+rm -fv /usr/local/bin/umount_zfs
+
 echo "Removing zfs libraries from /usr/lib" | tee -a "$ULOG"
 rm -fv /usr/lib/libnvpair.1.dylib
 rm -fv /usr/lib/libnvpair.a
@@ -250,6 +265,9 @@ rm -fv /etc/zfs/zsysctl.conf.example
 echo "Removing /usr/libexec/zfs" | tee -a "$ULOG"
 rm -rfv /usr/libexec/zfs
 
+echo "Removing /usr/local/libexec/zfs" | tee -a "$ULOG"
+rm -rfv /usr/local/libexec/zfs
+
 echo "Removing launchd plists" | tee -a "$ULOG"
 rm -fv /Library/LaunchDaemons/org.openzfsonosx.InvariantDisks.plist
 rm -fv /Library/LaunchDaemons/org.openzfsonosx.zconfigd.plist
@@ -258,8 +276,11 @@ rm -fv /Library/LaunchDaemons/org.openzfsonosx.zed.service.plist
 rm -fv /Library/LaunchDaemons/org.openzfsonosx.zpool-autoimport.plist
 rm -fv /Library/LaunchDaemons/org.openzfsonosx.zpool-import-all.plist
 
-echo "Removing zfs.fs" | tee -a "$ULOG"
+echo "Removing zfs.fs from /System/Library/Filesystems" | tee -a "$ULOG"
 rm -rfv /System/Library/Filesystems/zfs.fs
+
+echo "Removing zfs.fs from /Library/Filesystems" | tee -a "$ULOG"
+rm -rfv /Library/Filesystems/zfs.fs
 
 echo "Telling OS X to forget zfs packages" | tee -a "$ULOG"
 pkgutil --pkgs | grep net | grep lundman | while read p ; do echo "Forgetting $p" ; pkgutil --forget "$p" ; done
