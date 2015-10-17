@@ -206,6 +206,28 @@ rm -fv /usr/lib/libzpool.a
 rm -fv /usr/lib/libzpool.dylib
 rm -fv /usr/lib/libzpool.la
 
+echo "Removing zfs libraries from /usr/local/lib" | tee -a "$ULOG"
+rm -fv /usr/local/lib/libnvpair.1.dylib
+rm -fv /usr/local/lib/libnvpair.a
+rm -fv /usr/local/lib/libnvpair.dylib
+rm -fv /usr/local/lib/libnvpair.la
+rm -fv /usr/local/lib/libuutil.1.dylib
+rm -fv /usr/local/lib/libuutil.a
+rm -fv /usr/local/lib/libuutil.dylib
+rm -fv /usr/local/lib/libuutil.la
+rm -fv /usr/local/lib/libzfs.2.dylib
+rm -fv /usr/local/lib/libzfs.a
+rm -fv /usr/local/lib/libzfs.dylib
+rm -fv /usr/local/lib/libzfs.la
+rm -fv /usr/local/lib/libzfs_core.1.dylib
+rm -fv /usr/local/lib/libzfs_core.a
+rm -fv /usr/local/lib/libzfs_core.dylib
+rm -fv /usr/local/lib/libzfs_core.la
+rm -fv /usr/local/lib/libzpool.1.dylib
+rm -fv /usr/local/lib/libzpool.a
+rm -fv /usr/local/lib/libzpool.dylib
+rm -fv /usr/local/lib/libzpool.la
+
 echo "Removing arcstat.pl from /usr/bin" | tee -a "$ULOG"
 rm -fv /usr/bin/arcstat.pl
 
@@ -213,7 +235,7 @@ echo "Removing mount_zfs and umount_zfs from /sbin" | tee -a "$ULOG"
 rm -fv /sbin/mount_zfs
 rm -fv /sbin/umount_zfs
 
-echo "Removing man pages" | tee -a "$ULOG"
+echo "Removing man pages from /usr/share/man" | tee -a "$ULOG"
 rm -fv /usr/share/man/man1/zhack.1
 rm -fv /usr/share/man/man1/zpios.1
 rm -fv /usr/share/man/man1/ztest.1
@@ -224,6 +246,18 @@ rm -fv /usr/share/man/man8/zfs.8
 rm -fv /usr/share/man/man8/zinject.8
 rm -fv /usr/share/man/man8/zpool.8
 rm -fv /usr/share/man/man8/zstreamdump.8
+
+echo "Removing man pages from /usr/local/share/man" | tee -a "$ULOG"
+rm -fv /usr/local/share/man/man1/zhack.1
+rm -fv /usr/local/share/man/man1/zpios.1
+rm -fv /usr/local/share/man/man1/ztest.1
+rm -fv /usr/local/share/man/man5/zpool-features.5
+rm -fv /usr/local/share/man/man8/zdb.8
+rm -fv /usr/local/share/man/man8/zed.8
+rm -fv /usr/local/share/man/man8/zfs.8
+rm -fv /usr/local/share/man/man8/zinject.8
+rm -fv /usr/local/share/man/man8/zpool.8
+rm -fv /usr/local/share/man/man8/zstreamdump.8
 
 echo "Removing /etc/zfs/zed.d" | tee -a "$ULOG"
 rm -fv /etc/zfs/zed.d/checksum-email.sh
