@@ -1,3 +1,4 @@
+
 #!/bin/bash
 set +e
 date -j -f "%a %b %d %T %Z %Y" "`date`" "+%s" >> /tmp/o3x.log
@@ -44,6 +45,7 @@ rm -rfv /usr/local/lib/udev
 rm -rfv /usr/lib/udev
 rm -rfv /usr/local/share/zfs
 rm -rfv /usr/share/zfs
+rm -rfv /usr/local/libexec/zfs
 rm -rfv /usr/libexec/zfs
 
 rm -fv /usr/local/share/man/man1/zhack.1
@@ -118,6 +120,18 @@ rm -fv /usr/lib/libzpool.dylib
 rm -fv /usr/lib/libzpool.la
 
 rm -fv /usr/local/bin/arcstat.pl
+rm -fv /usr/local/bin/InvariantDisks
+rm -fv /usr/local/bin/zdb
+rm -fv /usr/local/bin/zdb_static
+rm -fv /usr/local/bin/zed
+rm -fv /usr/local/bin/zfs
+rm -fv /usr/local/bin/zhack
+rm -fv /usr/local/bin/zinject
+rm -fv /usr/local/bin/zpios
+rm -fv /usr/local/bin/zpool
+rm -fv /usr/local/bin/zstreamdump
+rm -fv /usr/local/bin/ztest
+rm -fv /usr/local/bin/ztest_static
 rm -fv /usr/local/sbin/InvariantDisks
 rm -fv /usr/local/sbin/zdb
 rm -fv /usr/local/sbin/zdb_static
@@ -147,7 +161,13 @@ rm -fv /usr/sbin/ztest_static
 rm -fv /sbin/mount.zfs
 rm -fv /sbin/mount_zfs
 rm -fv /sbin/umount_zfs
-
+rm -fv /usr/local/bin/mount.zfs
+rm -fv /usr/local/bin/mount_zfs
+rm -fv /usr/local/bin/umount_zfs
+rm -fv /usr/local/sbin/mount.zfs
+rm -fv /usr/local/sbin/mount_zfs
+rm -fv /usr/local/sbin/umount_zfs
+r
 rm -fv /etc/zfs/zpool.cache
 rm -fv /etc/zfs/zpool.cache.tmp
 
@@ -190,6 +210,7 @@ rm -fv /Library/LaunchDaemons/org.openzfsonosx.zed.service.plist
 rm -fv /Library/LaunchDaemons/org.openzfsonosx.zpool-autoimport.plist
 rm -fv /Library/LaunchDaemons/org.openzfsonosx.zpool-import-all.plist
 
+rm -rfv /Library/Filesystems/zfs.fs
 rm -rfv /System/Library/Filesystems/zfs.fs
 
 [ -d  /etc/zfs/zed.d ] && [ $(ls -A /etc/zfs/zed.d | wc -l) -eq 0 ] && rmdir /etc/zfs/zed.d
