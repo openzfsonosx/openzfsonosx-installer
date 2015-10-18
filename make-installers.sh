@@ -6,6 +6,8 @@ then
 	exit $?
 fi
 
+sudo ntpdate -u time.apple.com
+
 should_make_108=1
 should_make_109=1
 should_make_1010=1
