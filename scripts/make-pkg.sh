@@ -2,7 +2,7 @@
 
 set -e
 
-version=1.4.4
+version=1.4.5
 owner=`logname`
 dev_id_application="Developer ID Application: Joergen  Lundman (735AM5QEU3)"
 dev_id_installer="Developer ID Installer: Joergen  Lundman (735AM5QEU3)"
