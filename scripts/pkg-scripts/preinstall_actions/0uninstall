@@ -167,7 +167,7 @@ rm -fv /usr/local/bin/umount_zfs
 rm -fv /usr/local/sbin/mount.zfs
 rm -fv /usr/local/sbin/mount_zfs
 rm -fv /usr/local/sbin/umount_zfs
-r
+
 rm -fv /etc/zfs/zpool.cache
 rm -fv /etc/zfs/zpool.cache.tmp
 
