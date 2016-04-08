@@ -1,6 +1,6 @@
 #!/bin/bash
 
-VERSION=1.4.5
+source version
 PRETTY_108="OpenZFS on OS X $VERSION Mountain Lion.pkg"
 PRETTY_109="OpenZFS on OS X $VERSION Mavericks.pkg"
 PRETTY_1010="OpenZFS on OS X $VERSION Yosemite.pkg"

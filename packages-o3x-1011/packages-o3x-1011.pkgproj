@@ -520,6 +520,22 @@
 																					<key>GID</key>
 																					<integer>0</integer>
 																					<key>PATH</key>
+																					<string>1011/Library/Extensions/spl.kext/Contents/PlugIns/KernelExports.kext/_CodeSignature/CodeRequirements-1</string>
+																					<key>PATH_TYPE</key>
+																					<integer>3</integer>
+																					<key>PERMISSIONS</key>
+																					<integer>420</integer>
+																					<key>TYPE</key>
+																					<integer>3</integer>
+																					<key>UID</key>
+																					<integer>0</integer>
+																				</dict>
+																				<dict>
+																					<key>CHILDREN</key>
+																					<array/>
+																					<key>GID</key>
+																					<integer>0</integer>
+																					<key>PATH</key>
 																					<string>1011/Library/Extensions/spl.kext/Contents/PlugIns/KernelExports.kext/_CodeSignature/CodeResources</string>
 																					<key>PATH_TYPE</key>
 																					<integer>3</integer>
@@ -537,6 +553,22 @@
 																					<integer>0</integer>
 																					<key>PATH</key>
 																					<string>1011/Library/Extensions/spl.kext/Contents/PlugIns/KernelExports.kext/_CodeSignature/CodeSignature</string>
+																					<key>PATH_TYPE</key>
+																					<integer>3</integer>
+																					<key>PERMISSIONS</key>
+																					<integer>420</integer>
+																					<key>TYPE</key>
+																					<integer>3</integer>
+																					<key>UID</key>
+																					<integer>0</integer>
+																				</dict>
+																				<dict>
+																					<key>CHILDREN</key>
+																					<array/>
+																					<key>GID</key>
+																					<integer>0</integer>
+																					<key>PATH</key>
+																					<string>1011/Library/Extensions/spl.kext/Contents/PlugIns/KernelExports.kext/_CodeSignature/CodeTopDirectory</string>
 																					<key>PATH_TYPE</key>
 																					<integer>3</integer>
 																					<key>PERMISSIONS</key>

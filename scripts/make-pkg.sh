@@ -2,19 +2,19 @@
 
 set -e
 
-version=1.4.5
+source version
 owner=`logname`
 dev_id_application="Developer ID Application: Joergen  Lundman (735AM5QEU3)"
 dev_id_installer="Developer ID Installer: Joergen  Lundman (735AM5QEU3)"
-keychain=`eval "echo ~${owner}"`/Library/Keychains/openzfs-login.keychain
+keychain=`eval "echo ~${owner}"`/Library/Keychains/login.keychain
 #keychain_timeout=1200
 keychain_timeout=none
 should_unlock=1
 should_sign_installer=1
 require_version2_signature=1
-zfs_kext="zfs.kext/"
+spl_kernel_exports_kext="spl.kext/Contents/PlugIns/KernelExports.kext/"
 spl_kext="spl.kext/"
-spl_kernel_exports_kext="spl.kext/Contents/Plugins/KernelExports.kext/"
+zfs_kext="zfs.kext/"
 os_release_major_version=`uname -r | awk -F '.' '{print $1;}'`
 
 if [ -z $os_release_major_version ]
@@ -138,17 +138,17 @@ do_rsync() {
 if [ ${OS} -ge 109 ]
 then
 	pushd ${OS}/Library/Extensions &>/dev/null
-	for path in "${zfs_kext}" "${spl_kernel_exports_kext}" "${spl_kext}"
+	for path in "${spl_kernel_exports_kext}" "${spl_kext}" "${zfs_kext}"
 	do
 		set +e
-		codesign -dv "${path}"
+		codesign -dvvv "${path}"
 		ret=$?
 		set -e
 		if [ $ret -ne 0 ]
 		then
 			echo "Signing ${path}"
 			codesign -fvs "${dev_id_application}" "${path}"
-			spctl --assess --raw "${path}"
+			codesign -dvvv "${path}"
 		fi
 	done
 	popd
