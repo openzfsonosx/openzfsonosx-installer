@@ -77,6 +77,22 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
+													<string>109/etc/zfs/zed.d/checksum-notify.sh</string>
+													<key>PATH_TYPE</key>
+													<integer>3</integer>
+													<key>PERMISSIONS</key>
+													<integer>493</integer>
+													<key>TYPE</key>
+													<integer>3</integer>
+													<key>UID</key>
+													<integer>0</integer>
+												</dict>
+												<dict>
+													<key>CHILDREN</key>
+													<array/>
+													<key>GID</key>
+													<integer>0</integer>
+													<key>PATH</key>
 													<string>109/etc/zfs/zed.d/checksum-spare.sh</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
@@ -158,6 +174,38 @@
 													<integer>0</integer>
 													<key>PATH</key>
 													<string>109/etc/zfs/zed.d/io-spare.sh</string>
+													<key>PATH_TYPE</key>
+													<integer>3</integer>
+													<key>PERMISSIONS</key>
+													<integer>493</integer>
+													<key>TYPE</key>
+													<integer>3</integer>
+													<key>UID</key>
+													<integer>0</integer>
+												</dict>
+												<dict>
+													<key>CHILDREN</key>
+													<array/>
+													<key>GID</key>
+													<integer>0</integer>
+													<key>PATH</key>
+													<string>109/etc/zfs/zed.d/resilver.finish-notify.sh</string>
+													<key>PATH_TYPE</key>
+													<integer>3</integer>
+													<key>PERMISSIONS</key>
+													<integer>493</integer>
+													<key>TYPE</key>
+													<integer>3</integer>
+													<key>UID</key>
+													<integer>0</integer>
+												</dict>
+												<dict>
+													<key>CHILDREN</key>
+													<array/>
+													<key>GID</key>
+													<integer>0</integer>
+													<key>PATH</key>
+													<string>109/etc/zfs/zed.d/scrub.finish-notify.sh</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -2148,6 +2196,38 @@
 															<integer>0</integer>
 															<key>PATH</key>
 															<string>109/usr/libexec/zfs/zed.d/io-spare.sh</string>
+															<key>PATH_TYPE</key>
+															<integer>3</integer>
+															<key>PERMISSIONS</key>
+															<integer>493</integer>
+															<key>TYPE</key>
+															<integer>3</integer>
+															<key>UID</key>
+															<integer>0</integer>
+														</dict>
+														<dict>
+															<key>CHILDREN</key>
+															<array/>
+															<key>GID</key>
+															<integer>0</integer>
+															<key>PATH</key>
+															<string>109/usr/libexec/zfs/zed.d/resilver.finish-notify.sh</string>
+															<key>PATH_TYPE</key>
+															<integer>3</integer>
+															<key>PERMISSIONS</key>
+															<integer>493</integer>
+															<key>TYPE</key>
+															<integer>3</integer>
+															<key>UID</key>
+															<integer>0</integer>
+														</dict>
+														<dict>
+															<key>CHILDREN</key>
+															<array/>
+															<key>GID</key>
+															<integer>0</integer>
+															<key>PATH</key>
+															<string>109/usr/libexec/zfs/zed.d/scrub.finish-notify.sh</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
