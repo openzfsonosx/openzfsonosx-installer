@@ -40,8 +40,6 @@ export ML_ZFS_DIFF="$PWD"/zfs-108.diff
 export MAV_ZFS_DIFF="$PWD"/zfs-109.diff
 export YOS_ZFS_DIFF="$PWD"/zfs-1010.diff
 export ELCAP_ZFS_DIFF="$PWD"/zfs-1011.diff
-export SPL_COPYRIGHT_DIFF="$PWD"/spl-bump-copyright.diff
-export ZFS_COPYRIGHT_DIFF="$PWD"/zfs-bump-copyright.diff
 
 export BASH_PATH=bash
 export CAT=cat
@@ -727,36 +725,42 @@ if [ "$SHOULD_CONFIGURE" = "yes" ]
 then
 	CFLAGS_STRING=${CFLAGS_ARRAY[*]}
 	cd "$SPL_REPOSITORY_DIR"
-  $GIT apply "${SPL_COPYRIGHT_DIFF}"
 	if [ x"$TARGET_OS_X_VERSION" = x"10.8" ]
 	then
 		[ -e "${ML_SPL_DIFF}" ] && $GIT apply "${ML_SPL_DIFF}"
+		# $GIT diff > "${ML_SPL_DIFF}".new
 	elif [ x"$TARGET_OS_X_VERSION" = x"10.9" ]
 	then
 		[ -e "${MAV_SPL_DIFF}" ] && $GIT apply "${MAV_SPL_DIFF}"
+		# $GIT diff > "${MAV_SPL_DIFF}".new
 	elif [ x"$TARGET_OS_X_VERSION" = x"10.10" ]
 	then
 		[ -e "${YOS_SPL_DIFF}" ] && $GIT apply "${YOS_SPL_DIFF}"
+		# $GIT diff > "${YOS_SPL_DIFF}".new
 	else
 		[ -e "${ELCAP_SPL_DIFF}" ] && $GIT apply "${ELCAP_SPL_DIFF}"
+		# $GIT diff > "${ELCAP_SPL_DIFF}".new
 	fi
 	$SUDO -u "$OWNER" $BASH_PATH "$SPL_REPOSITORY_DIR"/autogen.sh
 	$SUDO -u "$OWNER" $BASH_PATH "$SPL_REPOSITORY_DIR"/configure\
 	    ${CFLAGS_STRING:+CFLAGS="$CFLAGS_STRING"}\
 	    ${SPL_CONFIGURE_ARRAY[@]}
 	cd "$ZFS_REPOSITORY_DIR"
-  $GIT apply "${ZFS_COPYRIGHT_DIFF}"
 	if [ x"$TARGET_OS_X_VERSION" = x"10.8" ]
 	then
 		[ -e "${ML_ZFS_DIFF}" ] && $GIT apply "${ML_ZFS_DIFF}"
+		# $GIT diff > "${ML_ZFS_DIFF}".new
 	elif  [ x"$TARGET_OS_X_VERSION" = x"10.9" ]
 	then
 		[ -e "${MAV_ZFS_DIFF}" ] && $GIT apply "${MAV_ZFS_DIFF}"
+		# $GIT diff > "${MAV_ZFS_DIFF}".new
 	elif  [ x"$TARGET_OS_X_VERSION" = x"10.10" ]
 	then
 		[ -e "${YOS_ZFS_DIFF}" ] && $GIT apply "${YOS_ZFS_DIFF}"
+		# $GIT diff > "${YOS_ZFS_DIFF}".new
 	else
 		[ -e "${ELCAP_ZFS_DIFF}" ] && $GIT apply "${ELCAP_ZFS_DIFF}"
+		# $GIT diff > "${ELCAP_ZFS_DIFF}".new
 	fi
 	$SUDO -u "$OWNER" $BASH_PATH "$ZFS_REPOSITORY_DIR"/autogen.sh
 	$SUDO -u "$OWNER" $BASH_PATH "$ZFS_REPOSITORY_DIR"/configure\
