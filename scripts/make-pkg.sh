@@ -89,10 +89,7 @@ then
 
 	if [ $ret -ne 0 ]
 	then
-		echo "Please enter openzfs-login.keychain's password"
-			read -s openzfspassword
-			export OZP="$openzfspassword"
-			security unlock-keychain -p "$OZP" "${keychain}"
+		security unlock-keychain "${keychain}"
 	fi
 
 	if [ x"${keychain_timeout}" = x -o "${keychain_timeout}" = "none" ]
