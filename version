@@ -1,2 +1,2 @@
-export version=1.5.0
+export version=1.5.1
 export VERSION=$version
