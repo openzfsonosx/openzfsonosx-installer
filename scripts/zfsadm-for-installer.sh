@@ -40,6 +40,8 @@ export ML_ZFS_DIFF="$PWD"/zfs-108.diff
 export MAV_ZFS_DIFF="$PWD"/zfs-109.diff
 export YOS_ZFS_DIFF="$PWD"/zfs-1010.diff
 export ELCAP_ZFS_DIFF="$PWD"/zfs-1011.diff
+export SPL_COPYRIGHT_DIFF="$PWD"/spl-bump-copyright.diff
+export ZFS_COPYRIGHT_DIFF="$PWD"/zfs-bump-copyright.diff
 
 export BASH_PATH=bash
 export CAT=cat
@@ -725,6 +727,7 @@ if [ "$SHOULD_CONFIGURE" = "yes" ]
 then
 	CFLAGS_STRING=${CFLAGS_ARRAY[*]}
 	cd "$SPL_REPOSITORY_DIR"
+  $GIT apply "${SPL_COPYRIGHT_DIFF}"
 	if [ x"$TARGET_OS_X_VERSION" = x"10.8" ]
 	then
 		[ -e "${ML_SPL_DIFF}" ] && $GIT apply "${ML_SPL_DIFF}"
@@ -742,6 +745,7 @@ then
 	    ${CFLAGS_STRING:+CFLAGS="$CFLAGS_STRING"}\
 	    ${SPL_CONFIGURE_ARRAY[@]}
 	cd "$ZFS_REPOSITORY_DIR"
+  $GIT apply "${ZFS_COPYRIGHT_DIFF}"
 	if [ x"$TARGET_OS_X_VERSION" = x"10.8" ]
 	then
 		[ -e "${ML_ZFS_DIFF}" ] && $GIT apply "${ML_ZFS_DIFF}"
