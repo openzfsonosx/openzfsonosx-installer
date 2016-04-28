@@ -1,5 +1,5 @@
 diff --git a/module/spl/Info.plist b/module/spl/Info.plist
-index 531f4db..10900b9 100644
+index 531f4db..25e954a 100644
 --- a/module/spl/Info.plist
 +++ b/module/spl/Info.plist
 @@ -3,7 +3,7 @@
@@ -11,7 +11,7 @@ index 531f4db..10900b9 100644
  	<key>CFBundleDevelopmentRegion</key>
  	<string>English</string>
  	<key>CFBundleExecutable</key>
-@@ -25,17 +25,17 @@
+@@ -25,19 +25,19 @@
  	<key>DTCompiler</key>
  	<string>com.apple.compilers.llvm.clang.1_0</string>
  	<key>DTPlatformBuild</key>
@@ -32,13 +32,16 @@ index 531f4db..10900b9 100644
 -	<string>6C131e</string>
 +	<string>7D1012</string>
  	<key>NSHumanReadableCopyright</key>
- 	<string>CDDL (SPL), BSD (FreeBSD), Copyright © 2012-2016 OpenZFS on OS X. All rights reserved.</string>
+-	<string>CDDL (SPL), BSD (FreeBSD), Copyright © 2012-2015 OpenZFS on OS X. All rights reserved.</string>
++	<string>CDDL (SPL), BSD (FreeBSD), Copyright © 2012-2016 OpenZFS on OS X. All rights reserved.</string>
  	<key>OSBundleCompatibleVersion</key>
+ 	<string>1.0.0</string>
+ 	<key>OSBundleLibraries</key>
 diff --git a/module/spl/spl-osx.c b/module/spl/spl-osx.c
-index b0fd468..ed0d3c2 100644
+index 2cea6ea..cf08d7e 100644
 --- a/module/spl/spl-osx.c
 +++ b/module/spl/spl-osx.c
-@@ -495,7 +495,7 @@ extern kern_return_t _stop(kmod_info_t *ki, void *data);
+@@ -469,7 +469,7 @@ extern kern_return_t _stop(kmod_info_t *ki, void *data);
  __private_extern__ kern_return_t spl_start(kmod_info_t *ki, void *data);
  __private_extern__ kern_return_t spl_stop(kmod_info_t *ki, void *data);
  
