@@ -13,6 +13,7 @@ should_make_109=1
 should_make_1010=1
 should_make_1011=1
 should_make_dmg=1
+should_make_node_appdmg=1
 require_version2_signature=1
 os_release_major_version=`uname -r | awk -F '.' '{print $1;}'`
 
@@ -177,9 +178,14 @@ ret1011=$?
 [ $should_make_109 -eq 1 -a $ret109 -ne 0 ] && exit $ret109
 [ $should_make_108 -eq 1 -a $ret108 -ne 0 ] && exit $ret108
 
-if [ $should_make_dmg -eq 1 ]
+[ $should_make_dmg -eq 1 ] && ./scripts/make-dmg.sh
+retdmg=$?
+
+[ $should_make_dmg -eq 1 -a $retdmg -ne 0 ] && exit $retdmg
+
+if [ $should_make_node_appdmg -eq 1 ]
 then
-	./scripts/make-dmg.sh
+	./scripts/make-node-appdmg.sh
 	ret=$?
 else
 	ret=0
