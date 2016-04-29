@@ -1,0 +1,14 @@
+{
+  "title": "OpenZFS on OS X @version@",
+  "icon": "OpenZFSIcon.icns",
+  "background": "dmg-background.png",
+  "icon-size": 72,
+  "contents": [
+    { "x": 120, "y": 170, "type": "file", "path": "../../stage/ReadMe.rtf" },
+    { "x": 310, "y": 170, "type": "file", "path": "../../stage/Docs & Scripts" },
+    { "x": 120, "y": 300, "type": "file", "path": "../../stage/OpenZFS on OS X @version@ El Capitan or higher.pkg" },
+    { "x": 310, "y": 300, "type": "file", "path": "../../stage/OpenZFS on OS X @version@ Yosemite.pkg" },
+    { "x": 120, "y": 450, "type": "file", "path": "../../stage/OpenZFS on OS X @version@ Mavericks.pkg" },
+    { "x": 310, "y": 450, "type": "file", "path": "../../stage/OpenZFS on OS X @version@ Mountain Lion.pkg" }
+  ]
+}
