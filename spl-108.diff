@@ -1,5 +1,5 @@
 diff --git a/module/spl/Info.plist b/module/spl/Info.plist
-index cc6c3cf..e2901a6 100644
+index cc6c3cf..030a909 100644
 --- a/module/spl/Info.plist
 +++ b/module/spl/Info.plist
 @@ -3,7 +3,7 @@
@@ -7,7 +7,7 @@ index cc6c3cf..e2901a6 100644
  <dict>
  	<key>BuildMachineOSBuild</key>
 -	<string>14C1514</string>
-+	<string>15E65</string>
++	<string>15D21</string>
  	<key>CFBundleDevelopmentRegion</key>
  	<string>English</string>
  	<key>CFBundleExecutable</key>

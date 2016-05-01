@@ -1,5 +1,5 @@
 diff --git a/module/zfs/Info.plist b/module/zfs/Info.plist
-index 782a63a..dc169a5 100644
+index 782a63a..2b89ef9 100644
 --- a/module/zfs/Info.plist
 +++ b/module/zfs/Info.plist
 @@ -3,7 +3,7 @@
@@ -7,7 +7,7 @@ index 782a63a..dc169a5 100644
  <dict>
  	<key>BuildMachineOSBuild</key>
 -	<string>14C1514</string>
-+	<string>15E65</string>
++	<string>15D21</string>
  	<key>CFBundleDevelopmentRegion</key>
  	<string>English</string>
  	<key>CFBundleExecutable</key>
