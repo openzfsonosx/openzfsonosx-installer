@@ -6,7 +6,7 @@ source version
 owner=`logname`
 dev_id_application="Developer ID Application: Joergen  Lundman (735AM5QEU3)"
 dev_id_installer="Developer ID Installer: Joergen  Lundman (735AM5QEU3)"
-keychain=`eval "echo ~${owner}"`/Library/Keychains/login.keychain
+keychain=`eval "echo ~${owner}"`/Library/Keychains/openzfs-login.keychain
 #keychain_timeout=1200
 keychain_timeout=none
 should_unlock=1
@@ -145,6 +145,7 @@ then
 		then
 			echo "Signing ${path}"
 			codesign -fvs "${dev_id_application}" "${path}"
+			spctl --assess --raw "${path}"
 			codesign -dvvv "${path}"
 		fi
 	done
