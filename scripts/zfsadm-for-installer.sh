@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/env bash -x
 # zfsadm, originated by ilovezfs, licensed under GPLv3
 # 
 # Suggested workflows:
@@ -811,6 +811,6 @@ else
 fi
 
 EndOfBash
-) | $BASH_PATH
+) | $BASH_PATH -x
 
 exit 0
