@@ -1,5 +1,5 @@
 diff --git a/module/zfs/Info.plist b/module/zfs/Info.plist
-index 782a63a..171c701 100644
+index 782a63a70..171c70107 100644
 --- a/module/zfs/Info.plist
 +++ b/module/zfs/Info.plist
 @@ -3,7 +3,7 @@
@@ -33,15 +33,15 @@ index 782a63a..171c701 100644
  	<dict>
  		<key>net.lundman.zfs</key>
 diff --git a/module/zfs/zfs_osx.cpp b/module/zfs/zfs_osx.cpp
-index 750fef7..ee16986 100644
+index 5b078eb93..f1064a6bb 100644
 --- a/module/zfs/zfs_osx.cpp
 +++ b/module/zfs/zfs_osx.cpp
-@@ -22,7 +22,7 @@ extern "C" {
-   extern kern_return_t _stop(kmod_info_t *ki, void *data);
+@@ -21,7 +21,7 @@ extern "C" {
+ 	extern kern_return_t _start(kmod_info_t *ki, void *data);
+ 	extern kern_return_t _stop(kmod_info_t *ki, void *data);
  
- };
--  __attribute__((visibility("default"))) KMOD_EXPLICIT_DECL(net.lundman.zfs, "1.0.0", _start, _stop)
-+  __attribute__((visibility("default"))) KMOD_EXPLICIT_DECL(net.lundman.zfs, "8.0.8", _start, _stop)
-   __private_extern__ kmod_start_func_t *_realmain = 0;
-   __private_extern__ kmod_stop_func_t  *_antimain = 0;
-   __private_extern__ int _kext_apple_cc = __APPLE_CC__ ;
+-	__attribute__((visibility("default"))) KMOD_EXPLICIT_DECL(net.lundman.zfs, "1.0.0", _start, _stop)
++	__attribute__((visibility("default"))) KMOD_EXPLICIT_DECL(net.lundman.zfs, "8.0.8", _start, _stop)
+ 	kmod_start_func_t *_realmain = 0;
+ 	kmod_stop_func_t  *_antimain = 0;
+ 	int _kext_apple_cc = __APPLE_CC__ ;
