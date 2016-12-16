@@ -97,17 +97,19 @@ YOSDESTDIR="${YOSPAK}"/1010
 ELCAPPAK="${topdir}"/packages-o3x-1011
 ELCAPDESTDIR="${ELCAPPAK}"/1011
 
+BRANCH=knight
+
 if [ $make_only -eq 1 ]
 then
-	[ $should_make_108 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.8 -d "${MLDEV}" -i /System/Library/Extensions -m
-	[ $should_make_109 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.9 -d "${MAVDEV}" -i /Library/Extensions -m
-	[ $should_make_1010 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.10 -d "${YOSDEV}" -i /Library/Extensions -m
-	[ $should_make_1011 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.11 -d "${ELCAPDEV}" -i /Library/Extensions -m
+	[ $should_make_108 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.8 -d "${MLDEV}" -i /System/Library/Extensions -m -b $BRANCH
+	[ $should_make_109 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.9 -d "${MAVDEV}" -i /Library/Extensions -m -b $BRANCH
+	[ $should_make_1010 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.10 -d "${YOSDEV}" -i /Library/Extensions -m -b $BRANCH
+	[ $should_make_1011 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.11 -d "${ELCAPDEV}" -i /Library/Extensions -m -b $BRANCH
 else
-	[ $should_make_108 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.8 -d "${MLDEV}" -i /System/Library/Extensions
-	[ $should_make_109 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.9 -d "${MAVDEV}" -i /Library/Extensions
-	[ $should_make_1010 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.10 -d "${YOSDEV}" -i /Library/Extensions
-	[ $should_make_1011 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.11 -d "${ELCAPDEV}" -i /Library/Extensions
+	[ $should_make_108 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.8 -d "${MLDEV}" -i /System/Library/Extensions -b $BRANCH
+	[ $should_make_109 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.9 -d "${MAVDEV}" -i /Library/Extensions -b $BRANCH
+	[ $should_make_1010 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.10 -d "${YOSDEV}" -i /Library/Extensions -b $BRANCH
+	[ $should_make_1011 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.11 -d "${ELCAPDEV}" -i /Library/Extensions -b $BRANCH
 fi
 
 if [ $should_make_108 -eq 1 ]
