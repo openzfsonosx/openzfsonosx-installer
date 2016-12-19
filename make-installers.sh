@@ -12,6 +12,7 @@ should_make_108=1
 should_make_109=1
 should_make_1010=1
 should_make_1011=1
+should_make_1012=1
 should_make_dmg=1
 require_version2_signature=1
 os_release_major_version=`uname -r | awk -F '.' '{print $1;}'`
@@ -84,6 +85,7 @@ MLDEV="${HOME_DIR}"/Developer/mountainlion
 MAVDEV="${HOME_DIR}"/Developer/mavericks
 YOSDEV="${HOME_DIR}"/Developer/yosemite
 ELCAPDEV="${HOME_DIR}"/Developer/elcapitan
+SIERRADEV="${HOME_DIR}"/Developer/sierra
 
 MLPAK="${topdir}"/packages-o3x-108
 MLDESTDIR="${MLPAK}"/108
@@ -97,6 +99,9 @@ YOSDESTDIR="${YOSPAK}"/1010
 ELCAPPAK="${topdir}"/packages-o3x-1011
 ELCAPDESTDIR="${ELCAPPAK}"/1011
 
+SIERRAPAK="${topdir}"/packages-o3x-1012
+SIERRADESTDIR="${SIERRAPAK}"/1012
+
 BRANCH=knight
 
 if [ $make_only -eq 1 ]
@@ -105,11 +110,13 @@ then
 	[ $should_make_109 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.9 -d "${MAVDEV}" -i /Library/Extensions -m -b $BRANCH
 	[ $should_make_1010 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.10 -d "${YOSDEV}" -i /Library/Extensions -m -b $BRANCH
 	[ $should_make_1011 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.11 -d "${ELCAPDEV}" -i /Library/Extensions -m -b $BRANCH
+	[ $should_make_1012 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.12 -d "${SIERRADEV}" -i /Library/Extensions -m -b $BRANCH
 else
 	[ $should_make_108 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.8 -d "${MLDEV}" -i /System/Library/Extensions -b $BRANCH
 	[ $should_make_109 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.9 -d "${MAVDEV}" -i /Library/Extensions -b $BRANCH
 	[ $should_make_1010 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.10 -d "${YOSDEV}" -i /Library/Extensions -b $BRANCH
 	[ $should_make_1011 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.11 -d "${ELCAPDEV}" -i /Library/Extensions -b $BRANCH
+	[ $should_make_1012 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.12 -d "${SIERRADEV}" -i /Library/Extensions -b $BRANCH
 fi
 
 if [ $should_make_108 -eq 1 ]
@@ -164,6 +171,19 @@ then
 	sudo make DESTDIR="${ELCAPDESTDIR}" install
 fi
 
+if [ $should_make_1012 -eq 1 ]
+then
+	rm -rf "${SIERRADESTDIR}"
+	cd "${SIERRADEV}"
+
+	cd spl
+	sudo make DESTDIR="${SIERRADESTDIR}" install
+	cd ..
+
+	cd zfs
+	sudo make DESTDIR="${SIERRADESTDIR}" install
+fi
+
 cd "${topdir}"
 [ $should_make_108 -eq 1 ] && ./scripts/make-pkg.sh 108
 ret108=$?
@@ -173,7 +193,10 @@ ret109=$?
 ret1010=$?
 [ $should_make_1011 -eq 1 ] && ./scripts/make-pkg.sh 1011
 ret1011=$?
+[ $should_make_1012 -eq 1 ] && ./scripts/make-pkg.sh 1012
+ret1012=$?
 
+[ $should_make_1012 -eq 1 -a $ret1012 -ne 0 ] && exit $ret1012
 [ $should_make_1011 -eq 1 -a $ret1011 -ne 0 ] && exit $ret1011
 [ $should_make_1010 -eq 1 -a $ret1010 -ne 0 ] && exit $ret1010
 [ $should_make_109 -eq 1 -a $ret109 -ne 0 ] && exit $ret109
