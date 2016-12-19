@@ -148,7 +148,7 @@ then
 		then
 			echo "Signing ${path}"
 			codesign -fvs "${dev_id_application}" "${path}"
-			spctl --assess --raw "${path}"
+			# spctl --assess --raw "${path}"
 			codesign -dvvv "${path}"
 		fi
 	done
