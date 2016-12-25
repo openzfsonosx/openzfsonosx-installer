@@ -1,4 +1,3 @@
-
 #!/bin/bash
 set +e
 date -j -f "%a %b %d %T %Z %Y" "`date`" "+%s" >> /tmp/o3x.log
@@ -51,6 +50,7 @@ rm -rfv /usr/libexec/zfs
 rm -fv /usr/local/share/man/man1/zhack.1
 rm -fv /usr/local/share/man/man1/zpios.1
 rm -fv /usr/local/share/man/man1/ztest.1
+rm -fv /usr/local/share/man/man5/zfs-events.5
 rm -fv /usr/local/share/man/man5/vdev_id.conf.5
 rm -fv /usr/local/share/man/man5/zfs-module-parameters.5
 rm -fv /usr/local/share/man/man5/zpool-features.5
@@ -58,6 +58,7 @@ rm -fv /usr/local/share/man/man8/fsck.zfs.8
 rm -fv /usr/local/share/man/man8/mount.zfs.8
 rm -fv /usr/local/share/man/man8/vdev_id.8
 rm -fv /usr/local/share/man/man8/zdb.8
+rm -fv /usr/local/share/man/man8/zed.8
 rm -fv /usr/local/share/man/man8/zfs.8
 rm -fv /usr/local/share/man/man8/zinject.8
 rm -fv /usr/local/share/man/man8/zpool.8
@@ -66,6 +67,7 @@ rm -fv /usr/share/man/man1/zhack.1
 rm -fv /usr/share/man/man1/zpios.1
 rm -fv /usr/share/man/man1/ztest.1
 rm -fv /usr/share/man/man5/vdev_id.conf.5
+rm -fv /usr/share/man/man5/zfs-events.5
 rm -fv /usr/share/man/man5/zfs-module-parameters.5
 rm -fv /usr/share/man/man5/zpool-features.5
 rm -fv /usr/share/man/man8/fsck.zfs.8
@@ -78,6 +80,10 @@ rm -fv /usr/share/man/man8/zinject.8
 rm -fv /usr/share/man/man8/zpool.8
 rm -fv /usr/share/man/man8/zstreamdump.8
 
+rm -fv /usr/local/lib/libdiskmgt.1.dylib
+rm -fv /usr/local/lib/libdiskmgt.a
+rm -fv /usr/local/lib/libdiskmgt.dylib
+rm -fv /usr/local/lib/libdiskmgt.la
 rm -fv /usr/local/lib/libnvpair.1.dylib
 rm -fv /usr/local/lib/libnvpair.a
 rm -fv /usr/local/lib/libnvpair.dylib
@@ -98,6 +104,10 @@ rm -fv /usr/local/lib/libzpool.1.dylib
 rm -fv /usr/local/lib/libzpool.a
 rm -fv /usr/local/lib/libzpool.dylib
 rm -fv /usr/local/lib/libzpool.la
+rm -fv /usr/lib/libdiskmgt.1.dylib
+rm -fv /usr/lib/libdiskmgt.a
+rm -fv /usr/lib/libdiskmgt.dylib
+rm -fv /usr/lib/libdiskmgt.la
 rm -fv /usr/lib/libnvpair.1.dylib
 rm -fv /usr/lib/libnvpair.a
 rm -fv /usr/lib/libnvpair.dylib
@@ -121,6 +131,7 @@ rm -fv /usr/lib/libzpool.la
 
 rm -fv /usr/local/bin/arcstat.pl
 rm -fv /usr/local/bin/InvariantDisks
+rm -fv /usr/local/bin/zconfigd
 rm -fv /usr/local/bin/zdb
 rm -fv /usr/local/bin/zdb_static
 rm -fv /usr/local/bin/zed
@@ -130,6 +141,7 @@ rm -fv /usr/local/bin/zinject
 rm -fv /usr/local/bin/zpios
 rm -fv /usr/local/bin/zpool
 rm -fv /usr/local/bin/zstreamdump
+rm -fv /usr/local/bin/zsysctl
 rm -fv /usr/local/bin/ztest
 rm -fv /usr/local/bin/ztest_static
 rm -fv /usr/local/sbin/InvariantDisks
@@ -146,6 +158,7 @@ rm -fv /usr/local/sbin/ztest
 rm -fv /usr/local/sbin/ztest_static
 rm -fv /usr/bin/arcstat.pl
 rm -fv /usr/sbin/InvariantDisks
+rm -fv /usr/sbin/zconfigd
 rm -fv /usr/sbin/zdb
 rm -fv /usr/sbin/zdb_static
 rm -fv /usr/sbin/zed
@@ -155,6 +168,7 @@ rm -fv /usr/sbin/zinject
 rm -fv /usr/sbin/zpios
 rm -fv /usr/sbin/zpool
 rm -fv /usr/sbin/zstreamdump
+rm -fv /usr/sbin/zsysctl
 rm -fv /usr/sbin/ztest
 rm -fv /usr/sbin/ztest_static
 

@@ -159,6 +159,7 @@ rm -rfv /Library/OpenZFSonOSX
 
 echo "Removing zfs commands from /usr/sbin" | tee -a "$ULOG"
 rm -fv /usr/sbin/InvariantDisks
+rm -fv /usr/sbin/zconfigd
 rm -fv /usr/sbin/zdb
 rm -fv /usr/sbin/zed
 rm -fv /usr/sbin/zfs
@@ -168,10 +169,12 @@ rm -fv /usr/sbin/ztest
 rm -fv /usr/sbin/zhack
 rm -fv /usr/sbin/zpios
 rm -fv /usr/sbin/zstreamdump
+rm -fv /usr/sbin/zsysctl
 
 echo "Removing zfs commands from /usr/local/bin" | tee -a "$ULOG"
 rm -fv /usr/local/bin/arcstat.pl
 rm -fv /usr/local/bin/InvariantDisks
+rm -fv /usr/local/bin/zconfigd
 rm -fv /usr/local/bin/zdb
 rm -fv /usr/local/bin/zed
 rm -fv /usr/local/bin/zfs
@@ -181,10 +184,15 @@ rm -fv /usr/local/bin/ztest
 rm -fv /usr/local/bin/zhack
 rm -fv /usr/local/bin/zpios
 rm -fv /usr/local/bin/zstreamdump
+rm -fv /usr/local/bin/zsysctl
 rm -fv /usr/local/bin/mount_zfs
 rm -fv /usr/local/bin/umount_zfs
 
 echo "Removing zfs libraries from /usr/lib" | tee -a "$ULOG"
+rm -fv /usr/lib/libdiskmgt.1.dylib
+rm -fv /usr/lib/libdiskmgt.a
+rm -fv /usr/lib/libdiskmgt.dylib
+rm -fv /usr/lib/libdiskmgt.la
 rm -fv /usr/lib/libnvpair.1.dylib
 rm -fv /usr/lib/libnvpair.a
 rm -fv /usr/lib/libnvpair.dylib
@@ -207,6 +215,10 @@ rm -fv /usr/lib/libzpool.dylib
 rm -fv /usr/lib/libzpool.la
 
 echo "Removing zfs libraries from /usr/local/lib" | tee -a "$ULOG"
+rm -fv /usr/local/lib/libdiskmgt.1.dylib
+rm -fv /usr/local/lib/libdiskmgt.a
+rm -fv /usr/local/lib/libdiskmgt.dylib
+rm -fv /usr/local/lib/libdiskmgt.la
 rm -fv /usr/local/lib/libnvpair.1.dylib
 rm -fv /usr/local/lib/libnvpair.a
 rm -fv /usr/local/lib/libnvpair.dylib
@@ -239,6 +251,8 @@ echo "Removing man pages from /usr/share/man" | tee -a "$ULOG"
 rm -fv /usr/share/man/man1/zhack.1
 rm -fv /usr/share/man/man1/zpios.1
 rm -fv /usr/share/man/man1/ztest.1
+rm -fv /usr/share/man/man5/zfs-events.5
+rm -fv /usr/share/man/man5/zfs-module-parameters.5
 rm -fv /usr/share/man/man5/zpool-features.5
 rm -fv /usr/share/man/man8/zdb.8
 rm -fv /usr/share/man/man8/zed.8
@@ -251,6 +265,8 @@ echo "Removing man pages from /usr/local/share/man" | tee -a "$ULOG"
 rm -fv /usr/local/share/man/man1/zhack.1
 rm -fv /usr/local/share/man/man1/zpios.1
 rm -fv /usr/local/share/man/man1/ztest.1
+rm -fv /usr/local/share/man/man5/zfs-events.5
+rm -fv /usr/local/share/man/man5/zfs-module-parameters.5
 rm -fv /usr/local/share/man/man5/zpool-features.5
 rm -fv /usr/local/share/man/man8/zdb.8
 rm -fv /usr/local/share/man/man8/zed.8
@@ -299,8 +315,14 @@ rm -fv /etc/zfs/zsysctl.conf.example
 echo "Removing /usr/libexec/zfs" | tee -a "$ULOG"
 rm -rfv /usr/libexec/zfs
 
+echo "Removing /usr/share/zfs" | tee -a "$ULOG"
+rm -rfv /usr/share/zfs
+
 echo "Removing /usr/local/libexec/zfs" | tee -a "$ULOG"
 rm -rfv /usr/local/libexec/zfs
+
+echo "Removing /usr/local/share/zfs" | tee -a "$ULOG"
+rm -rfv /usr/local/share/zfs
 
 echo "Removing launchd plists" | tee -a "$ULOG"
 rm -fv /Library/LaunchDaemons/org.openzfsonosx.InvariantDisks.plist
