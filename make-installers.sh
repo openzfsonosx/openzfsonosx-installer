@@ -102,7 +102,7 @@ ELCAPDESTDIR="${ELCAPPAK}"/1011
 SIERRAPAK="${topdir}"/packages-o3x-1012
 SIERRADESTDIR="${SIERRAPAK}"/1012
 
-BRANCH=knight
+BRANCH=master
 
 if [ $make_only -eq 1 ]
 then
