@@ -663,7 +663,7 @@ then
 		$ECHO "Trying to switch spl branch ..."
 		if [ x"$SHOULD_CLEAN" = x"yes" ]
 		then
-			$GIT reset --hard @{u}
+			$GIT reset --hard
 			$GIT clean -fdqx
 		fi
 		$SUDO -u "$OWNER" $GIT checkout "$SPL_BRANCH"
@@ -699,7 +699,7 @@ then
 		$ECHO "Trying to switch zfs branch ..."
 		if [ x"$SHOULD_CLEAN" = x"yes" ]
 		then
-			$GIT reset --hard @{u}
+			$GIT reset --hard
 			$GIT clean -fdqx
 		fi
 		$SUDO -u "$OWNER" $GIT checkout "$ZFS_BRANCH"
@@ -716,14 +716,14 @@ fi
 if [ x"$SHOULD_CLEAN" = x"yes" ]
 then
 	cd "$SPL_REPOSITORY_DIR"
-	$GIT reset --hard @{u}
+	$GIT reset --hard
 	$GIT clean -fdqx
 	if [ x"$PULL" = x"on" ]
 	then
 		$SUDO -u "$OWNER" $GIT pull --tags --ff-only
 	fi
 	cd "$ZFS_REPOSITORY_DIR"
-	$GIT reset --hard @{u}
+	$GIT reset --hard
 	$GIT clean -fdqx
 	if [ x"$PULL" = x"on" ]
 	then
