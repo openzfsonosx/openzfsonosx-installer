@@ -1,5 +1,5 @@
 diff --git a/module/zfs/Info.plist b/module/zfs/Info.plist
-index 782a63a70..2b89ef971 100644
+index 782a63a70b..cafa9dafe9 100644
 --- a/module/zfs/Info.plist
 +++ b/module/zfs/Info.plist
 @@ -3,7 +3,7 @@
@@ -34,11 +34,20 @@ index 782a63a70..2b89ef971 100644
  	<key>IOKitPersonalities</key>
  	<dict>
  		<key>net.lundman.zfs</key>
+@@ -60,7 +60,7 @@
+ 		</dict>
+ 	</dict>
+ 	<key>NSHumanReadableCopyright</key>
+-	<string>CDDL (ZFS), BSD (FreeBSD), Copyright © 2012-2016 OpenZFS on OS X. All rights reserved.</string>
++	<string>CDDL (ZFS), BSD (FreeBSD), Copyright © 2012-2017 OpenZFS on OS X. All rights reserved.</string>
+ 	<key>OSBundleCompatibleVersion</key>
+ 	<string>1.0.0</string>
+ 	<key>OSBundleLibraries</key>
 diff --git a/module/zfs/zfs_osx.cpp b/module/zfs/zfs_osx.cpp
-index 5b078eb93..6b9782d30 100644
+index 9308fee076..7beec74661 100644
 --- a/module/zfs/zfs_osx.cpp
 +++ b/module/zfs/zfs_osx.cpp
-@@ -21,7 +21,7 @@ extern "C" {
+@@ -28,7 +28,7 @@ extern "C" {
  	extern kern_return_t _start(kmod_info_t *ki, void *data);
  	extern kern_return_t _stop(kmod_info_t *ki, void *data);
  
