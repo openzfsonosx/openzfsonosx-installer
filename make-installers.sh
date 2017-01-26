@@ -107,17 +107,17 @@ ZFS_TAG=zfs-1.6.0
 
 if [ $make_only -eq 1 ]
 then
-	[ $should_make_108 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.8 -d "${MLDEV}" -i /System/Library/Extensions -m -s $SPL_TAG -z $ZFS_TAG
-	[ $should_make_109 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.9 -d "${MAVDEV}" -i /Library/Extensions -m -s $SPL_TAG -z $ZFS_TAG
-	[ $should_make_1010 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.10 -d "${YOSDEV}" -i /Library/Extensions -m -s $SPL_TAG -z $ZFS_TAG
-	[ $should_make_1011 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.11 -d "${ELCAPDEV}" -i /Library/Extensions -m -s $SPL_TAG -z $ZFS_TAG
-	[ $should_make_1012 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.12 -d "${SIERRADEV}" -i /Library/Extensions -m -s $SPL_TAG -z $ZFS_TAG
+	[ $should_make_108 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.8 -d "${MLDEV}" -i /System/Library/Extensions -m -s $SPL_TAG -z $ZFS_TAG -p off
+	[ $should_make_109 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.9 -d "${MAVDEV}" -i /Library/Extensions -m -s $SPL_TAG -z $ZFS_TAG -p off
+	[ $should_make_1010 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.10 -d "${YOSDEV}" -i /Library/Extensions -m -s $SPL_TAG -z $ZFS_TAG -p off
+	[ $should_make_1011 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.11 -d "${ELCAPDEV}" -i /Library/Extensions -m -s $SPL_TAG -z $ZFS_TAG -p off
+	[ $should_make_1012 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.12 -d "${SIERRADEV}" -i /Library/Extensions -m -s $SPL_TAG -z $ZFS_TAG -p off
 else
-	[ $should_make_108 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.8 -d "${MLDEV}" -i /System/Library/Extensions -s $SPL_TAG -z $ZFS_TAG
-	[ $should_make_109 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.9 -d "${MAVDEV}" -i /Library/Extensions -s $SPL_TAG -z $ZFS_TAG
-	[ $should_make_1010 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.10 -d "${YOSDEV}" -i /Library/Extensions -s $SPL_TAG -z $ZFS_TAG
-	[ $should_make_1011 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.11 -d "${ELCAPDEV}" -i /Library/Extensions -s $SPL_TAG -z $ZFS_TAG
-	[ $should_make_1012 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.12 -d "${SIERRADEV}" -i /Library/Extensions -s $SPL_TAG -z $ZFS_TAG
+	[ $should_make_108 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.8 -d "${MLDEV}" -i /System/Library/Extensions -s $SPL_TAG -z $ZFS_TAG -p off
+	[ $should_make_109 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.9 -d "${MAVDEV}" -i /Library/Extensions -s $SPL_TAG -z $ZFS_TAG -p off
+	[ $should_make_1010 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.10 -d "${YOSDEV}" -i /Library/Extensions -s $SPL_TAG -z $ZFS_TAG -p off
+	[ $should_make_1011 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.11 -d "${ELCAPDEV}" -i /Library/Extensions -s $SPL_TAG -z $ZFS_TAG -p off
+	[ $should_make_1012 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.12 -d "${SIERRADEV}" -i /Library/Extensions -s $SPL_TAG -z $ZFS_TAG -p off
 fi
 
 if [ $should_make_108 -eq 1 ]
