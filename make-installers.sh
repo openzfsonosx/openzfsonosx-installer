@@ -102,8 +102,8 @@ ELCAPDESTDIR="${ELCAPPAK}"/1011
 SIERRAPAK="${topdir}"/packages-o3x-1012
 SIERRADESTDIR="${SIERRAPAK}"/1012
 
-SPL_TAG=spl-1.6.0-2
-ZFS_TAG=zfs-1.6.0-2
+SPL_TAG=spl-1.6.1
+ZFS_TAG=zfs-1.6.1
 
 if [ $make_only -eq 1 ]
 then
