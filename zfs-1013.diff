@@ -1,5 +1,5 @@
 diff --git a/module/zfs/Info.plist b/module/zfs/Info.plist
-index 782a63a70b..dad169336e 100644
+index 782a63a70b..ae59932311 100644
 --- a/module/zfs/Info.plist
 +++ b/module/zfs/Info.plist
 @@ -3,7 +3,7 @@
@@ -7,28 +7,30 @@ index 782a63a70b..dad169336e 100644
  <dict>
  	<key>BuildMachineOSBuild</key>
 -	<string>14C1514</string>
-+	<string>15D21</string>
++	<string>17A291m</string>
  	<key>CFBundleDevelopmentRegion</key>
  	<string>English</string>
  	<key>CFBundleExecutable</key>
-@@ -25,7 +25,7 @@
+@@ -25,17 +25,17 @@
  	<key>DTCompiler</key>
  	<string>com.apple.compilers.llvm.clang.1_0</string>
  	<key>DTPlatformBuild</key>
 -	<string>6C131e</string>
-+	<string>7D1012</string>
++	<string>9M137d</string>
  	<key>DTPlatformVersion</key>
  	<string>GM</string>
  	<key>DTSDKBuild</key>
-@@ -33,9 +33,9 @@
+-	<string>12F37</string>
++	<string>17A291h</string>
  	<key>DTSDKName</key>
- 	<string>macosx10.8</string>
+-	<string>macosx10.8</string>
++	<string>macosx10.13</string>
  	<key>DTXcode</key>
 -	<string>0620</string>
-+	<string>0731</string>
++	<string>0900</string>
  	<key>DTXcodeBuild</key>
 -	<string>6C131e</string>
-+	<string>7D1012</string>
++	<string>9M137d</string>
  	<key>IOKitPersonalities</key>
  	<dict>
  		<key>net.lundman.zfs</key>
@@ -42,7 +44,7 @@ index 782a63a70b..dad169336e 100644
  	<string>1.0.0</string>
  	<key>OSBundleLibraries</key>
 diff --git a/module/zfs/zfs_osx.cpp b/module/zfs/zfs_osx.cpp
-index 9308fee076..328aeaac05 100644
+index 9308fee076..556d95a267 100644
 --- a/module/zfs/zfs_osx.cpp
 +++ b/module/zfs/zfs_osx.cpp
 @@ -28,7 +28,7 @@ extern "C" {
@@ -50,7 +52,7 @@ index 9308fee076..328aeaac05 100644
  	extern kern_return_t _stop(kmod_info_t *ki, void *data);
  
 -	__attribute__((visibility("default"))) KMOD_EXPLICIT_DECL(net.lundman.zfs, "1.0.0", _start, _stop)
-+	__attribute__((visibility("default"))) KMOD_EXPLICIT_DECL(net.lundman.zfs, "10.0.8", _start, _stop)
++	__attribute__((visibility("default"))) KMOD_EXPLICIT_DECL(net.lundman.zfs, "10.0.13", _start, _stop)
  	kmod_start_func_t *_realmain = 0;
  	kmod_stop_func_t  *_antimain = 0;
  	int _kext_apple_cc = __APPLE_CC__ ;

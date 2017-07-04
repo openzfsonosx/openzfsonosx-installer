@@ -5,7 +5,7 @@ openzfsonosx-installer
 `./make-installers.sh`
 
 ### Requirements:
-- macOS 10.8 Mountain Lion, 10.9 Mavericks, 10.10 Yosemite, 10.11 El Capitan, or 10.12 Sierra
+- macOS 10.8 Mountain Lion, 10.9 Mavericks, 10.10 Yosemite, 10.11 El Capitan, 10.12 Sierra, 10.13 High Sierra
 - http://s.sudre.free.fr/Software/files/Packages.dmg
 - ~/Library/Keychains/openzfs-login.keychain added to Keychain Access.app
 - Autotools, compiler, etc.
@@ -20,6 +20,8 @@ make-installers.sh
 - `should_make_109`
 - `should_make_1010`
 - `should_make_1011`
+- `should_make_1012`
+- `should_make_1013`
 - `should_make_dmg`
 - `require_version2_signature`
 - `make_only`

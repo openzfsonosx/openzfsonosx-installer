@@ -52,7 +52,7 @@ index 9308fee076..611d347c0b 100644
  	extern kern_return_t _stop(kmod_info_t *ki, void *data);
  
 -	__attribute__((visibility("default"))) KMOD_EXPLICIT_DECL(net.lundman.zfs, "1.0.0", _start, _stop)
-+	__attribute__((visibility("default"))) KMOD_EXPLICIT_DECL(net.lundman.zfs, "9.0.10", _start, _stop)
++	__attribute__((visibility("default"))) KMOD_EXPLICIT_DECL(net.lundman.zfs, "10.0.10", _start, _stop)
  	kmod_start_func_t *_realmain = 0;
  	kmod_stop_func_t  *_antimain = 0;
  	int _kext_apple_cc = __APPLE_CC__ ;

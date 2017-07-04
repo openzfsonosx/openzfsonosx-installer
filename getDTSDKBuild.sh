@@ -1,6 +1,12 @@
 #!/bin/bash
 
-XCODE=/Applications/Xcode.app
+if [[ -d /Applications/Xcode.app ]]
+then
+        XCODE=/Applications/Xcode.app
+elif [[ -d /Applications/Xcode-beta.app ]]
+then
+        XCODE=/Applications/Xcode-beta.app
+fi
 SDKS="${XCODE}"/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs
 SYSVER=System/Library/CoreServices/SystemVersion.plist
 
@@ -23,4 +29,7 @@ then
 elif [ x"$1" = x"1012" ]
 then
 	pbv "${SDKS}"/MacOSX10.12.sdk/"${SYSVER}"
+elif [ x"$1" = x"1013" ]
+then
+	pbv "${SDKS}"/MacOSX10.13.sdk/"${SYSVER}"
 fi
