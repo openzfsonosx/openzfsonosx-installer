@@ -21,7 +21,7 @@ index 782a63a70b..cbc3337a13 100644
  	<string>GM</string>
  	<key>DTSDKBuild</key>
 -	<string>12F37</string>
-+	<string>15E60</string>
++	<string>15C43</string>
  	<key>DTSDKName</key>
 -	<string>macosx10.8</string>
 +	<string>macosx10.11</string>
