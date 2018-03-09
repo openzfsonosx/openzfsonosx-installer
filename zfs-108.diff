@@ -28,7 +28,7 @@ index 782a63a70b..dad169336e 100644
 +	<string>0721</string>
  	<key>DTXcodeBuild</key>
 -	<string>6C131e</string>
-+	<string>7D1012</string>
++	<string>7C1002</string>
  	<key>IOKitPersonalities</key>
  	<dict>
  		<key>net.lundman.zfs</key>

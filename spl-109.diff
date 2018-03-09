@@ -30,7 +30,7 @@ index cc6c3cf..270f2cd 100644
 +	<string>0721</string>
  	<key>DTXcodeBuild</key>
 -	<string>6C131e</string>
-+	<string>7D1012</string>
++	<string>7C1002</string>
  	<key>NSHumanReadableCopyright</key>
 -	<string>CDDL (SPL), BSD (FreeBSD), Copyright © 2012-2016 OpenZFS on OS X. All rights reserved.</string>
 +	<string>CDDL (SPL), BSD (FreeBSD), Copyright © 2012-2018 OpenZFS on OS X. All rights reserved.</string>
