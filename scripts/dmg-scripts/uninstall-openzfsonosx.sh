@@ -16,11 +16,11 @@ chmod 777 "$ULOG"
 echo "No pools should be imported" | tee -a "$ULOG"
 
 if [ -c /dev/zfs ] ; then
-	if [ -e /usr/sbin/zpool ] ; then
-		echo "Checking output of /usr/sbin/zpool status" | tee -a "$ULOG"
+	if [ -x "$(which zpool)" ] ; then
+		echo "Checking output of zpool status" | tee -a "$ULOG"
 		TMPF=`mktemp /private/tmp/zfsuninstaller-poolcheck.XXXXXX`
 		set +e
-		2>>"$TMPF" 1>>"$TMPF" /usr/sbin/zpool status
+		2>>"$TMPF" 1>>"$TMPF" zpool status
 		err=$?
 		set -e
 		zpoolstatuslinecount=$(cat "$TMPF" | wc -l | tr -d ' ')
@@ -34,16 +34,16 @@ if [ -c /dev/zfs ] ; then
 		fi
 		rm "$TMPF"
 	else
-		echo "/usr/sbin/zpool does not exist." | tee -a "$ULOG"
+		echo "zpool command does not exist." | tee -a "$ULOG"
 		echo "You will need to export your pool(s) and unload zfs.kext manually before uninstalling." | tee -a "$ULOG"
 		exit 1
 	fi
 
-	if [ -e /usr/sbin/zfs ] ; then
-		echo "Checking output of /usr/sbin/zfs get name" | tee -a "$ULOG"
+	if [ -x "$(which zfs)" ] ; then
+		echo "Checking output of zfs get name" | tee -a "$ULOG"
 		TMPF=`mktemp /private/tmp/zfsuninstaller-zfscheck.XXXXXX`
 		set +e
-		2>>"$TMPF" 1>>"$TMPF" /usr/sbin/zfs get name 
+		2>>"$TMPF" 1>>"$TMPF" zfs get name
 		err=$?
 		set -e
 		zfsgetnamelinecount=$(cat "$TMPF" | wc -l)
@@ -57,7 +57,7 @@ if [ -c /dev/zfs ] ; then
 		fi
 		rm "$TMPF"
 	else
-		echo "/usr/sbin/zfs does not exist." | tee -a "$ULOG"
+		echo "zfs command does not exist." | tee -a "$ULOG"
 		echo "You will need to export your pool(s) and unload zfs.kext manually before uninstalling." | tee -a "$ULOG"
 		exit 1
 	fi
