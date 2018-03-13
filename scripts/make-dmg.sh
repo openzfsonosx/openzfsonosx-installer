@@ -6,7 +6,7 @@ PRETTY_109="OpenZFS on OS X $VERSION Mavericks.pkg"
 PRETTY_1010="OpenZFS on OS X $VERSION Yosemite.pkg"
 PRETTY_1011="OpenZFS on OS X $VERSION El Capitan.pkg"
 PRETTY_1012="OpenZFS on OS X $VERSION Sierra.pkg"
-PRETTY_1013="OpenZFS on OS X $VERSION High Sierra or higher.pkg"
+PRETTY_1013="OpenZFS on OS X $VERSION High Sierra.pkg"
 DMG_VOLNAME="OpenZFS on OS X $VERSION"
 
 should_arrange=1
