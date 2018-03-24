@@ -650,6 +650,7 @@ then
 	else
 		$SUDO $CHOWN -R "$OWNER":staff "$SPL_REPOSITORY_DIR"
 		cd "$SPL_REPOSITORY_DIR"
+		git fetch --tags
 	fi
 	if [ ! -d "$ZFS_REPOSITORY_DIR" ]
 	then
@@ -663,6 +664,7 @@ then
 	else
 		$SUDO $CHOWN -R "$OWNER":staff "$ZFS_REPOSITORY_DIR"
 		cd "$ZFS_REPOSITORY_DIR"
+		git fetch --tags
 	fi
 fi
 
