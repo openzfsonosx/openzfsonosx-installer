@@ -107,8 +107,8 @@ SIERRADESTDIR="${SIERRAPAK}"/1012
 HIGHSIERRAPAK="${topdir}"/packages-o3x-1013
 HIGHSIERRADESTDIR="${HIGHSIERRAPAK}"/1013
 
-SPL_TAG=spl-1.7.2
-ZFS_TAG=zfs-1.7.2
+SPL_TAG=spl-1.7.3
+ZFS_TAG=zfs-1.7.3
 
 if [ $make_only -eq 1 ]
 then
