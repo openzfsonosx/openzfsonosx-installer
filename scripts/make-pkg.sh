@@ -23,7 +23,10 @@ then
 	exit 1
 fi
 
-if [[ $1 == *1013* || $0 == *1013* || $PWD == *1013* ]]
+if [[ $1 == *1014* || $0 == *1014* || $PWD == *1014* ]]
+then
+	OS=1014
+elif [[ $1 == *1013* || $0 == *1013* || $PWD == *1013* ]]
 then
 	OS=1013
 elif [[ $1 == *1012* || $0 == *1012* || $PWD == *1012* ]]
@@ -42,7 +45,7 @@ else
 	OS=108
 fi
 
-if [ $require_version2_signature -eq 1 -a $os_release_major_version -lt 13 -a $OS -gt 108 ]
+if [ $require_version2_signature -eq 1 -a $os_release_major_version -lt 14 -a $OS -gt 108 ]
 then
 	echo "It is necessary to sign code while running OS X Mavericks or higher to get a version 2 signature."
 	exit 1
