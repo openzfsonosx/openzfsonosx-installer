@@ -14,6 +14,7 @@ should_make_1010=1
 should_make_1011=1
 should_make_1012=1
 should_make_1013=1
+should_make_1014=1
 should_make_dmg=1
 require_version2_signature=1
 os_release_major_version=`uname -r | awk -F '.' '{print $1;}'`
@@ -24,13 +25,13 @@ then
        exit 1
 fi
 
-if [ $require_version2_signature -eq 1 -a $os_release_major_version -lt 13 -a $should_make_109 -eq 1 ]
+if [ $require_version2_signature -eq 1 -a $os_release_major_version -lt 14 -a $should_make_109 -eq 1 ]
 then
        echo "It is necessary to sign code while running OS X Mavericks or higher to get a version 2 signature."
        exit 1
 fi
 
-if [ $require_version2_signature -eq 1 -a $os_release_major_version -lt 13 -a $should_make_1010 -eq 1 ]
+if [ $require_version2_signature -eq 1 -a $os_release_major_version -lt 14 -a $should_make_1010 -eq 1 ]
 then
        echo "It is necessary to sign code while running OS X Mavericks or higher to get a version 2 signature."
        exit 1
@@ -88,6 +89,7 @@ YOSDEV="${HOME_DIR}"/Developer/yosemite
 ELCAPDEV="${HOME_DIR}"/Developer/elcapitan
 SIERRADEV="${HOME_DIR}"/Developer/sierra
 HIGHSIERRADEV="${HOME_DIR}"/Developer/highsierra
+MOJAVEDEV="${HOME_DIR}"/Developer/mojave
 
 MLPAK="${topdir}"/packages-o3x-108
 MLDESTDIR="${MLPAK}"/108
@@ -107,8 +109,11 @@ SIERRADESTDIR="${SIERRAPAK}"/1012
 HIGHSIERRAPAK="${topdir}"/packages-o3x-1013
 HIGHSIERRADESTDIR="${HIGHSIERRAPAK}"/1013
 
-SPL_TAG=spl-1.7.3
-ZFS_TAG=zfs-1.7.3
+MOJAVEPAK="${topdir}"/packages-o3x-1014
+MOJAVEDESTDIR="${MOJAVEPAK}"/1014
+
+SPL_TAG=spl-1.7.4
+ZFS_TAG=zfs-1.7.4
 
 if [ $make_only -eq 1 ]
 then
@@ -118,6 +123,7 @@ then
 	[ $should_make_1011 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.11 -d "${ELCAPDEV}" -i /Library/Extensions -m -s $SPL_TAG -z $ZFS_TAG -p off
 	[ $should_make_1012 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.12 -d "${SIERRADEV}" -i /Library/Extensions -m -s $SPL_TAG -z $ZFS_TAG -p off
 	[ $should_make_1013 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.13 -d "${HIGHSIERRADEV}" -i /Library/Extensions -m -s $SPL_TAG -z $ZFS_TAG -p off
+	[ $should_make_1014 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.14 -d "${MOJAVEDEV}" -i /Library/Extensions -m -s $SPL_TAG -z $ZFS_TAG -p off
 else
 	[ $should_make_108 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.8 -d "${MLDEV}" -i /System/Library/Extensions -s $SPL_TAG -z $ZFS_TAG -p off
 	[ $should_make_109 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.9 -d "${MAVDEV}" -i /Library/Extensions -s $SPL_TAG -z $ZFS_TAG -p off
@@ -125,6 +131,7 @@ else
 	[ $should_make_1011 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.11 -d "${ELCAPDEV}" -i /Library/Extensions -s $SPL_TAG -z $ZFS_TAG -p off
 	[ $should_make_1012 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.12 -d "${SIERRADEV}" -i /Library/Extensions -s $SPL_TAG -z $ZFS_TAG -p off
 	[ $should_make_1013 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.13 -d "${HIGHSIERRADEV}" -i /Library/Extensions -s $SPL_TAG -z $ZFS_TAG -p off
+	[ $should_make_1014 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.14 -d "${MOJAVEDEV}" -i /Library/Extensions -s $SPL_TAG -z $ZFS_TAG -p off
 fi
 
 if [ $should_make_108 -eq 1 ]
@@ -205,6 +212,19 @@ then
 	sudo make DESTDIR="${HIGHSIERRADESTDIR}" install
 fi
 
+if [ $should_make_1014 -eq 1 ]
+then
+	rm -rf "${MOJAVEDESTDIR}"
+	cd "${MOJAVEDEV}"
+
+	cd spl
+	sudo make DESTDIR="${MOJAVEDESTDIR}" install
+	cd ..
+
+	cd zfs
+	sudo make DESTDIR="${MOJAVEDESTDIR}" install
+fi
+
 cd "${topdir}"
 [ $should_make_108 -eq 1 ] && ./scripts/make-pkg.sh 108
 ret108=$?
@@ -218,7 +238,10 @@ ret1011=$?
 ret1012=$?
 [ $should_make_1013 -eq 1 ] && ./scripts/make-pkg.sh 1013
 ret1013=$?
+[ $should_make_1014 -eq 1 ] && ./scripts/make-pkg.sh 1014
+ret1014=$?
 
+[ $should_make_1014 -eq 1 -a $ret1014 -ne 0 ] && exit $ret1014
 [ $should_make_1013 -eq 1 -a $ret1013 -ne 0 ] && exit $ret1013
 [ $should_make_1012 -eq 1 -a $ret1012 -ne 0 ] && exit $ret1012
 [ $should_make_1011 -eq 1 -a $ret1011 -ne 0 ] && exit $ret1011
