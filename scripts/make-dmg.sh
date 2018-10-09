@@ -106,7 +106,7 @@ TMPDIR=$PWD
 DMG_RW_TMPDIR=`mktemp -d -t rw`
 rw_mntpoint="$( \
     hdiutil create \
-    -size 50m \
+    -size 60m \
     -fs HFS+J \
     -volname "$DMG_VOLNAME" \
     -attach \

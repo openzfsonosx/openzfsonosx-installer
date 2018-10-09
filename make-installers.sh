@@ -112,8 +112,8 @@ HIGHSIERRADESTDIR="${HIGHSIERRAPAK}"/1013
 MOJAVEPAK="${topdir}"/packages-o3x-1014
 MOJAVEDESTDIR="${MOJAVEPAK}"/1014
 
-SPL_TAG=spl-1.7.4
-ZFS_TAG=zfs-1.7.4
+SPL_TAG=spl-1.8.0
+ZFS_TAG=zfs-1.8.0
 
 if [ $make_only -eq 1 ]
 then
