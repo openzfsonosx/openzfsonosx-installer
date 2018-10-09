@@ -184,6 +184,7 @@ rm -fv /etc/zfs/zed.d/all-syslog.sh
 rm -fv /etc/zfs/zed.d/checksum-notify.sh
 rm -fv /etc/zfs/zed.d/checksum-spare.sh
 rm -fv /etc/zfs/zed.d/config.remove.sh
+rm -fv /etc/zfs/zed.d/config.rename.sh
 rm -fv /etc/zfs/zed.d/config.sync.sh
 rm -fv /etc/zfs/zed.d/data-notify.sh
 rm -fv /etc/zfs/zed.d/generic-notify.sh

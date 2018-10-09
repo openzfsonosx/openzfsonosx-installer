@@ -141,6 +141,22 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
+													<string>1014/etc/zfs/zed.d/config.rename.sh</string>
+													<key>PATH_TYPE</key>
+													<integer>3</integer>
+													<key>PERMISSIONS</key>
+													<integer>493</integer>
+													<key>TYPE</key>
+													<integer>3</integer>
+													<key>UID</key>
+													<integer>0</integer>
+												</dict>
+												<dict>
+													<key>CHILDREN</key>
+													<array/>
+													<key>GID</key>
+													<integer>0</integer>
+													<key>PATH</key>
 													<string>1014/etc/zfs/zed.d/data-notify.sh</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
@@ -2391,6 +2407,22 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
+																	<string>1014/usr/local/libexec/zfs/zed.d/config.rename.sh</string>
+																	<key>PATH_TYPE</key>
+																	<integer>3</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>493</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
 																	<string>1014/usr/local/libexec/zfs/zed.d/data-notify.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
@@ -3968,7 +4000,7 @@
 				<key>OVERWRITE_PERMISSIONS</key>
 				<false/>
 				<key>VERSION</key>
-				<string>15.0</string>
+				<string>16.0</string>
 			</dict>
 			<key>UUID</key>
 			<string>DA78ACD3-B7AF-426E-A34D-143E0C00A983</string>
