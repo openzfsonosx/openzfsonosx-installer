@@ -1,9 +1,9 @@
---- distribution.dist	2018-03-06 06:10:38.000000000 -0800
-+++ distribution.dist	2018-03-06 06:11:49.000000000 -0800
+--- distribution.dist	2018-03-05 09:20:29.000000000 -0800
++++ distribution.dist	2018-03-05 09:22:16.000000000 -0800
 @@ -1,7 +1,14 @@
- <?xml version="1.0" encoding="UTF-8" standalone="no"?>
--<installer-gui-script authoringTool="Packages" authoringToolVersion="1.2.2" authoringToolBuild="316" minSpecVersion="1.0">
-+<installer-gui-script authoringTool="Packages" authoringToolVersion="1.2.2" authoringToolBuild="316" minSpecVersion="2">
+ <?xml version="1.0" encoding="UTF-8"?>
+-<installer-gui-script authoringTool="Packages" authoringToolVersion="1.2.3" authoringToolBuild="373" minSpecVersion="1.0">
++<installer-gui-script authoringTool="Packages" authoringToolVersion="1.2.3" authoringToolBuild="373" minSpecVersion="2">
      <options rootVolumeOnly="true" customize="never" allow-external-scripts="true"/>
 -    <installation-check script="installation_check()"/>
 +    <volume-check>
@@ -17,10 +17,3 @@
      <!--+==========================+
          |       Presentation       |
          +==========================+-->
-@@ -233,4 +240,4 @@
- 	}
- 
-     </script>
--</installer-gui-script>
-\ No newline at end of file
-+</installer-gui-script>
