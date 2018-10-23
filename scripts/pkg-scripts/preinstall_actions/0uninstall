@@ -1,6 +1,6 @@
 #!/bin/bash
 set +e
-date -j -f "%a %b %d %T %Z %Y" "`date`" "+%s" >> /tmp/o3x.log
+date '+%s' >> /tmp/o3x.log
 echo $0 >> /tmp/o3x.log
 pkgutil --pkgs | grep net.lundman.openzfs |\
 while read apkg

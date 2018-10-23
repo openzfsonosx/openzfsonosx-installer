@@ -1,5 +1,5 @@
 #!/bin/bash
-date -j -f "%a %b %d %T %Z %Y" "`date`" "+%s" >> /tmp/o3x.log
+date '+%s' >> /tmp/o3x.log
 echo $0 >> /tmp/o3x.log
 set -e
 
