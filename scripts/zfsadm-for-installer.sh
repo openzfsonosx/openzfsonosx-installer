@@ -275,9 +275,13 @@ CFLAGS_ARRAY=(-g)
 CFLAGS_ARRAY+=(-Os)
 CFLAGS_ARRAY+=(-Wno-tautological-constant-out-of-range-compare)
 
+CXXFLAGS_ARRAY=(-g)
+CXXFLAGS_ARRAY+=(-Os)
+
 if [ x"$TARGET_OS_X_VERSION" = x"10.8" ]
 then
 	CFLAGS_ARRAY+=(-mmacosx-version-min=10.8)
+	CXXFLAGS_ARRAY+=(-mmacosx-version-min=10.8)
 	SPL_CONFIGURE_ARRAY+=(--prefix=/usr)
 	ZFS_CONFIGURE_ARRAY+=(--prefix=/usr)
 	SPL_CONFIGURE_ARRAY+=\
@@ -290,6 +294,7 @@ then
 elif [ x"$TARGET_OS_X_VERSION" = x"10.9" ]
 then
 	CFLAGS_ARRAY+=(-mmacosx-version-min=10.9)
+	CXXFLAGS_ARRAY+=(-mmacosx-version-min=10.9)
 	SPL_CONFIGURE_ARRAY+=(--prefix=/usr)
 	ZFS_CONFIGURE_ARRAY+=(--prefix=/usr)
 	SPL_CONFIGURE_ARRAY+=\
@@ -302,6 +307,7 @@ then
 elif [ x"$TARGET_OS_X_VERSION" = x"10.10" ]
 then
 	CFLAGS_ARRAY+=(-mmacosx-version-min=10.10)
+	CXXFLAGS_ARRAY+=(-mmacosx-version-min=10.10)
 	SPL_CONFIGURE_ARRAY+=(--prefix=/usr)
 	ZFS_CONFIGURE_ARRAY+=(--prefix=/usr)
 	SPL_CONFIGURE_ARRAY+=\
@@ -314,6 +320,7 @@ then
 elif [ x"$TARGET_OS_X_VERSION" = x"10.11" ]
 then
 	CFLAGS_ARRAY+=(-mmacosx-version-min=10.11)
+	CXXFLAGS_ARRAY+=(-mmacosx-version-min=10.11)
 	SPL_CONFIGURE_ARRAY+=(--prefix=/usr/local)
 	ZFS_CONFIGURE_ARRAY+=(--prefix=/usr/local)
 	SPL_CONFIGURE_ARRAY+=(--sbindir=/usr/local/bin)
@@ -327,6 +334,7 @@ then
 elif [ x"$TARGET_OS_X_VERSION" = x"10.12" ]
 then
 	CFLAGS_ARRAY+=(-mmacosx-version-min=10.12)
+	CXXFLAGS_ARRAY+=(-mmacosx-version-min=10.12)
 	SPL_CONFIGURE_ARRAY+=(--prefix=/usr/local)
 	ZFS_CONFIGURE_ARRAY+=(--prefix=/usr/local)
 	SPL_CONFIGURE_ARRAY+=(--sbindir=/usr/local/bin)
@@ -340,6 +348,7 @@ then
 elif [ x"$TARGET_OS_X_VERSION" = x"10.13" ]
 then
 	CFLAGS_ARRAY+=(-mmacosx-version-min=10.13)
+	CXXFLAGS_ARRAY+=(-mmacosx-version-min=10.13)
 	SPL_CONFIGURE_ARRAY+=(--prefix=/usr/local)
 	ZFS_CONFIGURE_ARRAY+=(--prefix=/usr/local)
 	SPL_CONFIGURE_ARRAY+=(--sbindir=/usr/local/bin)
@@ -353,6 +362,7 @@ then
 elif [ x"$TARGET_OS_X_VERSION" = x"10.14" ]
 then
 	CFLAGS_ARRAY+=(-mmacosx-version-min=10.14)
+	CXXFLAGS_ARRAY+=(-mmacosx-version-min=10.14)
 	SPL_CONFIGURE_ARRAY+=(--prefix=/usr/local)
 	ZFS_CONFIGURE_ARRAY+=(--prefix=/usr/local)
 	SPL_CONFIGURE_ARRAY+=(--sbindir=/usr/local/bin)
@@ -786,6 +796,7 @@ fi
 if [ "$SHOULD_CONFIGURE" = "yes" ]
 then
 	CFLAGS_STRING=${CFLAGS_ARRAY[*]}
+	CXXFLAGS_STRING=${CXXFLAGS_ARRAY[*]}
 	cd "$SPL_REPOSITORY_DIR"
 	if [ x"$TARGET_OS_X_VERSION" = x"10.8" ]
 	then
@@ -818,6 +829,7 @@ then
 	$SUDO -u "$OWNER" $BASH_PATH "$SPL_REPOSITORY_DIR"/autogen.sh
 	$SUDO -u "$OWNER" $BASH_PATH "$SPL_REPOSITORY_DIR"/configure\
 	    ${CFLAGS_STRING:+CFLAGS="$CFLAGS_STRING"}\
+	    ${CXXFLAGS_STRING:+CXXFLAGS="$CXXFLAGS_STRING"}\
 	    ${SPL_CONFIGURE_ARRAY[@]}
 	cd "$ZFS_REPOSITORY_DIR"
 	if [ x"$TARGET_OS_X_VERSION" = x"10.8" ]
@@ -851,6 +863,7 @@ then
 	$SUDO -u "$OWNER" $BASH_PATH "$ZFS_REPOSITORY_DIR"/autogen.sh
 	$SUDO -u "$OWNER" $BASH_PATH "$ZFS_REPOSITORY_DIR"/configure\
 	    ${CFLAGS_STRING:+CFLAGS="$CFLAGS_STRING"}\
+	    ${CXXFLAGS_STRING:+CXXFLAGS="$CXXFLAGS_STRING"}\
 	    ${ZFS_CONFIGURE_ARRAY[@]}
 fi
 
