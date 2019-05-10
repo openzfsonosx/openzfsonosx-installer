@@ -39,7 +39,7 @@ index 782a63a70b..9d3d88bf1e 100644
  	</dict>
  	<key>NSHumanReadableCopyright</key>
 -	<string>CDDL (ZFS), BSD (FreeBSD), Copyright © 2012-2016 OpenZFS on OS X. All rights reserved.</string>
-+	<string>CDDL (ZFS), BSD (FreeBSD), Copyright © 2012-2018 OpenZFS on OS X. All rights reserved.</string>
++	<string>CDDL (ZFS), BSD (FreeBSD), Copyright © 2012-2019 OpenZFS on OS X. All rights reserved.</string>
  	<key>OSBundleCompatibleVersion</key>
  	<string>1.0.0</string>
  	<key>OSBundleLibraries</key>
@@ -52,7 +52,7 @@ index 9308fee076..611d347c0b 100644
  	extern kern_return_t _stop(kmod_info_t *ki, void *data);
  
 -	__attribute__((visibility("default"))) KMOD_EXPLICIT_DECL(net.lundman.zfs, "1.0.0", _start, _stop)
-+	__attribute__((visibility("default"))) KMOD_EXPLICIT_DECL(net.lundman.zfs, "16.0.10", _start, _stop)
++	__attribute__((visibility("default"))) KMOD_EXPLICIT_DECL(net.lundman.zfs, "17.0.10", _start, _stop)
  	kmod_start_func_t *_realmain = 0;
  	kmod_stop_func_t  *_antimain = 0;
  	int _kext_apple_cc = __APPLE_CC__ ;
