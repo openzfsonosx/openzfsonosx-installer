@@ -16,6 +16,7 @@ spl_kernel_exports_kext="spl.kext/Contents/PlugIns/KernelExports.kext/"
 spl_kext="spl.kext/"
 zfs_kext="zfs.kext/"
 os_release_major_version=`uname -r | awk -F '.' '{print $1;}'`
+signargs="--options runtime"
 
 if [ -z $os_release_major_version ]
 then
@@ -153,7 +154,60 @@ then
 		if [ $ret -ne 0 ]
 		then
 			echo "Signing ${path}"
-			codesign -fvs "${dev_id_application}" "${path}"
+			codesign $signargs -fvs "${dev_id_application}" "${path}"
+			# spctl --assess --raw "${path}"
+			codesign -dvvv "${path}"
+		fi
+	done
+	popd
+
+	pushd ${OS}/usr/local/bin &>/dev/null
+	for path in InvariantDisks fsck_zfs mount.zfs mount_zfs umount_zfs \
+	    zconfigd zdb zdb_static zed zfs zfs.util zhack zinject zpios \
+	    zpool zstreamdump zsysctl ztest ztest_static
+	do
+		set +e
+		codesign -dvvv "${path}"
+		ret=$?
+		set -e
+		if [ $ret -ne 0 ]
+		then
+			echo "Signing ${path}"
+			codesign $signargs -fvs "${dev_id_application}" "${path}"
+			# spctl --assess --raw "${path}"
+			codesign -dvvv "${path}"
+		fi
+	done
+	popd
+
+	pushd ${OS}/usr/local/lib &>/dev/null
+	for path in *.dylib
+	do
+		set +e
+		codesign -dvvv "${path}"
+		ret=$?
+		set -e
+		if [ $ret -ne 0 ]
+		then
+			echo "Signing ${path}"
+			codesign $signargs -fvs "${dev_id_application}" "${path}"
+			# spctl --assess --raw "${path}"
+			codesign -dvvv "${path}"
+		fi
+	done
+	popd
+
+	pushd ${OS}/Library/Filesystems/zfs.fs/Contents/Resources &>/dev/null
+	for path in zfs.util
+	do
+		set +e
+		codesign -dvvv "${path}"
+		ret=$?
+		set -e
+		if [ $ret -ne 0 ]
+		then
+			echo "Signing ${path}"
+			codesign $signargs -fvs "${dev_id_application}" "${path}"
 			# spctl --assess --raw "${path}"
 			codesign -dvvv "${path}"
 		fi
@@ -204,4 +258,25 @@ then
 else
 	do_rsync out-${OS}.pkg ../
 	chown ${owner} ../out-${OS}.pkg
+fi
+
+if [ $notarize_1014 -eq 1 ]
+then
+    xcrun altool --notarize-app -f ../out-1014-signed.pkg --primary-bundle-id net.lundman.zfs -u lundman@lundman.net -p "$NOTARIZE_PASS"
+
+    loop=1
+    while [ $loop ] 
+    do
+	echo "Waiting for Apple to notarize..."
+	sleep 30
+	echo "Querying Apple."
+	xcrun altool --notarization-info $GUID -u lundman@lundman.net -p "$NOTARIZE_PASS"
+	if [ $? -eq 0 ]; then
+	    loop=0
+	    echo "Done."
+	fi
+    done
+
+    xcrun stapler staple ../out-1014-signed.pkg
+    xcrun stapler validate -v../ out-1014-signed.pkg
 fi

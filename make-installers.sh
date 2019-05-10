@@ -19,6 +19,17 @@ should_make_dmg=1
 require_version2_signature=1
 os_release_major_version=`uname -r | awk -F '.' '{print $1;}'`
 
+notarize_1014=0
+
+if [ $notarize_1014 -eq 1 ]
+then
+    if [ -z $NOTARIZE_PASS ]
+    then
+	echo "Set ENVVAR NOTARIZE_PASS for notarization to work."
+	exit 1
+    fi
+fi
+
 if [ -z $os_release_major_version ]
 then
        echo "Could not determine operating system release major version"
@@ -112,8 +123,8 @@ HIGHSIERRADESTDIR="${HIGHSIERRAPAK}"/1013
 MOJAVEPAK="${topdir}"/packages-o3x-1014
 MOJAVEDESTDIR="${MOJAVEPAK}"/1014
 
-SPL_TAG=spl-1.8.0
-ZFS_TAG=zfs-1.8.0
+SPL_TAG=spl-1.9.0
+ZFS_TAG=zfs-1.9.0
 
 if [ $make_only -eq 1 ]
 then
