@@ -17,6 +17,7 @@ spl_kext="spl.kext/"
 zfs_kext="zfs.kext/"
 os_release_major_version=`uname -r | awk -F '.' '{print $1;}'`
 signargs="--options runtime"
+notarize_1014=${notarize_1014:-1}
 
 if [ -z $os_release_major_version ]
 then
@@ -260,23 +261,32 @@ else
 	chown ${owner} ../out-${OS}.pkg
 fi
 
-if [ $notarize_1014 -eq 1 ]
+if [ ${notarize_1014} -eq 1 ]
 then
-    xcrun altool --notarize-app -f ../out-1014-signed.pkg --primary-bundle-id net.lundman.zfs -u lundman@lundman.net -p "$NOTARIZE_PASS"
+    echo "Uploading PKG to Apple ..."
+    TFILE="out-altool.xml"
+    RFILE="req-altool.xml"
+    xcrun altool --notarize-app -f ../out-1014-signed.pkg --primary-bundle-id net.lundman.zfs -u lundman@lundman.net -p "$NOTARIZE_PASS" --output-format xml > ${TFILE}
 
-    loop=1
-    while [ $loop ] 
+    GUID=`/usr/libexec/PlistBuddy -c "Print :notarization-upload:RequestUUID" ${TFILE}`
+    echo "Uploaded. GUID ${GUID}"
+    echo "Waiting for Apple to notarize..."
+    while [ 1 ] 
     do
-	echo "Waiting for Apple to notarize..."
-	sleep 30
+	sleep 10
 	echo "Querying Apple."
-	xcrun altool --notarization-info $GUID -u lundman@lundman.net -p "$NOTARIZE_PASS"
-	if [ $? -eq 0 ]; then
-	    loop=0
-	    echo "Done."
+
+	xcrun altool --notarization-info "${GUID}" -u lundman@lundman.net -p "$NOTARIZE_PASS" --output-format xml > ${RFILE}
+	status=`/usr/libexec/PlistBuddy -c "Print :notarization-info:Status" ${RFILE}`
+	if [ "$status" != "in progress" ]; then 
+	    echo "Status: $status ."
+	    break
 	fi
+	echo "Status: $status - sleeping ..."
+	sleep 30
     done
 
+    echo "Stapling PKG ..."
     xcrun stapler staple ../out-1014-signed.pkg
-    xcrun stapler validate -v../ out-1014-signed.pkg
+    xcrun stapler validate -v ../out-1014-signed.pkg
 fi
