@@ -1324,7 +1324,55 @@
 																			<key>GID</key>
 																			<integer>0</integer>
 																			<key>PATH</key>
-																			<string>108/System/Library/Filesystems/zfs.fs/Contents/Resources/zfs.util</string>
+																			<string>108/System/Library/Filesystems/zfs.fs/Contents/Resources/zfs_util</string>
+																			<key>PATH_TYPE</key>
+																			<integer>3</integer>
+																			<key>PERMISSIONS</key>
+																			<integer>493</integer>
+																			<key>TYPE</key>
+																			<integer>3</integer>
+																			<key>UID</key>
+																			<integer>0</integer>
+																		</dict>
+																		<dict>
+																			<key>CHILDREN</key>
+																			<array/>
+																			<key>GID</key>
+																			<integer>0</integer>
+																			<key>PATH</key>
+																			<string>108/System/Library/Filesystems/zfs.fs/Contents/Resources/fsck_zfs</string>
+																			<key>PATH_TYPE</key>
+																			<integer>3</integer>
+																			<key>PERMISSIONS</key>
+																			<integer>493</integer>
+																			<key>TYPE</key>
+																			<integer>3</integer>
+																			<key>UID</key>
+																			<integer>0</integer>
+																		</dict>
+																		<dict>
+																			<key>CHILDREN</key>
+																			<array/>
+																			<key>GID</key>
+																			<integer>0</integer>
+																			<key>PATH</key>
+																			<string>108/System/Library/Filesystems/zfs.fs/Contents/Resources/mount_zfs</string>
+																			<key>PATH_TYPE</key>
+																			<integer>3</integer>
+																			<key>PERMISSIONS</key>
+																			<integer>493</integer>
+																			<key>TYPE</key>
+																			<integer>3</integer>
+																			<key>UID</key>
+																			<integer>0</integer>
+																		</dict>
+																		<dict>
+																			<key>CHILDREN</key>
+																			<array/>
+																			<key>GID</key>
+																			<integer>0</integer>
+																			<key>PATH</key>
+																			<string>108/System/Library/Filesystems/zfs.fs/Contents/Resources/newfs_zfs</string>
 																			<key>PATH_TYPE</key>
 																			<integer>3</integer>
 																			<key>PERMISSIONS</key>
@@ -1357,22 +1405,6 @@
 															<integer>0</integer>
 															<key>PATH</key>
 															<string>108/System/Library/Filesystems/zfs.fs/Contents</string>
-															<key>PATH_TYPE</key>
-															<integer>3</integer>
-															<key>PERMISSIONS</key>
-															<integer>493</integer>
-															<key>TYPE</key>
-															<integer>3</integer>
-															<key>UID</key>
-															<integer>0</integer>
-														</dict>
-														<dict>
-															<key>CHILDREN</key>
-															<array/>
-															<key>GID</key>
-															<integer>0</integer>
-															<key>PATH</key>
-															<string>108/System/Library/Filesystems/zfs.fs/zfs.util</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>

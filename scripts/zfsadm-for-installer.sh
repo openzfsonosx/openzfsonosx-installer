@@ -39,6 +39,7 @@ export ELCAP_SPL_DIFF="$PWD"/spl-1011.diff
 export SIERRA_SPL_DIFF="$PWD"/spl-1012.diff
 export HIGHSIERRA_SPL_DIFF="$PWD"/spl-1013.diff
 export MOJAVE_SPL_DIFF="$PWD"/spl-1014.diff
+export CATALINA_SPL_DIFF="$PWD"/spl-1015.diff
 
 export ML_ZFS_DIFF="$PWD"/zfs-108.diff
 export MAV_ZFS_DIFF="$PWD"/zfs-109.diff
@@ -47,6 +48,7 @@ export ELCAP_ZFS_DIFF="$PWD"/zfs-1011.diff
 export SIERRA_ZFS_DIFF="$PWD"/zfs-1012.diff
 export HIGHSIERRA_ZFS_DIFF="$PWD"/zfs-1013.diff
 export MOJAVE_ZFS_DIFF="$PWD"/zfs-1014.diff
+export CATALINA_ZFS_DIFF="$PWD"/zfs-1015.diff
 
 export BASH_PATH=bash
 export CAT=cat
@@ -247,6 +249,7 @@ XCODE_ELCAP_SDK="$XCODE_SDKS/MacOSX10.11.sdk"
 XCODE_SIERRA_SDK="$XCODE_SDKS/MacOSX10.12.sdk"
 XCODE_HIGHSIERRA_SDK="$XCODE_SDKS/MacOSX10.13.sdk"
 XCODE_MOJAVE_SDK="$XCODE_SDKS/MacOSX10.14.sdk"
+XCODE_CATALINA_SDK="$XCODE_SDKS/MacOSX10.15.sdk"
 KERNEL_FRAMEWORK_PATH=/System/Library/Frameworks/Kernel.framework
 ML_HEADERS=$XCODE_ML_SDK$KERNEL_FRAMEWORK_PATH
 MAV_HEADERS=$XCODE_MAV_SDK$KERNEL_FRAMEWORK_PATH
@@ -255,6 +258,7 @@ ELCAP_HEADERS=$XCODE_ELCAP_SDK$KERNEL_FRAMEWORK_PATH
 SIERRA_HEADERS=$XCODE_SIERRA_SDK$KERNEL_FRAMEWORK_PATH
 HIGHSIERRA_HEADERS=$XCODE_HIGHSIERRA_SDK$KERNEL_FRAMEWORK_PATH
 MOJAVE_HEADERS=$XCODE_MOJAVE_SDK$KERNEL_FRAMEWORK_PATH
+CATALINA_HEADERS=$XCODE_CATALINA_SDK$KERNEL_FRAMEWORK_PATH
 
 SPL_CONFIGURE_ARRAY=(CC=clang)
 SPL_CONFIGURE_ARRAY+=(CXX=clang++)
@@ -373,9 +377,23 @@ then
 (${MOJAVE_HEADERS:+--with-kernelsrc="$MOJAVE_HEADERS"})
 	ZFS_CONFIGURE_ARRAY+=\
 (--with-filesystems-prefix=/Library/Filesystems)
+elif [ x"$TARGET_OS_X_VERSION" = x"10.15" ]
+then
+	CFLAGS_ARRAY+=(-mmacosx-version-min=10.15)
+	CXXFLAGS_ARRAY+=(-mmacosx-version-min=10.15)
+	SPL_CONFIGURE_ARRAY+=(--prefix=/usr/local)
+	ZFS_CONFIGURE_ARRAY+=(--prefix=/usr/local)
+	SPL_CONFIGURE_ARRAY+=(--sbindir=/usr/local/bin)
+	ZFS_CONFIGURE_ARRAY+=(--sbindir=/usr/local/bin)
+	SPL_CONFIGURE_ARRAY+=\
+(${CATALINA_HEADERS:+--with-kernel-headers="$CATALINA_HEADERS"})
+	ZFS_CONFIGURE_ARRAY+=\
+(${CATALINA_HEADERS:+--with-kernelsrc="$CATALINA_HEADERS"})
+	ZFS_CONFIGURE_ARRAY+=\
+(--with-filesystems-prefix=/Library/Filesystems)
 elif [ x"$TARGET_OS_X_VERSION" != x"native" ]
 then
-	$ECHO "target should be '10.8', '10.9', '10.10', '10.11', '10.12', '10.13', '10.14', or 'native'"
+	$ECHO "target should be '10.8', '10.9', '10.10', '10.11', '10.12', '10.13', '10.14', '10.15', or 'native'"
 	exit 22
 fi
 
@@ -822,9 +840,13 @@ then
 	then
 		[ -e "${HIGHSIERRA_SPL_DIFF}" ] && $GIT apply "${HIGHSIERRA_SPL_DIFF}"
 		# $GIT diff > "${HIGHSIERRA_SPL_DIFF}".new
-	else
+	elif [ x"$TARGET_OS_X_VERSION" = x"10.14" ]
+	then
 		[ -e "${MOJAVE_SPL_DIFF}" ] && $GIT apply "${MOJAVE_SPL_DIFF}"
 		# $GIT diff > "${MOJAVE_SPL_DIFF}".new
+	else
+		[ -e "${CATALINA_SPL_DIFF}" ] && $GIT apply "${CATALINA_SPL_DIFF}"
+		# $GIT diff > "${CATALINA_SPL_DIFF}".new
 	fi
 	$SUDO -u "$OWNER" $BASH_PATH "$SPL_REPOSITORY_DIR"/autogen.sh
 	$SUDO -u "$OWNER" $BASH_PATH "$SPL_REPOSITORY_DIR"/configure\
@@ -856,9 +878,13 @@ then
 	then
 		[ -e "${HIGHSIERRA_ZFS_DIFF}" ] && $GIT apply "${HIGHSIERRA_ZFS_DIFF}"
 		# $GIT diff > "${HIGHSIERRA_ZFS_DIFF}".new
-	else
+	elif  [ x"$TARGET_OS_X_VERSION" = x"10.14" ]
+	then
 		[ -e "${MOJAVE_ZFS_DIFF}" ] && $GIT apply "${MOJAVE_ZFS_DIFF}"
 		# $GIT diff > "${MOJAVE_ZFS_DIFF}".new
+	else
+		[ -e "${CATALINA_ZFS_DIFF}" ] && $GIT apply "${CATALINA_ZFS_DIFF}"
+		# $GIT diff > "${CATALINE_ZFS_DIFF}".new
 	fi
 	$SUDO -u "$OWNER" $BASH_PATH "$ZFS_REPOSITORY_DIR"/autogen.sh
 	$SUDO -u "$OWNER" $BASH_PATH "$ZFS_REPOSITORY_DIR"/configure\

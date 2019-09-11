@@ -3,7 +3,7 @@
 @@ -1,7 +1,14 @@
  <?xml version="1.0" encoding="UTF-8"?>
 -<installer-gui-script authoringTool="Packages" authoringToolVersion="1.2.3" authoringToolBuild="373" minSpecVersion="1.0">
-+<installer-gui-script authoringTool="Packages" authoringToolVersion="1.2.3" authoringToolBuild="373" minSpecVersion="2">
++<installer-gui-script authoringTool="Packages" authoringToolVersion="1.2.6" authoringToolBuild="549" minSpecVersion="2">
      <options rootVolumeOnly="true" customize="never" allow-external-scripts="true"/>
 -    <installation-check script="installation_check()"/>
 +    <volume-check>

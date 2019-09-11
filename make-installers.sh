@@ -8,17 +8,19 @@ fi
 
 sudo ntpdate -u time.apple.com
 
-should_make_108=1
-should_make_109=1
-should_make_1010=1
-should_make_1011=1
-should_make_1012=1
-should_make_1013=1
-should_make_1014=1
-should_make_dmg=1
+should_make_108=0
+should_make_109=0
+should_make_1010=0
+should_make_1011=0
+should_make_1012=0
+should_make_1013=0
+should_make_1014=0
+should_make_1015=1
+should_make_dmg=0
 require_version2_signature=1
 os_release_major_version=`uname -r | awk -F '.' '{print $1;}'`
 
+# This is a notarize FROM switch.
 notarize_1014=0
 
 if [ $notarize_1014 -eq 1 ]
@@ -101,6 +103,7 @@ ELCAPDEV="${HOME_DIR}"/Developer/elcapitan
 SIERRADEV="${HOME_DIR}"/Developer/sierra
 HIGHSIERRADEV="${HOME_DIR}"/Developer/highsierra
 MOJAVEDEV="${HOME_DIR}"/Developer/mojave
+CATALINADEV="${HOME_DIR}"/Developer/catalina
 
 MLPAK="${topdir}"/packages-o3x-108
 MLDESTDIR="${MLPAK}"/108
@@ -123,8 +126,11 @@ HIGHSIERRADESTDIR="${HIGHSIERRAPAK}"/1013
 MOJAVEPAK="${topdir}"/packages-o3x-1014
 MOJAVEDESTDIR="${MOJAVEPAK}"/1014
 
-SPL_TAG=spl-1.9.0
-ZFS_TAG=zfs-1.9.0
+CATALINAPAK="${topdir}"/packages-o3x-1015
+CATALINADESTDIR="${CATALINAPAK}"/1015
+
+SPL_TAG=1.9.2
+ZFS_TAG=1.9.2
 
 if [ $make_only -eq 1 ]
 then
@@ -135,6 +141,7 @@ then
 	[ $should_make_1012 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.12 -d "${SIERRADEV}" -i /Library/Extensions -m -s $SPL_TAG -z $ZFS_TAG -p off
 	[ $should_make_1013 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.13 -d "${HIGHSIERRADEV}" -i /Library/Extensions -m -s $SPL_TAG -z $ZFS_TAG -p off
 	[ $should_make_1014 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.14 -d "${MOJAVEDEV}" -i /Library/Extensions -m -s $SPL_TAG -z $ZFS_TAG -p off
+	[ $should_make_1015 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.15 -d "${CATALINADEV}" -i /Library/Extensions -m -s $SPL_TAG -z $ZFS_TAG -p off
 else
 	[ $should_make_108 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.8 -d "${MLDEV}" -i /System/Library/Extensions -s $SPL_TAG -z $ZFS_TAG -p off
 	[ $should_make_109 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.9 -d "${MAVDEV}" -i /Library/Extensions -s $SPL_TAG -z $ZFS_TAG -p off
@@ -143,6 +150,7 @@ else
 	[ $should_make_1012 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.12 -d "${SIERRADEV}" -i /Library/Extensions -s $SPL_TAG -z $ZFS_TAG -p off
 	[ $should_make_1013 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.13 -d "${HIGHSIERRADEV}" -i /Library/Extensions -s $SPL_TAG -z $ZFS_TAG -p off
 	[ $should_make_1014 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.14 -d "${MOJAVEDEV}" -i /Library/Extensions -s $SPL_TAG -z $ZFS_TAG -p off
+	[ $should_make_1015 -eq 1 ] && ./scripts/zfsadm-for-installer.sh -t 10.15 -d "${CATALINADEV}" -i /Library/Extensions -s $SPL_TAG -z $ZFS_TAG -p off
 fi
 
 if [ $should_make_108 -eq 1 ]
@@ -236,6 +244,19 @@ then
 	sudo make DESTDIR="${MOJAVEDESTDIR}" install
 fi
 
+if [ $should_make_1015 -eq 1 ]
+then
+	rm -rf "${CATALINADESTDIR}"
+	cd "${CATALINADEV}"
+
+	cd spl
+	sudo make DESTDIR="${CATALINADESTDIR}" install
+	cd ..
+
+	cd zfs
+	sudo make DESTDIR="${CATALINADESTDIR}" install
+fi
+
 cd "${topdir}"
 [ $should_make_108 -eq 1 ] && ./scripts/make-pkg.sh 108
 ret108=$?
@@ -251,7 +272,10 @@ ret1012=$?
 ret1013=$?
 [ $should_make_1014 -eq 1 ] && ./scripts/make-pkg.sh 1014
 ret1014=$?
+[ $should_make_1015 -eq 1 ] && ./scripts/make-pkg.sh 1015
+ret1015=$?
 
+[ $should_make_1015 -eq 1 -a $ret1015 -ne 0 ] && exit $ret1015
 [ $should_make_1014 -eq 1 -a $ret1014 -ne 0 ] && exit $ret1014
 [ $should_make_1013 -eq 1 -a $ret1013 -ne 0 ] && exit $ret1013
 [ $should_make_1012 -eq 1 -a $ret1012 -ne 0 ] && exit $ret1012

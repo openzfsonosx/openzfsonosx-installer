@@ -61,7 +61,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/etc/zfs/zed.d/all-syslog.sh</string>
+													<string>1015/etc/zfs/zed.d/all-syslog.sh</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -77,7 +77,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/etc/zfs/zed.d/checksum-notify.sh</string>
+													<string>1015/etc/zfs/zed.d/checksum-notify.sh</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -93,7 +93,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/etc/zfs/zed.d/checksum-spare.sh</string>
+													<string>1015/etc/zfs/zed.d/checksum-spare.sh</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -109,7 +109,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/etc/zfs/zed.d/config.remove.sh</string>
+													<string>1015/etc/zfs/zed.d/config.remove.sh</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -125,7 +125,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/etc/zfs/zed.d/config.rename.sh</string>
+													<string>1015/etc/zfs/zed.d/config.sync.sh</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -141,7 +141,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/etc/zfs/zed.d/config.sync.sh</string>
+													<string>1015/etc/zfs/zed.d/config.rename.sh</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -157,7 +157,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/etc/zfs/zed.d/data-notify.sh</string>
+													<string>1015/etc/zfs/zed.d/data-notify.sh</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -173,7 +173,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/etc/zfs/zed.d/io-notify.sh</string>
+													<string>1015/etc/zfs/zed.d/io-notify.sh</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -189,7 +189,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/etc/zfs/zed.d/io-spare.sh</string>
+													<string>1015/etc/zfs/zed.d/io-spare.sh</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -205,7 +205,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/etc/zfs/zed.d/resilver.finish-notify.sh</string>
+													<string>1015/etc/zfs/zed.d/resilver.finish-notify.sh</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -221,7 +221,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/etc/zfs/zed.d/scrub.finish-notify.sh</string>
+													<string>1015/etc/zfs/zed.d/scrub.finish-notify.sh</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -237,7 +237,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/etc/zfs/zed.d/snapshot.mount.sh</string>
+													<string>1015/etc/zfs/zed.d/snapshot.mount.sh</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -253,7 +253,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/etc/zfs/zed.d/zed-functions.sh</string>
+													<string>1015/etc/zfs/zed.d/zed-functions.sh</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -269,7 +269,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/etc/zfs/zed.d/zed.rc</string>
+													<string>1015/etc/zfs/zed.d/zed.rc</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -285,7 +285,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/etc/zfs/zed.d/zpool.destroy.sh</string>
+													<string>1015/etc/zfs/zed.d/zpool.destroy.sh</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -301,7 +301,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/etc/zfs/zed.d/zpool.import.sh</string>
+													<string>1015/etc/zfs/zed.d/zpool.import.sh</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -317,7 +317,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/etc/zfs/zed.d/zvol.create.sh</string>
+													<string>1015/etc/zfs/zed.d/zvol.create.sh</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -333,7 +333,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/etc/zfs/zed.d/zvol.remove.sh</string>
+													<string>1015/etc/zfs/zed.d/zvol.remove.sh</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -349,7 +349,7 @@
 											<key>GID</key>
 											<integer>0</integer>
 											<key>PATH</key>
-											<string>1012/etc/zfs/zed.d</string>
+											<string>1015/etc/zfs/zed.d</string>
 											<key>PATH_TYPE</key>
 											<integer>3</integer>
 											<key>PERMISSIONS</key>
@@ -365,7 +365,7 @@
 											<key>GID</key>
 											<integer>0</integer>
 											<key>PATH</key>
-											<string>1012/etc/zfs/zsysctl.conf.example</string>
+											<string>1015/etc/zfs/zsysctl.conf.example</string>
 											<key>PATH_TYPE</key>
 											<integer>3</integer>
 											<key>PERMISSIONS</key>
@@ -381,7 +381,7 @@
 									<key>GID</key>
 									<integer>0</integer>
 									<key>PATH</key>
-									<string>1012/etc/zfs</string>
+									<string>1015/etc/zfs</string>
 									<key>PATH_TYPE</key>
 									<integer>3</integer>
 									<key>PERMISSIONS</key>
@@ -397,7 +397,7 @@
 							<key>GID</key>
 							<integer>0</integer>
 							<key>PATH</key>
-							<string>1012/etc</string>
+							<string>1015/etc</string>
 							<key>PATH_TYPE</key>
 							<integer>3</integer>
 							<key>PERMISSIONS</key>
@@ -460,7 +460,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/Library/Extensions/spl.kext/Contents/_CodeSignature/CodeResources</string>
+																	<string>1015/Library/Extensions/spl.kext/Contents/_CodeSignature/CodeResources</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -476,7 +476,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>1012/Library/Extensions/spl.kext/Contents/_CodeSignature</string>
+															<string>1015/Library/Extensions/spl.kext/Contents/_CodeSignature</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
@@ -492,7 +492,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>1012/Library/Extensions/spl.kext/Contents/Info.plist</string>
+															<string>1015/Library/Extensions/spl.kext/Contents/Info.plist</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
@@ -511,7 +511,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/Library/Extensions/spl.kext/Contents/MacOS/spl</string>
+																	<string>1015/Library/Extensions/spl.kext/Contents/MacOS/spl</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -527,7 +527,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>1012/Library/Extensions/spl.kext/Contents/MacOS</string>
+															<string>1015/Library/Extensions/spl.kext/Contents/MacOS</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
@@ -552,7 +552,7 @@
 																					<key>GID</key>
 																					<integer>0</integer>
 																					<key>PATH</key>
-																					<string>1012/Library/Extensions/spl.kext/Contents/PlugIns/KernelExports.kext/_CodeSignature/CodeDirectory</string>
+																					<string>1015/Library/Extensions/spl.kext/Contents/PlugIns/KernelExports.kext/_CodeSignature/CodeDirectory</string>
 																					<key>PATH_TYPE</key>
 																					<integer>3</integer>
 																					<key>PERMISSIONS</key>
@@ -568,7 +568,7 @@
 																					<key>GID</key>
 																					<integer>0</integer>
 																					<key>PATH</key>
-																					<string>1012/Library/Extensions/spl.kext/Contents/PlugIns/KernelExports.kext/_CodeSignature/CodeRequirements</string>
+																					<string>1015/Library/Extensions/spl.kext/Contents/PlugIns/KernelExports.kext/_CodeSignature/CodeRequirements</string>
 																					<key>PATH_TYPE</key>
 																					<integer>3</integer>
 																					<key>PERMISSIONS</key>
@@ -584,7 +584,7 @@
 																					<key>GID</key>
 																					<integer>0</integer>
 																					<key>PATH</key>
-																					<string>1012/Library/Extensions/spl.kext/Contents/PlugIns/KernelExports.kext/_CodeSignature/CodeRequirements-1</string>
+																					<string>1015/Library/Extensions/spl.kext/Contents/PlugIns/KernelExports.kext/_CodeSignature/CodeRequirements-1</string>
 																					<key>PATH_TYPE</key>
 																					<integer>3</integer>
 																					<key>PERMISSIONS</key>
@@ -600,7 +600,7 @@
 																					<key>GID</key>
 																					<integer>0</integer>
 																					<key>PATH</key>
-																					<string>1012/Library/Extensions/spl.kext/Contents/PlugIns/KernelExports.kext/_CodeSignature/CodeResources</string>
+																					<string>1015/Library/Extensions/spl.kext/Contents/PlugIns/KernelExports.kext/_CodeSignature/CodeResources</string>
 																					<key>PATH_TYPE</key>
 																					<integer>3</integer>
 																					<key>PERMISSIONS</key>
@@ -616,7 +616,7 @@
 																					<key>GID</key>
 																					<integer>0</integer>
 																					<key>PATH</key>
-																					<string>1012/Library/Extensions/spl.kext/Contents/PlugIns/KernelExports.kext/_CodeSignature/CodeSignature</string>
+																					<string>1015/Library/Extensions/spl.kext/Contents/PlugIns/KernelExports.kext/_CodeSignature/CodeSignature</string>
 																					<key>PATH_TYPE</key>
 																					<integer>3</integer>
 																					<key>PERMISSIONS</key>
@@ -632,7 +632,7 @@
 																			<key>GID</key>
 																			<integer>0</integer>
 																			<key>PATH</key>
-																			<string>1012/Library/Extensions/spl.kext/Contents/PlugIns/KernelExports.kext/_CodeSignature</string>
+																			<string>1015/Library/Extensions/spl.kext/Contents/PlugIns/KernelExports.kext/_CodeSignature</string>
 																			<key>PATH_TYPE</key>
 																			<integer>3</integer>
 																			<key>PERMISSIONS</key>
@@ -648,7 +648,7 @@
 																			<key>GID</key>
 																			<integer>0</integer>
 																			<key>PATH</key>
-																			<string>1012/Library/Extensions/spl.kext/Contents/PlugIns/KernelExports.kext/Info.plist</string>
+																			<string>1015/Library/Extensions/spl.kext/Contents/PlugIns/KernelExports.kext/Info.plist</string>
 																			<key>PATH_TYPE</key>
 																			<integer>3</integer>
 																			<key>PERMISSIONS</key>
@@ -664,7 +664,7 @@
 																			<key>GID</key>
 																			<integer>0</integer>
 																			<key>PATH</key>
-																			<string>1012/Library/Extensions/spl.kext/Contents/PlugIns/KernelExports.kext/KernelExports</string>
+																			<string>1015/Library/Extensions/spl.kext/Contents/PlugIns/KernelExports.kext/KernelExports</string>
 																			<key>PATH_TYPE</key>
 																			<integer>3</integer>
 																			<key>PERMISSIONS</key>
@@ -680,7 +680,7 @@
 																			<key>GID</key>
 																			<integer>0</integer>
 																			<key>PATH</key>
-																			<string>1012/Library/Extensions/spl.kext/Contents/PlugIns/KernelExports.kext/version.plist</string>
+																			<string>1015/Library/Extensions/spl.kext/Contents/PlugIns/KernelExports.kext/version.plist</string>
 																			<key>PATH_TYPE</key>
 																			<integer>3</integer>
 																			<key>PERMISSIONS</key>
@@ -696,7 +696,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/Library/Extensions/spl.kext/Contents/PlugIns/KernelExports.kext</string>
+																	<string>1015/Library/Extensions/spl.kext/Contents/PlugIns/KernelExports.kext</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -712,7 +712,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>1012/Library/Extensions/spl.kext/Contents/PlugIns</string>
+															<string>1015/Library/Extensions/spl.kext/Contents/PlugIns</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
@@ -734,7 +734,7 @@
 																			<key>GID</key>
 																			<integer>0</integer>
 																			<key>PATH</key>
-																			<string>1012/Library/Extensions/spl.kext/Contents/Resources/English.lproj/InfoPlist.strings</string>
+																			<string>1015/Library/Extensions/spl.kext/Contents/Resources/English.lproj/InfoPlist.strings</string>
 																			<key>PATH_TYPE</key>
 																			<integer>3</integer>
 																			<key>PERMISSIONS</key>
@@ -750,7 +750,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/Library/Extensions/spl.kext/Contents/Resources/English.lproj</string>
+																	<string>1015/Library/Extensions/spl.kext/Contents/Resources/English.lproj</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -766,7 +766,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>1012/Library/Extensions/spl.kext/Contents/Resources</string>
+															<string>1015/Library/Extensions/spl.kext/Contents/Resources</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
@@ -782,7 +782,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/Library/Extensions/spl.kext/Contents</string>
+													<string>1015/Library/Extensions/spl.kext/Contents</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -798,7 +798,7 @@
 											<key>GID</key>
 											<integer>0</integer>
 											<key>PATH</key>
-											<string>1012/Library/Extensions/spl.kext</string>
+											<string>1015/Library/Extensions/spl.kext</string>
 											<key>PATH_TYPE</key>
 											<integer>3</integer>
 											<key>PERMISSIONS</key>
@@ -823,7 +823,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/Library/Extensions/zfs.kext/Contents/_CodeSignature/CodeResources</string>
+																	<string>1015/Library/Extensions/zfs.kext/Contents/_CodeSignature/CodeResources</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -839,7 +839,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>1012/Library/Extensions/zfs.kext/Contents/_CodeSignature</string>
+															<string>1015/Library/Extensions/zfs.kext/Contents/_CodeSignature</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
@@ -855,7 +855,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>1012/Library/Extensions/zfs.kext/Contents/Info.plist</string>
+															<string>1015/Library/Extensions/zfs.kext/Contents/Info.plist</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
@@ -874,7 +874,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/Library/Extensions/zfs.kext/Contents/MacOS/zfs</string>
+																	<string>1015/Library/Extensions/zfs.kext/Contents/MacOS/zfs</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -890,7 +890,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>1012/Library/Extensions/zfs.kext/Contents/MacOS</string>
+															<string>1015/Library/Extensions/zfs.kext/Contents/MacOS</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
@@ -912,7 +912,7 @@
 																			<key>GID</key>
 																			<integer>0</integer>
 																			<key>PATH</key>
-																			<string>1012/Library/Extensions/zfs.kext/Contents/Resources/English.lproj/InfoPlist.strings</string>
+																			<string>1015/Library/Extensions/zfs.kext/Contents/Resources/English.lproj/InfoPlist.strings</string>
 																			<key>PATH_TYPE</key>
 																			<integer>3</integer>
 																			<key>PERMISSIONS</key>
@@ -928,7 +928,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/Library/Extensions/zfs.kext/Contents/Resources/English.lproj</string>
+																	<string>1015/Library/Extensions/zfs.kext/Contents/Resources/English.lproj</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -944,7 +944,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/Library/Extensions/zfs.kext/Contents/Resources/VolumeIcon.icns</string>
+																	<string>1015/Library/Extensions/zfs.kext/Contents/Resources/VolumeIcon.icns</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -960,7 +960,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>1012/Library/Extensions/zfs.kext/Contents/Resources</string>
+															<string>1015/Library/Extensions/zfs.kext/Contents/Resources</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
@@ -976,7 +976,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/Library/Extensions/zfs.kext/Contents</string>
+													<string>1015/Library/Extensions/zfs.kext/Contents</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -992,7 +992,7 @@
 											<key>GID</key>
 											<integer>0</integer>
 											<key>PATH</key>
-											<string>1012/Library/Extensions/zfs.kext</string>
+											<string>1015/Library/Extensions/zfs.kext</string>
 											<key>PATH_TYPE</key>
 											<integer>3</integer>
 											<key>PERMISSIONS</key>
@@ -1008,7 +1008,7 @@
 									<key>GID</key>
 									<integer>0</integer>
 									<key>PATH</key>
-									<string>1012/Library/Extensions</string>
+									<string>1015/Library/Extensions</string>
 									<key>PATH_TYPE</key>
 									<integer>3</integer>
 									<key>PERMISSIONS</key>
@@ -1033,7 +1033,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>1012/Library/Filesystems/zfs.fs/Contents/Info.plist</string>
+															<string>1015/Library/Filesystems/zfs.fs/Contents/Info.plist</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
@@ -1049,7 +1049,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>1012/Library/Filesystems/zfs.fs/Contents/PkgInfo</string>
+															<string>1015/Library/Filesystems/zfs.fs/Contents/PkgInfo</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
@@ -1071,7 +1071,7 @@
 																			<key>GID</key>
 																			<integer>0</integer>
 																			<key>PATH</key>
-																			<string>1012/Library/Filesystems/zfs.fs/Contents/Resources/English.lproj/InfoPlist.strings</string>
+																			<string>1015/Library/Filesystems/zfs.fs/Contents/Resources/English.lproj/InfoPlist.strings</string>
 																			<key>PATH_TYPE</key>
 																			<integer>3</integer>
 																			<key>PERMISSIONS</key>
@@ -1087,7 +1087,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/Library/Filesystems/zfs.fs/Contents/Resources/English.lproj</string>
+																	<string>1015/Library/Filesystems/zfs.fs/Contents/Resources/English.lproj</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -1097,13 +1097,13 @@
 																	<key>UID</key>
 																	<integer>0</integer>
 																</dict>
- 																<dict>
+																<dict>
 																	<key>CHILDREN</key>
 																	<array/>
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/Library/Filesystems/zfs.fs/Contents/Resources/zfs_util</string>
+																	<string>1015/Library/Filesystems/zfs.fs/Contents/Resources/zfs_util</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -1113,13 +1113,13 @@
 																	<key>UID</key>
 																	<integer>0</integer>
 																</dict>
- 																<dict>
+																<dict>
 																	<key>CHILDREN</key>
 																	<array/>
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/Library/Filesystems/zfs.fs/Contents/Resources/fsck_zfs</string>
+																	<string>1015/Library/Filesystems/zfs.fs/Contents/Resources/fsck_zfs</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -1129,13 +1129,13 @@
 																	<key>UID</key>
 																	<integer>0</integer>
 																</dict>
- 																<dict>
+																<dict>
 																	<key>CHILDREN</key>
 																	<array/>
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/Library/Filesystems/zfs.fs/Contents/Resources/mount_zfs</string>
+																	<string>1015/Library/Filesystems/zfs.fs/Contents/Resources/mount_zfs</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -1145,13 +1145,13 @@
 																	<key>UID</key>
 																	<integer>0</integer>
 																</dict>
- 																<dict>
+																<dict>
 																	<key>CHILDREN</key>
 																	<array/>
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/Library/Filesystems/zfs.fs/Contents/Resources/newfs_zfs</string>
+																	<string>1015/Library/Filesystems/zfs.fs/Contents/Resources/newfs_zfs</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -1167,7 +1167,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>1012/Library/Filesystems/zfs.fs/Contents/Resources</string>
+															<string>1015/Library/Filesystems/zfs.fs/Contents/Resources</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
@@ -1183,7 +1183,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/Library/Filesystems/zfs.fs/Contents</string>
+													<string>1015/Library/Filesystems/zfs.fs/Contents</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -1199,7 +1199,7 @@
 											<key>GID</key>
 											<integer>0</integer>
 											<key>PATH</key>
-											<string>1012/Library/Filesystems/zfs.fs</string>
+											<string>1015/Library/Filesystems/zfs.fs</string>
 											<key>PATH_TYPE</key>
 											<integer>3</integer>
 											<key>PERMISSIONS</key>
@@ -1296,7 +1296,7 @@
 											<key>GID</key>
 											<integer>0</integer>
 											<key>PATH</key>
-											<string>1012/Library/LaunchDaemons/org.openzfsonosx.InvariantDisks.plist</string>
+											<string>1015/Library/LaunchDaemons/org.openzfsonosx.InvariantDisks.plist</string>
 											<key>PATH_TYPE</key>
 											<integer>3</integer>
 											<key>PERMISSIONS</key>
@@ -1312,7 +1312,7 @@
 											<key>GID</key>
 											<integer>0</integer>
 											<key>PATH</key>
-											<string>1012/Library/LaunchDaemons/org.openzfsonosx.zconfigd.plist</string>
+											<string>1015/Library/LaunchDaemons/org.openzfsonosx.zconfigd.plist</string>
 											<key>PATH_TYPE</key>
 											<integer>3</integer>
 											<key>PERMISSIONS</key>
@@ -1328,7 +1328,7 @@
 											<key>GID</key>
 											<integer>0</integer>
 											<key>PATH</key>
-											<string>1012/Library/LaunchDaemons/org.openzfsonosx.zed.plist</string>
+											<string>1015/Library/LaunchDaemons/org.openzfsonosx.zed.plist</string>
 											<key>PATH_TYPE</key>
 											<integer>3</integer>
 											<key>PERMISSIONS</key>
@@ -1344,7 +1344,7 @@
 											<key>GID</key>
 											<integer>0</integer>
 											<key>PATH</key>
-											<string>1012/Library/LaunchDaemons/org.openzfsonosx.zpool-import-all.plist</string>
+											<string>1015/Library/LaunchDaemons/org.openzfsonosx.zpool-import-all.plist</string>
 											<key>PATH_TYPE</key>
 											<integer>3</integer>
 											<key>PERMISSIONS</key>
@@ -1640,7 +1640,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/bin/arcstat.pl</string>
+													<string>1015/usr/local/bin/arcstat.pl</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -1656,7 +1656,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/bin/InvariantDisks</string>
+													<string>1015/usr/local/bin/InvariantDisks</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -1672,7 +1672,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/bin/mount_zfs</string>
+													<string>1015/usr/local/bin/mount_zfs</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -1688,7 +1688,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/bin/umount_zfs</string>
+													<string>1015/usr/local/bin/umount_zfs</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -1704,7 +1704,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/bin/zconfigd</string>
+													<string>1015/usr/local/bin/zconfigd</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -1720,7 +1720,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/bin/zdb</string>
+													<string>1015/usr/local/bin/zdb</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -1736,7 +1736,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/bin/zed</string>
+													<string>1015/usr/local/bin/zed</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -1752,7 +1752,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/bin/zfs</string>
+													<string>1015/usr/local/bin/zfs</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -1768,7 +1768,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/bin/zhack</string>
+													<string>1015/usr/local/bin/zhack</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -1784,7 +1784,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/bin/zinject</string>
+													<string>1015/usr/local/bin/zinject</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -1800,7 +1800,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/bin/zpios</string>
+													<string>1015/usr/local/bin/zpios</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -1816,7 +1816,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/bin/zpool</string>
+													<string>1015/usr/local/bin/zpool</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -1832,7 +1832,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/bin/zstreamdump</string>
+													<string>1015/usr/local/bin/zstreamdump</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -1848,7 +1848,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/bin/zsysctl</string>
+													<string>1015/usr/local/bin/zsysctl</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -1864,7 +1864,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/bin/ztest</string>
+													<string>1015/usr/local/bin/ztest</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -1880,7 +1880,7 @@
 											<key>GID</key>
 											<integer>0</integer>
 											<key>PATH</key>
-											<string>1012/usr/local/bin</string>
+											<string>1015/usr/local/bin</string>
 											<key>PATH_TYPE</key>
 											<integer>3</integer>
 											<key>PERMISSIONS</key>
@@ -1899,7 +1899,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/lib/libdiskmgt.1.dylib</string>
+													<string>1015/usr/local/lib/libdiskmgt.1.dylib</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -1915,7 +1915,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/lib/libdiskmgt.a</string>
+													<string>1015/usr/local/lib/libdiskmgt.a</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -1931,7 +1931,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/lib/libdiskmgt.dylib</string>
+													<string>1015/usr/local/lib/libdiskmgt.dylib</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -1947,7 +1947,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/lib/libdiskmgt.la</string>
+													<string>1015/usr/local/lib/libdiskmgt.la</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -1963,7 +1963,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/lib/libnvpair.1.dylib</string>
+													<string>1015/usr/local/lib/libnvpair.1.dylib</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -1979,7 +1979,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/lib/libnvpair.a</string>
+													<string>1015/usr/local/lib/libnvpair.a</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -1995,7 +1995,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/lib/libnvpair.dylib</string>
+													<string>1015/usr/local/lib/libnvpair.dylib</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -2011,7 +2011,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/lib/libnvpair.la</string>
+													<string>1015/usr/local/lib/libnvpair.la</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -2027,7 +2027,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/lib/libuutil.1.dylib</string>
+													<string>1015/usr/local/lib/libuutil.1.dylib</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -2043,7 +2043,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/lib/libuutil.a</string>
+													<string>1015/usr/local/lib/libuutil.a</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -2059,7 +2059,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/lib/libuutil.dylib</string>
+													<string>1015/usr/local/lib/libuutil.dylib</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -2075,7 +2075,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/lib/libuutil.la</string>
+													<string>1015/usr/local/lib/libuutil.la</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -2091,7 +2091,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/lib/libzfs.2.dylib</string>
+													<string>1015/usr/local/lib/libzfs.2.dylib</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -2107,7 +2107,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/lib/libzfs.a</string>
+													<string>1015/usr/local/lib/libzfs.a</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -2123,7 +2123,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/lib/libzfs.dylib</string>
+													<string>1015/usr/local/lib/libzfs.dylib</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -2139,7 +2139,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/lib/libzfs.la</string>
+													<string>1015/usr/local/lib/libzfs.la</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -2155,7 +2155,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/lib/libzfs_core.1.dylib</string>
+													<string>1015/usr/local/lib/libzfs_core.1.dylib</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -2171,7 +2171,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/lib/libzfs_core.a</string>
+													<string>1015/usr/local/lib/libzfs_core.a</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -2187,7 +2187,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/lib/libzfs_core.dylib</string>
+													<string>1015/usr/local/lib/libzfs_core.dylib</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -2203,7 +2203,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/lib/libzfs_core.la</string>
+													<string>1015/usr/local/lib/libzfs_core.la</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -2219,7 +2219,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/lib/libzpool.1.dylib</string>
+													<string>1015/usr/local/lib/libzpool.1.dylib</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -2235,7 +2235,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/lib/libzpool.a</string>
+													<string>1015/usr/local/lib/libzpool.a</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -2251,7 +2251,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/lib/libzpool.dylib</string>
+													<string>1015/usr/local/lib/libzpool.dylib</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -2267,7 +2267,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/lib/libzpool.la</string>
+													<string>1015/usr/local/lib/libzpool.la</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -2283,387 +2283,7 @@
 											<key>GID</key>
 											<integer>0</integer>
 											<key>PATH</key>
-											<string>1012/usr/local/lib</string>
-											<key>PATH_TYPE</key>
-											<integer>3</integer>
-											<key>PERMISSIONS</key>
-											<integer>493</integer>
-											<key>TYPE</key>
-											<integer>3</integer>
-											<key>UID</key>
-											<integer>0</integer>
-										</dict>
-										<dict>
-											<key>CHILDREN</key>
-											<array>
-												<dict>
-													<key>CHILDREN</key>
-													<array>
-														<dict>
-															<key>CHILDREN</key>
-															<array>
-																<dict>
-																	<key>CHILDREN</key>
-																	<array/>
-																	<key>GID</key>
-																	<integer>0</integer>
-																	<key>PATH</key>
-																	<string>1012/usr/local/libexec/zfs/launchd.d/zpool-import-all.sh</string>
-																	<key>PATH_TYPE</key>
-																	<integer>3</integer>
-																	<key>PERMISSIONS</key>
-																	<integer>493</integer>
-																	<key>TYPE</key>
-																	<integer>3</integer>
-																	<key>UID</key>
-																	<integer>0</integer>
-																</dict>
-															</array>
-															<key>EXPANDED</key>
-															<true/>
-															<key>GID</key>
-															<integer>0</integer>
-															<key>PATH</key>
-															<string>1012/usr/local/libexec/zfs/launchd.d</string>
-															<key>PATH_TYPE</key>
-															<integer>3</integer>
-															<key>PERMISSIONS</key>
-															<integer>493</integer>
-															<key>TYPE</key>
-															<integer>3</integer>
-															<key>UID</key>
-															<integer>0</integer>
-														</dict>
-														<dict>
-															<key>CHILDREN</key>
-															<array>
-																<dict>
-																	<key>CHILDREN</key>
-																	<array/>
-																	<key>GID</key>
-																	<integer>0</integer>
-																	<key>PATH</key>
-																	<string>1012/usr/local/libexec/zfs/zed.d/all-debug.sh</string>
-																	<key>PATH_TYPE</key>
-																	<integer>3</integer>
-																	<key>PERMISSIONS</key>
-																	<integer>493</integer>
-																	<key>TYPE</key>
-																	<integer>3</integer>
-																	<key>UID</key>
-																	<integer>0</integer>
-																</dict>
-																<dict>
-																	<key>CHILDREN</key>
-																	<array/>
-																	<key>GID</key>
-																	<integer>0</integer>
-																	<key>PATH</key>
-																	<string>1012/usr/local/libexec/zfs/zed.d/all-syslog.sh</string>
-																	<key>PATH_TYPE</key>
-																	<integer>3</integer>
-																	<key>PERMISSIONS</key>
-																	<integer>493</integer>
-																	<key>TYPE</key>
-																	<integer>3</integer>
-																	<key>UID</key>
-																	<integer>0</integer>
-																</dict>
-																<dict>
-																	<key>CHILDREN</key>
-																	<array/>
-																	<key>GID</key>
-																	<integer>0</integer>
-																	<key>PATH</key>
-																	<string>1012/usr/local/libexec/zfs/zed.d/checksum-notify.sh</string>
-																	<key>PATH_TYPE</key>
-																	<integer>3</integer>
-																	<key>PERMISSIONS</key>
-																	<integer>493</integer>
-																	<key>TYPE</key>
-																	<integer>3</integer>
-																	<key>UID</key>
-																	<integer>0</integer>
-																</dict>
-																<dict>
-																	<key>CHILDREN</key>
-																	<array/>
-																	<key>GID</key>
-																	<integer>0</integer>
-																	<key>PATH</key>
-																	<string>1012/usr/local/libexec/zfs/zed.d/checksum-spare.sh</string>
-																	<key>PATH_TYPE</key>
-																	<integer>3</integer>
-																	<key>PERMISSIONS</key>
-																	<integer>493</integer>
-																	<key>TYPE</key>
-																	<integer>3</integer>
-																	<key>UID</key>
-																	<integer>0</integer>
-																</dict>
-																<dict>
-																	<key>CHILDREN</key>
-																	<array/>
-																	<key>GID</key>
-																	<integer>0</integer>
-																	<key>PATH</key>
-																	<string>1012/usr/local/libexec/zfs/zed.d/config.remove.sh</string>
-																	<key>PATH_TYPE</key>
-																	<integer>3</integer>
-																	<key>PERMISSIONS</key>
-																	<integer>493</integer>
-																	<key>TYPE</key>
-																	<integer>3</integer>
-																	<key>UID</key>
-																	<integer>0</integer>
-																</dict>
-																<dict>
-																	<key>CHILDREN</key>
-																	<array/>
-																	<key>GID</key>
-																	<integer>0</integer>
-																	<key>PATH</key>
-																	<string>1012/usr/local/libexec/zfs/zed.d/config.rename.sh</string>
-																	<key>PATH_TYPE</key>
-																	<integer>3</integer>
-																	<key>PERMISSIONS</key>
-																	<integer>493</integer>
-																	<key>TYPE</key>
-																	<integer>3</integer>
-																	<key>UID</key>
-																	<integer>0</integer>
-																</dict>
-																<dict>
-																	<key>CHILDREN</key>
-																	<array/>
-																	<key>GID</key>
-																	<integer>0</integer>
-																	<key>PATH</key>
-																	<string>1012/usr/local/libexec/zfs/zed.d/config.sync.sh</string>
-																	<key>PATH_TYPE</key>
-																	<integer>3</integer>
-																	<key>PERMISSIONS</key>
-																	<integer>493</integer>
-																	<key>TYPE</key>
-																	<integer>3</integer>
-																	<key>UID</key>
-																	<integer>0</integer>
-																</dict>
-																<dict>
-																	<key>CHILDREN</key>
-																	<array/>
-																	<key>GID</key>
-																	<integer>0</integer>
-																	<key>PATH</key>
-																	<string>1012/usr/local/libexec/zfs/zed.d/data-notify.sh</string>
-																	<key>PATH_TYPE</key>
-																	<integer>3</integer>
-																	<key>PERMISSIONS</key>
-																	<integer>493</integer>
-																	<key>TYPE</key>
-																	<integer>3</integer>
-																	<key>UID</key>
-																	<integer>0</integer>
-																</dict>
-																<dict>
-																	<key>CHILDREN</key>
-																	<array/>
-																	<key>GID</key>
-																	<integer>0</integer>
-																	<key>PATH</key>
-																	<string>1012/usr/local/libexec/zfs/zed.d/generic-notify.sh</string>
-																	<key>PATH_TYPE</key>
-																	<integer>3</integer>
-																	<key>PERMISSIONS</key>
-																	<integer>493</integer>
-																	<key>TYPE</key>
-																	<integer>3</integer>
-																	<key>UID</key>
-																	<integer>0</integer>
-																</dict>
-																<dict>
-																	<key>CHILDREN</key>
-																	<array/>
-																	<key>GID</key>
-																	<integer>0</integer>
-																	<key>PATH</key>
-																	<string>1012/usr/local/libexec/zfs/zed.d/io-notify.sh</string>
-																	<key>PATH_TYPE</key>
-																	<integer>3</integer>
-																	<key>PERMISSIONS</key>
-																	<integer>493</integer>
-																	<key>TYPE</key>
-																	<integer>3</integer>
-																	<key>UID</key>
-																	<integer>0</integer>
-																</dict>
-																<dict>
-																	<key>CHILDREN</key>
-																	<array/>
-																	<key>GID</key>
-																	<integer>0</integer>
-																	<key>PATH</key>
-																	<string>1012/usr/local/libexec/zfs/zed.d/io-spare.sh</string>
-																	<key>PATH_TYPE</key>
-																	<integer>3</integer>
-																	<key>PERMISSIONS</key>
-																	<integer>493</integer>
-																	<key>TYPE</key>
-																	<integer>3</integer>
-																	<key>UID</key>
-																	<integer>0</integer>
-																</dict>
-																<dict>
-																	<key>CHILDREN</key>
-																	<array/>
-																	<key>GID</key>
-																	<integer>0</integer>
-																	<key>PATH</key>
-																	<string>1012/usr/local/libexec/zfs/zed.d/resilver.finish-notify.sh</string>
-																	<key>PATH_TYPE</key>
-																	<integer>3</integer>
-																	<key>PERMISSIONS</key>
-																	<integer>493</integer>
-																	<key>TYPE</key>
-																	<integer>3</integer>
-																	<key>UID</key>
-																	<integer>0</integer>
-																</dict>
-																<dict>
-																	<key>CHILDREN</key>
-																	<array/>
-																	<key>GID</key>
-																	<integer>0</integer>
-																	<key>PATH</key>
-																	<string>1012/usr/local/libexec/zfs/zed.d/scrub.finish-notify.sh</string>
-																	<key>PATH_TYPE</key>
-																	<integer>3</integer>
-																	<key>PERMISSIONS</key>
-																	<integer>493</integer>
-																	<key>TYPE</key>
-																	<integer>3</integer>
-																	<key>UID</key>
-																	<integer>0</integer>
-																</dict>
-																<dict>
-																	<key>CHILDREN</key>
-																	<array/>
-																	<key>GID</key>
-																	<integer>0</integer>
-																	<key>PATH</key>
-																	<string>1012/usr/local/libexec/zfs/zed.d/snapshot.mount.sh</string>
-																	<key>PATH_TYPE</key>
-																	<integer>3</integer>
-																	<key>PERMISSIONS</key>
-																	<integer>493</integer>
-																	<key>TYPE</key>
-																	<integer>3</integer>
-																	<key>UID</key>
-																	<integer>0</integer>
-																</dict>
-																<dict>
-																	<key>CHILDREN</key>
-																	<array/>
-																	<key>GID</key>
-																	<integer>0</integer>
-																	<key>PATH</key>
-																	<string>1012/usr/local/libexec/zfs/zed.d/zpool.destroy.sh</string>
-																	<key>PATH_TYPE</key>
-																	<integer>3</integer>
-																	<key>PERMISSIONS</key>
-																	<integer>493</integer>
-																	<key>TYPE</key>
-																	<integer>3</integer>
-																	<key>UID</key>
-																	<integer>0</integer>
-																</dict>
-																<dict>
-																	<key>CHILDREN</key>
-																	<array/>
-																	<key>GID</key>
-																	<integer>0</integer>
-																	<key>PATH</key>
-																	<string>1012/usr/local/libexec/zfs/zed.d/zpool.import.sh</string>
-																	<key>PATH_TYPE</key>
-																	<integer>3</integer>
-																	<key>PERMISSIONS</key>
-																	<integer>493</integer>
-																	<key>TYPE</key>
-																	<integer>3</integer>
-																	<key>UID</key>
-																	<integer>0</integer>
-																</dict>
-																<dict>
-																	<key>CHILDREN</key>
-																	<array/>
-																	<key>GID</key>
-																	<integer>0</integer>
-																	<key>PATH</key>
-																	<string>1012/usr/local/libexec/zfs/zed.d/zvol.create.sh</string>
-																	<key>PATH_TYPE</key>
-																	<integer>3</integer>
-																	<key>PERMISSIONS</key>
-																	<integer>493</integer>
-																	<key>TYPE</key>
-																	<integer>3</integer>
-																	<key>UID</key>
-																	<integer>0</integer>
-																</dict>
-																<dict>
-																	<key>CHILDREN</key>
-																	<array/>
-																	<key>GID</key>
-																	<integer>0</integer>
-																	<key>PATH</key>
-																	<string>1012/usr/local/libexec/zfs/zed.d/zvol.remove.sh</string>
-																	<key>PATH_TYPE</key>
-																	<integer>3</integer>
-																	<key>PERMISSIONS</key>
-																	<integer>493</integer>
-																	<key>TYPE</key>
-																	<integer>3</integer>
-																	<key>UID</key>
-																	<integer>0</integer>
-																</dict>
-															</array>
-															<key>EXPANDED</key>
-															<true/>
-															<key>GID</key>
-															<integer>0</integer>
-															<key>PATH</key>
-															<string>1012/usr/local/libexec/zfs/zed.d</string>
-															<key>PATH_TYPE</key>
-															<integer>3</integer>
-															<key>PERMISSIONS</key>
-															<integer>493</integer>
-															<key>TYPE</key>
-															<integer>3</integer>
-															<key>UID</key>
-															<integer>0</integer>
-														</dict>
-													</array>
-													<key>EXPANDED</key>
-													<true/>
-													<key>GID</key>
-													<integer>0</integer>
-													<key>PATH</key>
-													<string>1012/usr/local/libexec/zfs</string>
-													<key>PATH_TYPE</key>
-													<integer>3</integer>
-													<key>PERMISSIONS</key>
-													<integer>493</integer>
-													<key>TYPE</key>
-													<integer>3</integer>
-													<key>UID</key>
-													<integer>0</integer>
-												</dict>
-											</array>
-											<key>EXPANDED</key>
-											<true/>
-											<key>GID</key>
-											<integer>0</integer>
-											<key>PATH</key>
-											<string>1012/usr/local/libexec</string>
+											<string>1015/usr/local/lib</string>
 											<key>PATH_TYPE</key>
 											<integer>3</integer>
 											<key>PERMISSIONS</key>
@@ -2688,43 +2308,11 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/man/man1/zhack.1</string>
+																	<string>1015/usr/local/libexec/zfs/launchd.d/zpool-import-all.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
-																	<integer>420</integer>
-																	<key>TYPE</key>
-																	<integer>3</integer>
-																	<key>UID</key>
-																	<integer>0</integer>
-																</dict>
-																<dict>
-																	<key>CHILDREN</key>
-																	<array/>
-																	<key>GID</key>
-																	<integer>0</integer>
-																	<key>PATH</key>
-																	<string>1012/usr/local/share/man/man1/zpios.1</string>
-																	<key>PATH_TYPE</key>
-																	<integer>3</integer>
-																	<key>PERMISSIONS</key>
-																	<integer>420</integer>
-																	<key>TYPE</key>
-																	<integer>3</integer>
-																	<key>UID</key>
-																	<integer>0</integer>
-																</dict>
-																<dict>
-																	<key>CHILDREN</key>
-																	<array/>
-																	<key>GID</key>
-																	<integer>0</integer>
-																	<key>PATH</key>
-																	<string>1012/usr/local/share/man/man1/ztest.1</string>
-																	<key>PATH_TYPE</key>
-																	<integer>3</integer>
-																	<key>PERMISSIONS</key>
-																	<integer>420</integer>
+																	<integer>493</integer>
 																	<key>TYPE</key>
 																	<integer>3</integer>
 																	<key>UID</key>
@@ -2736,7 +2324,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>1012/usr/local/share/man/man1</string>
+															<string>1015/usr/local/libexec/zfs/launchd.d</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
@@ -2755,11 +2343,11 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/man/man5/zfs-events.5</string>
+																	<string>1015/usr/local/libexec/zfs/zed.d/all-debug.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
-																	<integer>420</integer>
+																	<integer>493</integer>
 																	<key>TYPE</key>
 																	<integer>3</integer>
 																	<key>UID</key>
@@ -2771,11 +2359,11 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/man/man5/zfs-module-parameters.5</string>
+																	<string>1015/usr/local/libexec/zfs/zed.d/all-syslog.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
-																	<integer>420</integer>
+																	<integer>493</integer>
 																	<key>TYPE</key>
 																	<integer>3</integer>
 																	<key>UID</key>
@@ -2787,11 +2375,251 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/man/man5/zpool-features.5</string>
+																	<string>1015/usr/local/libexec/zfs/zed.d/checksum-notify.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
-																	<integer>420</integer>
+																	<integer>493</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>1015/usr/local/libexec/zfs/zed.d/checksum-spare.sh</string>
+																	<key>PATH_TYPE</key>
+																	<integer>3</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>493</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>1015/usr/local/libexec/zfs/zed.d/config.remove.sh</string>
+																	<key>PATH_TYPE</key>
+																	<integer>3</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>493</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>1015/usr/local/libexec/zfs/zed.d/config.sync.sh</string>
+																	<key>PATH_TYPE</key>
+																	<integer>3</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>493</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>1015/usr/local/libexec/zfs/zed.d/config.rename.sh</string>
+																	<key>PATH_TYPE</key>
+																	<integer>3</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>493</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>1015/usr/local/libexec/zfs/zed.d/data-notify.sh</string>
+																	<key>PATH_TYPE</key>
+																	<integer>3</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>493</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>1015/usr/local/libexec/zfs/zed.d/generic-notify.sh</string>
+																	<key>PATH_TYPE</key>
+																	<integer>3</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>493</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>1015/usr/local/libexec/zfs/zed.d/io-notify.sh</string>
+																	<key>PATH_TYPE</key>
+																	<integer>3</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>493</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>1015/usr/local/libexec/zfs/zed.d/io-spare.sh</string>
+																	<key>PATH_TYPE</key>
+																	<integer>3</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>493</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>1015/usr/local/libexec/zfs/zed.d/resilver.finish-notify.sh</string>
+																	<key>PATH_TYPE</key>
+																	<integer>3</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>493</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>1015/usr/local/libexec/zfs/zed.d/scrub.finish-notify.sh</string>
+																	<key>PATH_TYPE</key>
+																	<integer>3</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>493</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>1015/usr/local/libexec/zfs/zed.d/snapshot.mount.sh</string>
+																	<key>PATH_TYPE</key>
+																	<integer>3</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>493</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>1015/usr/local/libexec/zfs/zed.d/zpool.destroy.sh</string>
+																	<key>PATH_TYPE</key>
+																	<integer>3</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>493</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>1015/usr/local/libexec/zfs/zed.d/zpool.import.sh</string>
+																	<key>PATH_TYPE</key>
+																	<integer>3</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>493</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>1015/usr/local/libexec/zfs/zed.d/zvol.create.sh</string>
+																	<key>PATH_TYPE</key>
+																	<integer>3</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>493</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>1015/usr/local/libexec/zfs/zed.d/zvol.remove.sh</string>
+																	<key>PATH_TYPE</key>
+																	<integer>3</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>493</integer>
 																	<key>TYPE</key>
 																	<integer>3</integer>
 																	<key>UID</key>
@@ -2803,122 +2631,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>1012/usr/local/share/man/man5</string>
-															<key>PATH_TYPE</key>
-															<integer>3</integer>
-															<key>PERMISSIONS</key>
-															<integer>493</integer>
-															<key>TYPE</key>
-															<integer>3</integer>
-															<key>UID</key>
-															<integer>0</integer>
-														</dict>
-														<dict>
-															<key>CHILDREN</key>
-															<array>
-																<dict>
-																	<key>CHILDREN</key>
-																	<array/>
-																	<key>GID</key>
-																	<integer>0</integer>
-																	<key>PATH</key>
-																	<string>1012/usr/local/share/man/man8/zdb.8</string>
-																	<key>PATH_TYPE</key>
-																	<integer>3</integer>
-																	<key>PERMISSIONS</key>
-																	<integer>420</integer>
-																	<key>TYPE</key>
-																	<integer>3</integer>
-																	<key>UID</key>
-																	<integer>0</integer>
-																</dict>
-																<dict>
-																	<key>CHILDREN</key>
-																	<array/>
-																	<key>GID</key>
-																	<integer>0</integer>
-																	<key>PATH</key>
-																	<string>1012/usr/local/share/man/man8/zed.8</string>
-																	<key>PATH_TYPE</key>
-																	<integer>3</integer>
-																	<key>PERMISSIONS</key>
-																	<integer>420</integer>
-																	<key>TYPE</key>
-																	<integer>3</integer>
-																	<key>UID</key>
-																	<integer>0</integer>
-																</dict>
-																<dict>
-																	<key>CHILDREN</key>
-																	<array/>
-																	<key>GID</key>
-																	<integer>0</integer>
-																	<key>PATH</key>
-																	<string>1012/usr/local/share/man/man8/zfs.8</string>
-																	<key>PATH_TYPE</key>
-																	<integer>3</integer>
-																	<key>PERMISSIONS</key>
-																	<integer>420</integer>
-																	<key>TYPE</key>
-																	<integer>3</integer>
-																	<key>UID</key>
-																	<integer>0</integer>
-																</dict>
-																<dict>
-																	<key>CHILDREN</key>
-																	<array/>
-																	<key>GID</key>
-																	<integer>0</integer>
-																	<key>PATH</key>
-																	<string>1012/usr/local/share/man/man8/zinject.8</string>
-																	<key>PATH_TYPE</key>
-																	<integer>3</integer>
-																	<key>PERMISSIONS</key>
-																	<integer>420</integer>
-																	<key>TYPE</key>
-																	<integer>3</integer>
-																	<key>UID</key>
-																	<integer>0</integer>
-																</dict>
-																<dict>
-																	<key>CHILDREN</key>
-																	<array/>
-																	<key>GID</key>
-																	<integer>0</integer>
-																	<key>PATH</key>
-																	<string>1012/usr/local/share/man/man8/zpool.8</string>
-																	<key>PATH_TYPE</key>
-																	<integer>3</integer>
-																	<key>PERMISSIONS</key>
-																	<integer>420</integer>
-																	<key>TYPE</key>
-																	<integer>3</integer>
-																	<key>UID</key>
-																	<integer>0</integer>
-																</dict>
-																<dict>
-																	<key>CHILDREN</key>
-																	<array/>
-																	<key>GID</key>
-																	<integer>0</integer>
-																	<key>PATH</key>
-																	<string>1012/usr/local/share/man/man8/zstreamdump.8</string>
-																	<key>PATH_TYPE</key>
-																	<integer>3</integer>
-																	<key>PERMISSIONS</key>
-																	<integer>420</integer>
-																	<key>TYPE</key>
-																	<integer>3</integer>
-																	<key>UID</key>
-																	<integer>0</integer>
-																</dict>
-															</array>
-															<key>EXPANDED</key>
-															<true/>
-															<key>GID</key>
-															<integer>0</integer>
-															<key>PATH</key>
-															<string>1012/usr/local/share/man/man8</string>
+															<string>1015/usr/local/libexec/zfs/zed.d</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
@@ -2934,7 +2647,294 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/share/man</string>
+													<string>1015/usr/local/libexec/zfs</string>
+													<key>PATH_TYPE</key>
+													<integer>3</integer>
+													<key>PERMISSIONS</key>
+													<integer>493</integer>
+													<key>TYPE</key>
+													<integer>3</integer>
+													<key>UID</key>
+													<integer>0</integer>
+												</dict>
+											</array>
+											<key>EXPANDED</key>
+											<true/>
+											<key>GID</key>
+											<integer>0</integer>
+											<key>PATH</key>
+											<string>1015/usr/local/libexec</string>
+											<key>PATH_TYPE</key>
+											<integer>3</integer>
+											<key>PERMISSIONS</key>
+											<integer>493</integer>
+											<key>TYPE</key>
+											<integer>3</integer>
+											<key>UID</key>
+											<integer>0</integer>
+										</dict>
+										<dict>
+											<key>CHILDREN</key>
+											<array>
+												<dict>
+													<key>CHILDREN</key>
+													<array>
+														<dict>
+															<key>CHILDREN</key>
+															<array>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>1015/usr/local/share/man/man1/zhack.1</string>
+																	<key>PATH_TYPE</key>
+																	<integer>3</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>420</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>1015/usr/local/share/man/man1/zpios.1</string>
+																	<key>PATH_TYPE</key>
+																	<integer>3</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>420</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>1015/usr/local/share/man/man1/ztest.1</string>
+																	<key>PATH_TYPE</key>
+																	<integer>3</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>420</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+															</array>
+															<key>EXPANDED</key>
+															<true/>
+															<key>GID</key>
+															<integer>0</integer>
+															<key>PATH</key>
+															<string>1015/usr/local/share/man/man1</string>
+															<key>PATH_TYPE</key>
+															<integer>3</integer>
+															<key>PERMISSIONS</key>
+															<integer>493</integer>
+															<key>TYPE</key>
+															<integer>3</integer>
+															<key>UID</key>
+															<integer>0</integer>
+														</dict>
+														<dict>
+															<key>CHILDREN</key>
+															<array>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>1015/usr/local/share/man/man5/zfs-events.5</string>
+																	<key>PATH_TYPE</key>
+																	<integer>3</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>420</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>1015/usr/local/share/man/man5/zfs-module-parameters.5</string>
+																	<key>PATH_TYPE</key>
+																	<integer>3</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>420</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>1015/usr/local/share/man/man5/zpool-features.5</string>
+																	<key>PATH_TYPE</key>
+																	<integer>3</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>420</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+															</array>
+															<key>EXPANDED</key>
+															<true/>
+															<key>GID</key>
+															<integer>0</integer>
+															<key>PATH</key>
+															<string>1015/usr/local/share/man/man5</string>
+															<key>PATH_TYPE</key>
+															<integer>3</integer>
+															<key>PERMISSIONS</key>
+															<integer>493</integer>
+															<key>TYPE</key>
+															<integer>3</integer>
+															<key>UID</key>
+															<integer>0</integer>
+														</dict>
+														<dict>
+															<key>CHILDREN</key>
+															<array>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>1015/usr/local/share/man/man8/zdb.8</string>
+																	<key>PATH_TYPE</key>
+																	<integer>3</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>420</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>1015/usr/local/share/man/man8/zed.8</string>
+																	<key>PATH_TYPE</key>
+																	<integer>3</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>420</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>1015/usr/local/share/man/man8/zfs.8</string>
+																	<key>PATH_TYPE</key>
+																	<integer>3</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>420</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>1015/usr/local/share/man/man8/zinject.8</string>
+																	<key>PATH_TYPE</key>
+																	<integer>3</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>420</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>1015/usr/local/share/man/man8/zpool.8</string>
+																	<key>PATH_TYPE</key>
+																	<integer>3</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>420</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+																<dict>
+																	<key>CHILDREN</key>
+																	<array/>
+																	<key>GID</key>
+																	<integer>0</integer>
+																	<key>PATH</key>
+																	<string>1015/usr/local/share/man/man8/zstreamdump.8</string>
+																	<key>PATH_TYPE</key>
+																	<integer>3</integer>
+																	<key>PERMISSIONS</key>
+																	<integer>420</integer>
+																	<key>TYPE</key>
+																	<integer>3</integer>
+																	<key>UID</key>
+																	<integer>0</integer>
+																</dict>
+															</array>
+															<key>EXPANDED</key>
+															<true/>
+															<key>GID</key>
+															<integer>0</integer>
+															<key>PATH</key>
+															<string>1015/usr/local/share/man/man8</string>
+															<key>PATH_TYPE</key>
+															<integer>3</integer>
+															<key>PERMISSIONS</key>
+															<integer>493</integer>
+															<key>TYPE</key>
+															<integer>3</integer>
+															<key>UID</key>
+															<integer>0</integer>
+														</dict>
+													</array>
+													<key>EXPANDED</key>
+													<true/>
+													<key>GID</key>
+													<integer>0</integer>
+													<key>PATH</key>
+													<string>1015/usr/local/share/man</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -2953,7 +2953,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>1012/usr/local/share/zfs/common.sh</string>
+															<string>1015/usr/local/share/zfs/common.sh</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
@@ -2969,7 +2969,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>1012/usr/local/share/zfs/smb.sh</string>
+															<string>1015/usr/local/share/zfs/smb.sh</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
@@ -2985,7 +2985,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>1012/usr/local/share/zfs/zconfig.sh</string>
+															<string>1015/usr/local/share/zfs/zconfig.sh</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
@@ -3001,7 +3001,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>1012/usr/local/share/zfs/zfault.sh</string>
+															<string>1015/usr/local/share/zfs/zfault.sh</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
@@ -3017,7 +3017,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>1012/usr/local/share/zfs/zfs.sh</string>
+															<string>1015/usr/local/share/zfs/zfs.sh</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
@@ -3033,7 +3033,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>1012/usr/local/share/zfs/ziltest.sh</string>
+															<string>1015/usr/local/share/zfs/ziltest.sh</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
@@ -3049,7 +3049,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>1012/usr/local/share/zfs/zimport.sh</string>
+															<string>1015/usr/local/share/zfs/zimport.sh</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
@@ -3068,7 +3068,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpios-profile/zpios-profile-disk.sh</string>
+																	<string>1015/usr/local/share/zfs/zpios-profile/zpios-profile-disk.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3084,7 +3084,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpios-profile/zpios-profile-pids.sh</string>
+																	<string>1015/usr/local/share/zfs/zpios-profile/zpios-profile-pids.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3100,7 +3100,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpios-profile/zpios-profile-post.sh</string>
+																	<string>1015/usr/local/share/zfs/zpios-profile/zpios-profile-post.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3116,7 +3116,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpios-profile/zpios-profile-pre.sh</string>
+																	<string>1015/usr/local/share/zfs/zpios-profile/zpios-profile-pre.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3132,7 +3132,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpios-profile/zpios-profile.sh</string>
+																	<string>1015/usr/local/share/zfs/zpios-profile/zpios-profile.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3148,7 +3148,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>1012/usr/local/share/zfs/zpios-profile</string>
+															<string>1015/usr/local/share/zfs/zpios-profile</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
@@ -3164,7 +3164,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>1012/usr/local/share/zfs/zpios-sanity.sh</string>
+															<string>1015/usr/local/share/zfs/zpios-sanity.sh</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
@@ -3180,7 +3180,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>1012/usr/local/share/zfs/zpios-survey.sh</string>
+															<string>1015/usr/local/share/zfs/zpios-survey.sh</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
@@ -3199,7 +3199,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpios-test/16th-8192rc-4rs-1cs-4off.sh</string>
+																	<string>1015/usr/local/share/zfs/zpios-test/16th-8192rc-4rs-1cs-4off.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3215,7 +3215,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpios-test/1th-16rc-4rs-1cs-4off.sh</string>
+																	<string>1015/usr/local/share/zfs/zpios-test/1th-16rc-4rs-1cs-4off.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3231,7 +3231,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpios-test/1x256th-65536rc-4rs-1cs-4off.sh</string>
+																	<string>1015/usr/local/share/zfs/zpios-test/1x256th-65536rc-4rs-1cs-4off.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3247,7 +3247,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpios-test/256th-65536rc-4rs-1cs-4off.sh</string>
+																	<string>1015/usr/local/share/zfs/zpios-test/256th-65536rc-4rs-1cs-4off.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3263,7 +3263,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpios-test/4th-1024rc-4rs-1cs-4off.sh</string>
+																	<string>1015/usr/local/share/zfs/zpios-test/4th-1024rc-4rs-1cs-4off.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3279,7 +3279,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpios-test/large-thread-survey.sh</string>
+																	<string>1015/usr/local/share/zfs/zpios-test/large-thread-survey.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3295,7 +3295,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpios-test/large.sh</string>
+																	<string>1015/usr/local/share/zfs/zpios-test/large.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3311,7 +3311,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpios-test/lustre.sh</string>
+																	<string>1015/usr/local/share/zfs/zpios-test/lustre.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3327,7 +3327,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpios-test/medium.sh</string>
+																	<string>1015/usr/local/share/zfs/zpios-test/medium.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3343,7 +3343,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpios-test/small.sh</string>
+																	<string>1015/usr/local/share/zfs/zpios-test/small.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3359,7 +3359,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpios-test/tiny.sh</string>
+																	<string>1015/usr/local/share/zfs/zpios-test/tiny.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3375,7 +3375,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>1012/usr/local/share/zfs/zpios-test</string>
+															<string>1015/usr/local/share/zfs/zpios-test</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
@@ -3391,7 +3391,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>1012/usr/local/share/zfs/zpios.sh</string>
+															<string>1015/usr/local/share/zfs/zpios.sh</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
@@ -3410,7 +3410,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpool-config/dm0-raid0.sh</string>
+																	<string>1015/usr/local/share/zfs/zpool-config/dm0-raid0.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3426,7 +3426,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpool-config/file-raid0.sh</string>
+																	<string>1015/usr/local/share/zfs/zpool-config/file-raid0.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3442,7 +3442,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpool-config/file-raid10.sh</string>
+																	<string>1015/usr/local/share/zfs/zpool-config/file-raid10.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3458,7 +3458,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpool-config/file-raidz.sh</string>
+																	<string>1015/usr/local/share/zfs/zpool-config/file-raidz.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3474,7 +3474,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpool-config/file-raidz2.sh</string>
+																	<string>1015/usr/local/share/zfs/zpool-config/file-raidz2.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3490,7 +3490,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpool-config/hda-raid0.sh</string>
+																	<string>1015/usr/local/share/zfs/zpool-config/hda-raid0.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3506,7 +3506,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpool-config/lo-faulty-raid0.sh</string>
+																	<string>1015/usr/local/share/zfs/zpool-config/lo-faulty-raid0.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3522,7 +3522,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpool-config/lo-faulty-raid10.sh</string>
+																	<string>1015/usr/local/share/zfs/zpool-config/lo-faulty-raid10.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3538,7 +3538,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpool-config/lo-faulty-raidz.sh</string>
+																	<string>1015/usr/local/share/zfs/zpool-config/lo-faulty-raidz.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3554,7 +3554,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpool-config/lo-faulty-raidz2.sh</string>
+																	<string>1015/usr/local/share/zfs/zpool-config/lo-faulty-raidz2.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3570,7 +3570,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpool-config/lo-faulty-raidz3.sh</string>
+																	<string>1015/usr/local/share/zfs/zpool-config/lo-faulty-raidz3.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3586,7 +3586,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpool-config/lo-raid0.sh</string>
+																	<string>1015/usr/local/share/zfs/zpool-config/lo-raid0.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3602,7 +3602,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpool-config/lo-raid10.sh</string>
+																	<string>1015/usr/local/share/zfs/zpool-config/lo-raid10.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3618,7 +3618,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpool-config/lo-raidz.sh</string>
+																	<string>1015/usr/local/share/zfs/zpool-config/lo-raidz.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3634,7 +3634,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpool-config/lo-raidz2.sh</string>
+																	<string>1015/usr/local/share/zfs/zpool-config/lo-raidz2.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3650,7 +3650,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpool-config/md0-raid10.sh</string>
+																	<string>1015/usr/local/share/zfs/zpool-config/md0-raid10.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3666,7 +3666,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpool-config/md0-raid5.sh</string>
+																	<string>1015/usr/local/share/zfs/zpool-config/md0-raid5.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3682,7 +3682,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpool-config/ram0-raid0.sh</string>
+																	<string>1015/usr/local/share/zfs/zpool-config/ram0-raid0.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3698,7 +3698,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpool-config/scsi_debug-noraid.sh</string>
+																	<string>1015/usr/local/share/zfs/zpool-config/scsi_debug-noraid.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3714,7 +3714,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpool-config/scsi_debug-raid0.sh</string>
+																	<string>1015/usr/local/share/zfs/zpool-config/scsi_debug-raid0.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3730,7 +3730,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpool-config/scsi_debug-raid10.sh</string>
+																	<string>1015/usr/local/share/zfs/zpool-config/scsi_debug-raid10.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3746,7 +3746,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpool-config/scsi_debug-raidz.sh</string>
+																	<string>1015/usr/local/share/zfs/zpool-config/scsi_debug-raidz.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3762,7 +3762,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpool-config/scsi_debug-raidz2.sh</string>
+																	<string>1015/usr/local/share/zfs/zpool-config/scsi_debug-raidz2.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3778,7 +3778,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpool-config/scsi_debug-raidz3.sh</string>
+																	<string>1015/usr/local/share/zfs/zpool-config/scsi_debug-raidz3.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3794,7 +3794,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpool-config/sda-raid0.sh</string>
+																	<string>1015/usr/local/share/zfs/zpool-config/sda-raid0.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3810,7 +3810,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpool-config/zpool-raid0.sh</string>
+																	<string>1015/usr/local/share/zfs/zpool-config/zpool-raid0.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3826,7 +3826,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpool-config/zpool-raid10.sh</string>
+																	<string>1015/usr/local/share/zfs/zpool-config/zpool-raid10.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3842,7 +3842,7 @@
 																	<key>GID</key>
 																	<integer>0</integer>
 																	<key>PATH</key>
-																	<string>1012/usr/local/share/zfs/zpool-config/zpool-raidz.sh</string>
+																	<string>1015/usr/local/share/zfs/zpool-config/zpool-raidz.sh</string>
 																	<key>PATH_TYPE</key>
 																	<integer>3</integer>
 																	<key>PERMISSIONS</key>
@@ -3858,7 +3858,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>1012/usr/local/share/zfs/zpool-config</string>
+															<string>1015/usr/local/share/zfs/zpool-config</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
@@ -3874,7 +3874,7 @@
 															<key>GID</key>
 															<integer>0</integer>
 															<key>PATH</key>
-															<string>1012/usr/local/share/zfs/zpool-create.sh</string>
+															<string>1015/usr/local/share/zfs/zpool-create.sh</string>
 															<key>PATH_TYPE</key>
 															<integer>3</integer>
 															<key>PERMISSIONS</key>
@@ -3890,7 +3890,7 @@
 													<key>GID</key>
 													<integer>0</integer>
 													<key>PATH</key>
-													<string>1012/usr/local/share/zfs</string>
+													<string>1015/usr/local/share/zfs</string>
 													<key>PATH_TYPE</key>
 													<integer>3</integer>
 													<key>PERMISSIONS</key>
@@ -3906,7 +3906,7 @@
 											<key>GID</key>
 											<integer>0</integer>
 											<key>PATH</key>
-											<string>1012/usr/local/share</string>
+											<string>1015/usr/local/share</string>
 											<key>PATH_TYPE</key>
 											<integer>3</integer>
 											<key>PERMISSIONS</key>
@@ -3922,7 +3922,7 @@
 									<key>GID</key>
 									<integer>0</integer>
 									<key>PATH</key>
-									<string>1012/usr/local</string>
+									<string>1015/usr/local</string>
 									<key>PATH_TYPE</key>
 									<integer>3</integer>
 									<key>PERMISSIONS</key>
@@ -4024,11 +4024,11 @@
 				<key>CONCLUSION_ACTION</key>
 				<integer>0</integer>
 				<key>IDENTIFIER</key>
-				<string>net.lundman.openzfs.1012.pkg</string>
+				<string>net.lundman.openzfs.1015.pkg</string>
 				<key>LOCATION</key>
 				<integer>0</integer>
 				<key>NAME</key>
-				<string>zfs1012</string>
+				<string>zfs1015</string>
 				<key>OVERWRITE_PERMISSIONS</key>
 				<false/>
 				<key>VERSION</key>

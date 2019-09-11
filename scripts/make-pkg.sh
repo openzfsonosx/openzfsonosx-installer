@@ -19,13 +19,25 @@ os_release_major_version=`uname -r | awk -F '.' '{print $1;}'`
 signargs="--options runtime"
 notarize_1014=${notarize_1014:-1}
 
+if [ $notarize_1014 -eq 1 ]
+then
+    if [ -z $NOTARIZE_PASS ]
+    then
+        echo "Set ENVVAR NOTARIZE_PASS for notarization to work."
+        exit 1
+    fi
+fi
+
 if [ -z $os_release_major_version ]
 then
 	echo "Could not determine operating system release major version"
 	exit 1
 fi
 
-if [[ $1 == *1014* || $0 == *1014* || $PWD == *1014* ]]
+if [[ $1 == *1015* || $0 == *1015* || $PWD == *1015* ]]
+then
+	OS=1015
+elif [[ $1 == *1014* || $0 == *1014* || $PWD == *1014* ]]
 then
 	OS=1014
 elif [[ $1 == *1013* || $0 == *1013* || $PWD == *1013* ]]
@@ -163,8 +175,8 @@ then
 	popd
 
 	pushd ${OS}/usr/local/bin &>/dev/null
-	for path in InvariantDisks fsck_zfs mount.zfs mount_zfs umount_zfs \
-	    zconfigd zdb zdb_static zed zfs zfs.util zhack zinject zpios \
+	for path in InvariantDisks fsck_zfs mount_zfs umount_zfs \
+	    zconfigd zdb zdb_static zed zfs zfs_util zhack zinject zpios \
 	    zpool zstreamdump zsysctl ztest ztest_static
 	do
 		set +e
@@ -199,7 +211,7 @@ then
 	popd
 
 	pushd ${OS}/Library/Filesystems/zfs.fs/Contents/Resources &>/dev/null
-	for path in zfs.util
+	for path in zfs_util
 	do
 		set +e
 		codesign -dvvv "${path}"
@@ -266,7 +278,7 @@ then
     echo "Uploading PKG to Apple ..."
     TFILE="out-altool.xml"
     RFILE="req-altool.xml"
-    xcrun altool --notarize-app -f ../out-1014-signed.pkg --primary-bundle-id net.lundman.zfs -u lundman@lundman.net -p "$NOTARIZE_PASS" --output-format xml > ${TFILE}
+    xcrun altool --notarize-app -f ../out-${OS}-signed.pkg --primary-bundle-id net.lundman.zfs -u lundman@lundman.net -p "$NOTARIZE_PASS" --output-format xml > ${TFILE}
 
     GUID=`/usr/libexec/PlistBuddy -c "Print :notarization-upload:RequestUUID" ${TFILE}`
     echo "Uploaded. GUID ${GUID}"
@@ -287,6 +299,6 @@ then
     done
 
     echo "Stapling PKG ..."
-    xcrun stapler staple ../out-1014-signed.pkg
-    xcrun stapler validate -v ../out-1014-signed.pkg
+    xcrun stapler staple ../out-${OS}-signed.pkg
+    xcrun stapler validate -v ../out-${OS}-signed.pkg
 fi
