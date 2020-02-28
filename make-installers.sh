@@ -6,7 +6,7 @@ then
 	exit $?
 fi
 
-sudo ntpdate -u time.apple.com
+sudo sntp -sS pool.ntp.org
 
 should_make_108=0
 should_make_109=0
@@ -21,7 +21,7 @@ require_version2_signature=1
 os_release_major_version=`uname -r | awk -F '.' '{print $1;}'`
 
 # This is a notarize FROM switch.
-notarize_1014=0
+notarize_1014=1
 
 if [ $notarize_1014 -eq 1 ]
 then
@@ -129,8 +129,8 @@ MOJAVEDESTDIR="${MOJAVEPAK}"/1014
 CATALINAPAK="${topdir}"/packages-o3x-1015
 CATALINADESTDIR="${CATALINAPAK}"/1015
 
-SPL_TAG=1.9.2
-ZFS_TAG=1.9.2
+SPL_TAG=spl-1.9.4
+ZFS_TAG=zfs-1.9.4
 
 if [ $make_only -eq 1 ]
 then

@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 set -e
 
@@ -6,7 +6,7 @@ source version
 owner=`logname`
 dev_id_application="Developer ID Application: Joergen  Lundman (735AM5QEU3)"
 dev_id_installer="Developer ID Installer: Joergen  Lundman (735AM5QEU3)"
-keychain=`eval "echo ~${owner}"`/Library/Keychains/openzfs-login.keychain
+keychain=`eval "echo ~${owner}"`/Library/Keychains/openzfs.keychain
 #keychain_timeout=1200
 keychain_timeout=none
 should_unlock=1
@@ -162,7 +162,7 @@ then
 	do
 		set +e
 		codesign -dvvv "${path}"
-		ret=$?
+		ret=1
 		set -e
 		if [ $ret -ne 0 ]
 		then
@@ -174,8 +174,14 @@ then
 	done
 	popd
 
-	pushd ${OS}/usr/local/bin &>/dev/null
-	for path in InvariantDisks fsck_zfs mount_zfs umount_zfs \
+	# /usr -> /usr/local from 10.11 and up
+	if [ ${OS} -lt 1011 ]; then
+	    pushd ${OS}/usr/sbin &>/dev/null
+	else
+	    pushd ${OS}/usr/local/bin &>/dev/null
+	fi
+
+	for path in InvariantDisks fsck_zfs mount_zfs \
 	    zconfigd zdb zdb_static zed zfs zfs_util zhack zinject zpios \
 	    zpool zstreamdump zsysctl ztest ztest_static
 	do
@@ -193,7 +199,35 @@ then
 	done
 	popd
 
-	pushd ${OS}/usr/local/lib &>/dev/null
+	# /sbin -> /usr/local/bin from 10.11 and up
+	if [ ${OS} -lt 1011 ]; then
+	    pushd ${OS}/sbin &>/dev/null
+	else
+	    pushd ${OS}/usr/local/bin &>/dev/null
+	fi
+
+	for path in mount_zfs umount_zfs fsck_zfs
+	do
+		set +e
+		codesign -dvvv "${path}"
+		ret=$?
+		set -e
+		if [ $ret -ne 0 ]
+		then
+			echo "Signing ${path}"
+			codesign $signargs -fvs "${dev_id_application}" "${path}"
+			# spctl --assess --raw "${path}"
+			codesign -dvvv "${path}"
+		fi
+	done
+	popd
+
+	# /usr -> /usr/local from 10.11 and up
+	if [ ${OS} -lt 1011 ]; then
+	    pushd ${OS}/usr/lib &>/dev/null
+	else
+	    pushd ${OS}/usr/local/lib &>/dev/null
+	fi
 	for path in *.dylib
 	do
 		set +e
@@ -210,8 +244,14 @@ then
 	done
 	popd
 
-	pushd ${OS}/Library/Filesystems/zfs.fs/Contents/Resources &>/dev/null
-	for path in zfs_util
+	# /usr -> /usr/local from 10.11 and up
+	if [ ${OS} -lt 1011 ]; then
+	    pushd ${OS}/System/Library/Filesystems/zfs.fs/Contents/Resources &>/dev/null
+	else
+	    pushd ${OS}/Library/Filesystems/zfs.fs/Contents/Resources &>/dev/null
+	fi
+
+	for path in zfs_util mount_zfs fsck_zfs newfs_zfs
 	do
 		set +e
 		codesign -dvvv "${path}"
@@ -273,7 +313,7 @@ else
 	chown ${owner} ../out-${OS}.pkg
 fi
 
-if [ ${notarize_1014} -eq 1 ]
+if [ ${notarize_1014} -eq 1 -a $OS -ge 1014 ]
 then
     echo "Uploading PKG to Apple ..."
     TFILE="out-altool.xml"
